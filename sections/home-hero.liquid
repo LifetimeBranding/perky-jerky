@@ -1,0 +1,24 @@
+<style>
+  .hero {
+    height: 500px;
+  }
+</style>
+
+<span>I'm the homepage hero section!</span>
+
+{% schema %}
+  {
+    "name": "Hero Slideshow",
+    "class": "hero",
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "name": "Hero",
+        "type": "image"
+      }],
+    "settings": [
+      {
+        "type": "image"
+    }]
+  }
+{% endschema %}
