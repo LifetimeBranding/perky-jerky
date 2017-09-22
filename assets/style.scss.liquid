@@ -1,0 +1,24 @@
+/*================ Block Elements ================*/
+body {
+  font-family: {{ settings.type_body_font }};
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: {{ settings.type_header_font }}
+}
+
+/*================ Buttons ================*/
+.button__btn {
+  color: #fff;
+  max-height: 50px;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.button__btn--primary {
+  background-color: {{ settings.color_primary }};
+}
+
+.button__btn--secondary {
+  background-color: {{ settings.color_secondary }};
+}

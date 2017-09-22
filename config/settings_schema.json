@@ -1,15 +1,37 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Slate",
-    "theme_version": "0.11.0",
-    "theme_author": "Shopify",
+    "theme_name": "Perky Jerky Dev",
+    "theme_version": "0.0.0",
+    "theme_author": "Lifetime Branding",
     "theme_documentation_url": "https://shopify.github.io/slate/",
     "theme_support_url": "https://github.com/Shopify/slate"
   },
   {
     "name": "Typography",
     "settings": [
+      {
+        "type": "select",
+        "id": "type_header_font",
+        "label": "Header Font",
+        "default": "Franchise Bold",
+        "options": [
+          {
+            "value": "Franchise Bold"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "type_body_font",
+        "label": "Body Font",
+        "default": "Tahoma",
+        "options": [
+          {
+            "value": "Tahoma"
+          }
+        ]
+      },
       {
         "type": "select",
         "id": "type_base_size",
@@ -47,8 +69,15 @@
         "type": "color",
         "id": "color_primary",
         "label": "Primary color",
-        "default": "#000",
+        "default": "#e78f34",
         "info": "Used for text links, and primary buttons"
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": "Secondary color",
+        "default": "#000",
+        "info": "Use for secondary text links and buttons"
       },
       {
         "type": "color",

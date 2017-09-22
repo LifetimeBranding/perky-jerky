@@ -1,42 +1,46 @@
 {
-  "current": "Default",
+  "current": "Perky Jerky",
   "presets": {
-    "Default": {
+    "Perky Jerky": {
       "sections": {
-        "collection-list": {
-          "type": "collection-list",
-          "blocks": {
-            "collection-list-0": {
-              "type": "collection"
-            },
-            "collection-list-1": {
-              "type": "collection"
-            },
-            "collection-list-2": {
-              "type": "collection"
-            }
-          },
-          "block_order": [
-            "collection-list-0",
-            "collection-list-1",
-            "collection-list-2"
-          ]
-        },
         "featured-collection": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "frontpage"
-          }
+          "type": "featured-collection"
         },
-        "featured-product": {
-          "type": "featured-product"
+        "pick-and-pack": {
+          "type": "pick-and-pack"
+        },
+        "nutrition-facts": {
+          "type": "nutrition-facts"
+        },
+        "brand-ambassador": {
+          "type": "brand-ambassador"
+        },
+        "incentive-with-cta": {
+          "type": "incentive-with-cta"
+        },
+        "social-media-feed": {
+          "type": "social-media-feed"
+        },
+        "social-proof": {
+          "type": "social-proof"
+        },
+        "newsletter-sign-up": {
+          "type": "newsletter-sign-up"
         }
       },
       "content_for_index": [
-        "collection-list",
+        "incentive-with-cta",
         "featured-collection",
-        "featured-product"
+        "pick-and-pack",
+        "nutrition-facts",
+        "brand-ambassador",
+        "social-proof",
+        "newsletter-sign-up",
+        "social-media-feed"
       ]
+    },
+    "Alternate Perky Jerky": {
+
     }
   }
 }
