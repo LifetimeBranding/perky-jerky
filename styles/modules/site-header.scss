@@ -1,9 +1,23 @@
 /*================ Site Header ================*/
 .site-logo {
-  display: block;
+  display: inline;
+}
 
-  img {
-    display: block;
-    width: 100%;
-  }
+/* Theme specific navigation links */
+ul.navigation__header--links {
+  color: #fff;
+  list-style-type: none;
+  display: inline;
+}
+
+ul.navigation__header--links > li {
+  display: inline;
+  margin: 0px 55px 0px 0px;
+}
+
+ul.navigation__header--links > li > a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
 }

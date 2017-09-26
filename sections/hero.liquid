@@ -1,6 +1,21 @@
+<style>
+  .hero__container {
+    height: 500px;
+  }
+
+  img.hero__image--background {
+    position: relative;
+    top: 50%;
+    margin: -125px auto 50px 0px;
+  }
+</style>
+
 <div class="grid">
 <div class="grid__item one-whole text-center">
-  <span>I'm the homepage hero section!</span>
+  <!-- Slides go here -->
+  <div class="hero__container">
+    <img src="{{ section.settings.hero-image | img_url: '444x250' }}" class="hero__image--background">
+  </div>
 </div>
 </div>
 
@@ -15,7 +30,9 @@
       }],
     "settings": [
       {
-        "type": "image"
+        "type": "image_picker",
+        "id": "hero-image",
+        "label": "Hero Image"
     }]
   }
 {% endschema %}

@@ -20,18 +20,41 @@ $color-success-bg: #000;
 
 /*================ Typography Variables ================*/
 @font-face {
-  font-family: "Franchise Bold";
-  src: url('{{ "font_franchise-bold.ttf" | asset_url }}') format("truetype");
+  font-family: "Franchise";
+  src: url('{{ "font_franchise-regular.eot" | asset_url }}');
+  src: url('{{ "font_franchise-regular.woff2" | asset_url }}') format('woff2'),
+      url(' {{ "font_franchise-regular.eot?#iefix" | asset_url }} ') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Trade Gothic";
+  src: url('{{ "Trade Gothic LT.eot" | asset_url }}');
+  src: url('{{ "Trade Gothic LT.woff2" | asset_url }}') format('woff2'),
+       url('{{ "Trade Gothic LT.eot?#iefix" | asset_url }}') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Trade Gothic Bold Condensed No. 20";
+  src: url('{{ "Trade Gothic Bold Condensed No. 20.eot " | asset_url }}');
+  src: url('{{ "Trade Gothic Bold Condensed No. 20.woff2" | asset_url }}') format('woff2'),
+       url('{{ "Trade Gothic Bold Condensed No. 20.eot?#iefix" | asset_url }}') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-$font-stack-header: {{ settings.type_header_font }}, sans-serif;
+$font-stack-header: {{ settings.type_headers_font }}, sans-serif;
 $font-weight-header: $font-weight-bold;
 
 $font-stack-body: {{ settings.type_body_font }}, sans-serif;
-$font-size-base: {{ settings.type_base_size }};
+$font-size-base: {{ settings.type_body_size }};
 
 /*============================================================================
   Grid Breakpoints and Class Names

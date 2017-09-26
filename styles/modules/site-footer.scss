@@ -1,0 +1,35 @@
+footer {
+  background-color: #f2f2f2 !important;
+}
+
+ul.navigation__footer--links {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.navigation__footer--links > li {
+  margin: 0px 0px 10px 0px;
+}
+
+ul.navigation__footer--links > li > a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+#footer__copyright-notice {
+  padding: 75px;
+  margin: auto;
+}
+
+#footer__copyright-notice > * {
+  font-size: 0.5rem;
+  text-align: center;
+  color: #555555;
+  display: block;
+}
+
+#footer__copyright-notice > img {
+  margin: auto;
+  padding: 10px;
+}
