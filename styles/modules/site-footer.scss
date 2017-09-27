@@ -1,5 +1,6 @@
 footer {
   background-color: #f2f2f2 !important;
+  max-height: 320px;
 }
 
 ul.navigation__footer--links {
@@ -18,7 +19,6 @@ ul.navigation__footer--links > li > a {
 }
 
 #footer__copyright-notice {
-  padding: 75px;
   margin: auto;
 }
 
