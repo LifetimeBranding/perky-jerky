@@ -31,6 +31,8 @@
 #pick-and-pack-centerpiece > div {
   position: relative;
   left: 50%;
+  margin: auto;
+  text-align: center;
   width: 552px;
 }
 
@@ -42,10 +44,15 @@
 /*================ Right Side ================*/
 #pick-and-pack-right {
   margin-top: 150px; 
-  padding-left: 334px
+  padding-left: 314px
+}
+
+#pick-and-pack-right ol {
+  margin: 0;
+  padding: 0;
 }
 
 #pick-and-pack-right > ol > li {
   margin-bottom: 33.75px;
-  font-size: 26.25px;
+  font-size: 22.5px;
 }
