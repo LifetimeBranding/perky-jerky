@@ -1,10 +1,17 @@
-<div class="grid page-width">
-  <div class="grid__item two-thirds text-right">
-    <span>{{ section.settings.copy}}</span>
+<div class="grid page-width h-100">
+
+  <div class="grid__item two-thirds text-right h-100">
+  <div class="v-center" style="margin-top: -9px">
+    <span style="font-size: 19px;">{{ section.settings.copy}}</span>
   </div>
-  <div class="grid__item one-third">
-  <button class="button__btn button__btn--primary">{{ section.settings.button-label }}</button>
   </div>
+
+  <div class="grid__item one-third text-right h-100">
+  <div class="v-center" style="margin-top: -19px">
+    <button class="button__btn button__btn--primary">{{ section.settings.button-label }}</button>
+  </div>
+  </div>
+
 </div>
 
 {% schema %}

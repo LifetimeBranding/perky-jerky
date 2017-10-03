@@ -1,7 +1,7 @@
 <footer>
 <div class="page-width">
   {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
-  <ul>
+  <ul class="navigation__footer--social-links">
     {% for social in social_accounts %}
       {%- assign social_handle = social | handleize -%}
       {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}

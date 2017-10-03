@@ -1,5 +1,5 @@
 <style>
-  {%- if section.settings.logo != blank -%}
+{%- if section.settings.logo != blank -%}
     .site-header__logo-image {
       max-width: {{ section.settings.logo_max_width }}px;
     }
@@ -8,13 +8,17 @@
   /* Position in front of HERO */
   #shopify-section-header {
     width: 100%;
-    {%- if template.name == 'index' -%}
+    {% if template.name == 'index' %}
       position: absolute;
       z-index: 9;
-    {%- endif -%}
+      top: 22.5px;
+    {% else %}
+      position: absolute;
+      margin-top: 22.5px;
+    {% endif %}
   }
 
-  header {
+  header[role="banner"] {
     display: inline-block;
     width: 75%;
     float: left;
@@ -72,8 +76,8 @@
   }
 
   nav {
-    float: left;
-    width: 25%;
+    float: right;
+    margin-top: 22.5px;
     display: inline-block;
   }  
 </style>
@@ -81,11 +85,11 @@
 <div data-section-id="{{ section.id }}" data-section-type="header-section" class="page-width">
   <header role="banner">
 
-    {%- if template.name == 'index' -%}
+    {% if template.name == 'index' %}
       <h1 itemscope itemtype="http://schema.org/Organization">
-    {%- else -%}
+    {% else %}
       <div class="h1" itemscope itemtype="http://schema.org/Organization">
-    {%- endif -%}
+    {% endif %}
         <div class="navigation__header--container">
         <!-- Logo -->
         <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
@@ -97,28 +101,29 @@
                  itemprop="logo">
           {%- else -%}
             {{ shop.name }}
-          {%- endif -%}
+          {% endif -%}
         </a>
 
         <!-- Theme specific links -->
-        <ul class="navigation__header--links">
+        <ul class="navigation__header--links small--hide">
           <li><a id="header-shop" href="#">Shop</a></li>
           <li><a id="header-community" href="#">Community</a></li>
         </ul>
         </div>
 
-    {%- if template.name == 'index' -%}
+    {% if template.name == 'index' %}
       </h1>
-    {%- else -%}
+    {% else %}
       </div>
-    {%- endif -%}
+    {% endif %}
   </header>
 
   <!-- Navigation -->
   <nav role="navigation">
-    <img src="" width="200" height="100" alt="I'm your menu">
+    <div class="small--hide" style="z-index: -1; cursor: pointer;">
+    <img src="{{ 'menu-drawing.png' | asset_img_url }}" width="82" height="56" alt="I'm your menu" style="z-index: -1">
+    </div>
   </nav>
-
 </div>
 
 <!-- MODAL 1 -->

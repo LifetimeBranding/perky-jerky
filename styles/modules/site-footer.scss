@@ -1,15 +1,25 @@
 footer {
   background-color: #f2f2f2 !important;
-  max-height: 320px;
+  height: 375px;
+}
+
+ul.navigation__footer--social-links {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 ul.navigation__footer--links {
+  text-transform: uppercase;
+  font-size: 11.25px;
+  font-weight: 800;
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 ul.navigation__footer--links > li {
-  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 18.75px 0px;
 }
 
 ul.navigation__footer--links > li > a {

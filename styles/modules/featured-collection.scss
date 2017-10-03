@@ -1,6 +1,20 @@
 /*================ Featured Collection ================*/
 
 #shopify-section-featured-collection {
-  background-color: #a55151;
-  height: 500px;
+  background-color: #fff;
+  height: 1012px;
+  text-transform: uppercase;
+}
+
+.section-featured-collection--item {
+  margin-top: 67.5px;
+}
+
+.section-featured-collection--item > img {
+  display: block;
+  margin: 0px auto 22.5px auto;
+}
+
+.section-featured-collection--item > span {
+  font-size: 27.75px;
 }

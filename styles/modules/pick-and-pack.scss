@@ -1,6 +1,51 @@
 /*================ Pick and Pack ================*/
 
 #shopify-section-pick-and-pack {
-  background-color: #566d69;
-  height: 500px;
+  background-color: #FFA410;
+  text-transform: uppercase;
+  height: 608px;
+}
+
+/*================ Left Side ================*/
+#pick-and-pack-left {
+  max-width: 360px;
+  text-align: center;
+  margin-top: 123.75px;
+}
+
+#pick-and-pack-left > img {
+  display: block;
+  margin: auto;
+}
+
+#pick-and-pack-left > span {
+  text-align: center;
+  margin: auto;
+}
+
+/*================ Centerpiece ================*/
+#pick-and-pack-centerpiece {
+  position: absolute;
+}
+
+#pick-and-pack-centerpiece > div {
+  position: relative;
+  left: 50%;
+  width: 552px;
+}
+
+#pick-and-pack-centerpiece > img {
+  width: 100%;
+  height: 100%;
+}
+
+/*================ Right Side ================*/
+#pick-and-pack-right {
+  margin-top: 150px; 
+  padding-left: 334px
+}
+
+#pick-and-pack-right > ol > li {
+  margin-bottom: 33.75px;
+  font-size: 26.25px;
 }

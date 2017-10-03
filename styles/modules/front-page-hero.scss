@@ -1,6 +1,23 @@
 /*================ Front Page HERO ================*/
 
 #shopify-section-hero {
-  background-color: #7d9c79;
-  height: 500px;
+  width: 100%;
+  background: #DDDDDD;
+}
+
+.hero__container {
+  width: 100%;
+  height: 820px;
+}
+
+#frontpage-hero-carousel {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+}
+
+img.hero__image--background {
+  position: relative;
+  top: 50%;
+  margin-top: -272px;
 }

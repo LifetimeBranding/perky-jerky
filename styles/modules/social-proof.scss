@@ -1,6 +1,9 @@
 /*================ Social Proof ================*/
 
 #shopify-section-social-proof {
-  background-color: #a57763;
-  height: 500px;
+  height: 375px;
+}
+
+#shopify-section-social-proof :nth-child(2) {
+  background-color: #f2f2f2;
 }
