@@ -99,8 +99,6 @@
           <div class="navigation__dropdown-content">
           <div class="navigation__dropdown-2-container">
             <div class="grid">
-              <div class="grid__item">
-              <div class="grid">
                 <div class="grid__item one-fifth text-center">
                   <img class="navigation__dropdown-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="What is Perky Jerky?">
                 </div>
@@ -116,8 +114,6 @@
                 <div class="grid__item one-fifth text-center">
                   <img class="navigation__dropdown-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Feel The Buzz">
                 </div>
-              </div>
-              </div>
             </div>
           </div>
           </div>
@@ -135,16 +131,16 @@
   <nav role="navigation">
   <div class="small--hide navigation__main-menu">
   <div class="grid">
-  <div class="grid__item one-half">
+  <div class="grid__item one-half" style="width: 100px">
     <div class="navigation__main-menu--slide-out">
       <ul>
-        <li>Login/Register</li>
-        <li>My Cart</li>
-        <li>Store Locator</li>
+        <li><a href="#">Login/Register</a></li>
+        <li><a href="#">My Cart</a></li>
+        <li><a href="#">Store Locator</a></li>
       </ul>
     </div>
   </div>
-  <div class="grid__item one-half">
+  <div class="grid__item one-half" style="width: 100px">
     <div class="navigation__main-menu--icon">
     <img src="{{ 'menu-drawing.png' | asset_img_url }}" width="82" height="56" alt="I'm your menu" onclick="pj_navmenu.toggleMenu();">
     </div>

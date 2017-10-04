@@ -15,11 +15,19 @@ pj = {
 }
 
 pj_navmenu = {
+  menuIcon: $('.navigation__main-menu--icon > img'),
+  menuSlideOut: $('.navigation__main-menu--slide-out'),
   toggleMenu: function() {
-    let menuSlideOut = $('.navigation__main-menu--slide-out');
-    let currentWidth = menuSlideOut.css('width');
-    console.log(currentWidth);
-    (currentWidth === "0px") ? menuSlideOut.css('width', '150px') : menuSlideOut.css('width', '0px');
+    this.menuSlideOut.css('width') === "0px" ? this.open() : this.close();
+  },
+
+  open: function() {
+    this.menuSlideOut.css('width', '100%');
+    //this.menuIcon.attr('src', 'null.png');
+  },
+
+  close: function() {
+    this.menuSlideOut.css('width', '0px');
   }
 }
 
