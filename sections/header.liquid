@@ -22,51 +22,6 @@
     width: 75%;
     float: left;
   }
-
-/* Navigation Dropdowns */
-  .navigation__dropdown {
-    display: inline-block;
-    margin: 0px 45px 0px 45px;
-  }
-
-  .navigation__dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    right: 0;
-    z-index: 9;
-    background-color: #fff;
-    margin-top: 33.75px;
-  }
-
-  .navigation__dropdown:hover .navigation__dropdown-content {
-    display: block;
-  }
-
-  .navigation__dropdown-1-image {
-    display: block;
-    margin: 0px auto 15px auto;
-  }
-
- .navigation__dropdown-2-image {
-    margin: -15px auto 0px auto;
-    padding: 0px 7.5px 0px 0px;
-  }
-
-  .navigation__dropdown-1-container {
-    padding: 68px 0px 68px 0px;
-  }
-  
-  .navigation__dropdown-2-container {
-    margin: auto;
-    padding: 7.5px;
-  }
-/* End Navigation Dropdowns */
-
-  nav {
-    float: right;
-    display: inline-block;
-  }
 </style>
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" class="page-width">
@@ -95,7 +50,7 @@
         <div style="display: inline-block">
         <!-- Dropdown: Shop -->
         <div class="navigation__dropdown small--hide">
-          <a class="navigation__link" href="#">Shop</a>
+          <a class="navigation__link" href="javascript:void(0)">Shop</a>
           <div class="navigation__dropdown-content">
           <div class="navigation__dropdown-1-container page-width">
           <div class="grid">
@@ -140,7 +95,7 @@
         </div>     
         <!-- Dropdown: Community -->
         <div class="navigation__dropdown small--hide">
-          <a class="navigation__link" href="#">Community</a>
+          <a class="navigation__link" href="javascript:void(0)">Community</a>
           <div class="navigation__dropdown-content">
           <div class="navigation__dropdown-2-container">
             <div class="grid">
@@ -178,9 +133,24 @@
 
   <!-- Navigation -->
   <nav role="navigation">
-    <div class="small--hide" style="z-index: -1; cursor: pointer;">
-    <img src="{{ 'menu-drawing.png' | asset_img_url }}" width="82" height="56" alt="I'm your menu" style="z-index: -1">
+  <div class="small--hide navigation__main-menu">
+  <div class="grid">
+  <div class="grid__item one-half">
+    <div class="navigation__main-menu--slide-out">
+      <ul>
+        <li>Login/Register</li>
+        <li>My Cart</li>
+        <li>Store Locator</li>
+      </ul>
     </div>
+  </div>
+  <div class="grid__item one-half">
+    <div class="navigation__main-menu--icon">
+    <img src="{{ 'menu-drawing.png' | asset_img_url }}" width="82" height="56" alt="I'm your menu" onclick="pj_navmenu.toggleMenu();">
+    </div>
+  </div>
+  </div>
+  </div>
   </nav>
 </div>
 

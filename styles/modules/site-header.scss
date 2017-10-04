@@ -24,3 +24,72 @@ ul.navigation__header--links > li > a {
   font-weight: 700;
 }
 
+/* Navigation: Dropdowns */
+.navigation__dropdown {
+  display: inline-block;
+  margin: 0px 45px 0px 45px;
+}
+
+.navigation__dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  z-index: 9;
+  background-color: #fff;
+  margin-top: 33.75px;
+}
+
+.navigation__dropdown:hover .navigation__dropdown-content {
+  display: block;
+}
+
+.navigation__dropdown-1-image {
+  display: block;
+  margin: 0px auto 15px auto;
+}
+
+.navigation__dropdown-2-image {
+  margin: -15px auto 0px auto;
+  padding: 0px 7.5px 0px 0px;
+}
+
+.navigation__dropdown-1-container {
+  padding: 68px 0px 68px 0px;
+}
+
+.navigation__dropdown-2-container {
+  margin: auto;
+  padding: 7.5px;
+}
+
+
+/* Navigation: Main Menu */
+
+nav {
+  float: right;
+}
+
+.navigation__main-menu--slide-out {
+  vertical-align: middle;
+  overflow-x: hidden;
+  width: 0px;
+  transition: 0.5s;
+}
+
+.navigation__main-menu--icon {
+  height: 100%;
+  float: left;
+  z-index: -1; 
+  cursor: pointer; 
+  vertical-align: middle;
+}
+
+.navigation__main-menu--icon > img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navigation__main-menu ul > li {
+  list-style-type: none;
+}
