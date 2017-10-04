@@ -84,9 +84,7 @@ nav {
 .navigation__main-menu--slide-out {
   vertical-align: middle;
   overflow-x: hidden;
-  transition: -webkit-transform 0.5s ease-out;
-  -webkit-transform: translateX('-510px');
-  transform: translateX('-510px');
+  width: 0px;
 }
 
 .navigation__main-menu--icon {
