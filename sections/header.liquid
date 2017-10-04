@@ -5,15 +5,14 @@
     }
   {%- endif -%}
 
-  /* Position in front of HERO */
+  /* Position in front of HERO on the homepage */
   #shopify-section-header {
     width: 100%;
     {% if template.name == 'index' %}
       position: absolute;
-      z-index: 9;
+      z-index: 2;
       top: 22.5px;
     {% else %}
-      position: absolute;
       margin-top: 22.5px;
     {% endif %}
   }
@@ -24,63 +23,50 @@
     float: left;
   }
 
-  .d-block {
+/* Navigation Dropdowns */
+  .navigation__dropdown {
+    display: inline-block;
+    margin: 0px 45px 0px 45px;
+  }
+
+  .navigation__dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 9;
+    background-color: #fff;
+    margin-top: 33.75px;
+  }
+
+  .navigation__dropdown:hover .navigation__dropdown-content {
     display: block;
   }
 
-  .d-none {
-    display: none;
-  }
-
-  .modal {
-    z-index: 1;
-    /*
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    */
-  }
-
-  #shop-modal {
-    height: 431px;
-  }
-
-  #community-modal {
-    height: 203px;
-  }
-
-  .navigation__modal {
-    width: 100%;
-    background-color: #fff;
-    margin-top: -25px;
-    z-index: 9;
-  }
-
-  .navigation__modal-1-image {
+  .navigation__dropdown-1-image {
     display: block;
     margin: 0px auto 15px auto;
   }
 
- .navigation__modal-2-image {
+ .navigation__dropdown-2-image {
     margin: -15px auto 0px auto;
     padding: 0px 7.5px 0px 0px;
   }
 
-  .navigation__modal-1-container {
+  .navigation__dropdown-1-container {
     padding: 68px 0px 68px 0px;
-    
   }
-
-  .navigation__modal-2-container {
+  
+  .navigation__dropdown-2-container {
     margin: auto;
     padding: 7.5px;
   }
+/* End Navigation Dropdowns */
 
   nav {
     float: right;
-    margin-top: 22.5px;
     display: inline-block;
-  }  
+  }
 </style>
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" class="page-width">
@@ -105,11 +91,82 @@
           {% endif -%}
         </a>
 
-        <!-- Theme specific links -->
-        <ul class="navigation__header--links small--hide">
-          <li><a id="header-shop" href="#">Shop</a></li>
-          <li><a id="header-community" href="#">Community</a></li>
-        </ul>
+        <!-- NAVIGATION DROPDOWNS -->
+        <div style="display: inline-block">
+        <!-- Dropdown: Shop -->
+        <div class="navigation__dropdown small--hide">
+          <a class="navigation__link" href="#">Shop</a>
+          <div class="navigation__dropdown-content">
+          <div class="navigation__dropdown-1-container page-width">
+          <div class="grid">
+
+            <!-- Left Side -->
+            <div class="grid__item two-thirds" style="padding-right: 50px">
+            <div class="grid">
+              <div class="grid__item one-third text-center">
+                <img class="navigation__dropdown-1-image" src="http://via.placeholder.com/188x203" width="188" height="203" alt="Jerky">
+                <span>Jerky</span>
+              </div>
+              <div class="grid__item one-third text-center">
+                <img class="navigation__dropdown-1-image" src="http://via.placeholder.com/188x203" width="188" height="203" alt="Sticks">
+                <span>Sticks</span>
+              </div>
+              <div class="grid__item one-third text-center">
+                <img class="navigation__dropdown-1-image" src="http://via.placeholder.com/188x203" width="188" height="203" alt="Protein Pals">
+                <span>Protein Pals</span>
+              </div>
+              <div class="grid__item full-width text-center">
+                <button class="button__btn button__btn--primary" style="margin-top: 53px">Shop All Snacks</button>
+              </div>
+            </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="grid__item one-third" style="padding-left: 50px; border-left: 1.75px solid #f2f2f2;">
+            <div class="grid">
+              <div class="grid__item text-center">
+              <img class="navigation__dropdown-1-image" src="http://via.placeholder.com/323x203" width="323" height="203" alt="Perky Pick-n- Pack">
+                <span>Just pick a size, your favorite flavors, a shop date, and you're ready to go!</span>
+              </div>
+              <div class="grid__item text-center">
+                <button class="button__btn button__btn--primary" style="margin-top: 53px">Start Packing</button>
+              </div>
+            </div>
+            </div>
+
+          </div>
+          </div>
+          </div>
+        </div>     
+        <!-- Dropdown: Community -->
+        <div class="navigation__dropdown small--hide">
+          <a class="navigation__link" href="#">Community</a>
+          <div class="navigation__dropdown-content">
+          <div class="navigation__dropdown-2-container">
+            <div class="grid">
+              <div class="grid__item">
+              <div class="grid">
+                <div class="grid__item one-fifth text-center">
+                  <img class="navigation__dropdown-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="What is Perky Jerky?">
+                </div>
+                <div class="grid__item one-fifth text-center">
+                  <img class="navigation__dropdown-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Who we are">
+                </div>
+                <div class="grid__item one-fifth text-center">
+                  <img class="navigation__dropdown-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Jerk Fans">
+                </div>
+                <div class="grid__item one-fifth text-center">
+                  <img class="navigation__dropdown-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Ambassadors">
+                </div>
+                <div class="grid__item one-fifth text-center">
+                  <img class="navigation__dropdown-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Feel The Buzz">
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
         </div>
 
     {% if template.name == 'index' %}
@@ -125,78 +182,6 @@
     <img src="{{ 'menu-drawing.png' | asset_img_url }}" width="82" height="56" alt="I'm your menu" style="z-index: -1">
     </div>
   </nav>
-</div>
-
-<!-- MODAL 1 -->
-<div id="shop-modal" class="modal d-none">
-<div class="navigation__modal">
-<div class="navigation__modal-1-container page-width">
-<div class="grid">
-  <!-- Left Side -->
-  <div class="grid__item two-thirds" style="padding-right: 50px">
-  <div class="grid">
-    <div class="grid__item one-third text-center">
-      <img class="navigation__modal-1-image" src="http://via.placeholder.com/188x203" width="188" height="203" alt="Jerky">
-      <span>Jerky</span>
-    </div>
-    <div class="grid__item one-third text-center">
-      <img class="navigation__modal-1-image" src="http://via.placeholder.com/188x203" width="188" height="203" alt="Sticks">
-      <span>Sticks</span>
-    </div>
-    <div class="grid__item one-third text-center">
-      <img class="navigation__modal-1-image" src="http://via.placeholder.com/188x203" width="188" height="203" alt="Protein Pals">
-      <span>Protein Pals</span>
-    </div>
-    <div class="grid__item full-width text-center">
-      <button class="button__btn button__btn--primary" style="margin-top: 53px">Shop All Snacks</button>
-    </div>
-  </div>
-  </div>
-  <!-- Right Side -->
-  <div class="grid__item one-third" style="padding-left: 50px; border-left: 1.75px solid #f2f2f2;">
-  <div class="grid">
-    <div class="grid__item text-center">
-    <img class="navigation__modal-1-image" src="http://via.placeholder.com/323x203" width="323" height="203" alt="Perky Pick-n- Pack">
-      <span>Just pick a size, your favorite flavors, a shop date, and you're ready to go!</span>
-    </div>
-    <div class="grid__item text-center">
-      <button class="button__btn button__btn--primary" style="margin-top: 53px">Start Packing</button>
-    </div>
-  </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- MODAL 2 -->
-<div id="community-modal" class="modal d-none">
-<div class="navigation__modal">
-<div class="navigation__modal-2-container">
-<div class="grid">
-  <!-- Grid Row -->
-  <div class="grid__item">
-  <div class="grid">
-    <div class="grid__item one-fifth text-center">
-      <img class="navigation__modal-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="What is Perky Jerky?">
-    </div>
-    <div class="grid__item one-fifth text-center">
-      <img class="navigation__modal-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Who we are">
-    </div>
-    <div class="grid__item one-fifth text-center">
-      <img class="navigation__modal-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Jerk Fans">
-    </div>
-    <div class="grid__item one-fifth text-center">
-      <img class="navigation__modal-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Ambassadors">
-    </div>
-    <div class="grid__item one-fifth text-center">
-      <img class="navigation__modal-2-image" width="292" height="188" src="http://via.placeholder.com/292x188" alt="Feel The Buzz">
-    </div>
-  </div>
-  </div>
-</div>
-</div>
-</div>
 </div>
 
 {% schema %}
