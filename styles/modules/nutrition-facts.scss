@@ -3,9 +3,33 @@
 #shopify-section-nutrition-facts {
   background-color: #fff;
   text-transform: uppercase;
-  height: 608px;
+  height: 611.25px;
+  font-size: 15px;
 }
 
+#shopify-section-nutrition-facts td {
+  padding: 11.25px 0px 11.25px 0px;
+}
+
+#shopify-section-nutrition-facts td:first-child {
+  width: 213px;
+}
+
+#shopify-section-nutrition-facts td:not(:first-child) {
+  text-align: center;
+  width: 75px;
+}
+
+#shopify-section-nutrition-facts tr:not(:last-child) {
+  border-bottom: 3px solid #d2d2d2;
+}
+
+#shopify-section-nutrition-facts table {
+  border-collapse: collapse;
+}
+#shopify-section-nutrition-facts button {
+  float: right;
+}
 .fluidratio {
   @include fluid-ratio(800px 200px, 300px 150px);
   background-image: url('');

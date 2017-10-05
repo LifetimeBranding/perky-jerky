@@ -1,15 +1,18 @@
 footer {
   background-color: #f2f2f2 !important;
-  height: 375px;
+  padding: 71.25px 0px 56.25px 0px;
+}
+
+.navigation__footer--links-section {
+  margin: 0 0 0 236.25px;
 }
 
 ul.navigation__footer--social-links {
   padding: 0;
-  margin: 0;
   list-style-type: none;
 }
 
-ul.navigation__footer--links {
+ul.navigation__footer-link {
   text-transform: uppercase;
   font-size: 11.25px;
   font-weight: 800;
@@ -18,11 +21,11 @@ ul.navigation__footer--links {
   list-style-type: none;
 }
 
-ul.navigation__footer--links > li {
+ul.navigation__footer-link > li {
   padding: 0px 0px 18.75px 0px;
 }
 
-ul.navigation__footer--links > li > a {
+ul.navigation__footer-link > li > a {
   color: #000;
   text-decoration: none;
   font-weight: 900;

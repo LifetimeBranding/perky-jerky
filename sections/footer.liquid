@@ -1,24 +1,5 @@
 <footer>
 <div class="page-width">
-  {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
-  <ul class="navigation__footer--social-links">
-    {% for social in social_accounts %}
-      {%- assign social_handle = social | handleize -%}
-      {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
-      {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
-
-      {% if settings[social_link] != blank %}
-        <li>
-          <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
-            {% include social_icon %}
-            <span class="icon-fallback-text">{{ social }}</span>
-          </a>
-        </li>
-      {% endif %}
-
-    {% endfor %}
-  </ul>
-
   {% if section.settings.show_payment_icons %}
     {% unless shop.enabled_payment_types == empty %}
       {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' -%}
@@ -40,11 +21,13 @@
 
   {%- assign footer_linklist = section.settings.footer_linklist -%}
   {% if linklists[footer_linklist].links.size > 0 %}
-    <ul class="navigation__footer--links">
+  <div class="navigation__footer--links-section">
+    <ul class="navigation__footer-link">
       {% for link in linklists[footer_linklist].links %}
         <li>{{ link.title | link_to: link.url }}</li>
       {% endfor %}
     </ul>
+  </div>
   {% endif %}
 
   <div id="footer__copyright-notice">
@@ -76,12 +59,6 @@
         "type": "image_picker",
         "id": "logo",
         "label": "Logo image"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_payment_icons",
-        "label": "Show payment icons",
-        "default": false
       }
     ]
   }
