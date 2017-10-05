@@ -27,11 +27,6 @@
 <div data-section-id="{{ section.id }}" data-section-type="header-section" class="page-width">
   <header role="banner">
 
-    {% if template.name == 'index' %}
-      <h1 itemscope itemtype="http://schema.org/Organization">
-    {% else %}
-      <div class="h1" itemscope itemtype="http://schema.org/Organization">
-    {% endif %}
         <div class="navigation__header--container">
         <!-- Logo -->
         <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
@@ -119,12 +114,6 @@
           </div>
         </div>
         </div>
-
-    {% if template.name == 'index' %}
-      </h1>
-    {% else %}
-      </div>
-    {% endif %}
   </header>
 
   <!-- Navigation -->
