@@ -5,3 +5,8 @@
   text-transform: uppercase;
   height: 608px;
 }
+
+.fluidratio {
+  @include fluid-ratio(800px 200px, 300px 150px);
+  background-image: url('');
+}
