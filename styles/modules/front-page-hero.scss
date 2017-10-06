@@ -3,6 +3,9 @@
 #shopify-section-hero {
   width: 100%;
   background: #DDDDDD;
+  background-image: url('hero_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero__container {
