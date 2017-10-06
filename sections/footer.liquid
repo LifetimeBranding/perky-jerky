@@ -19,6 +19,9 @@
     {% endunless %}
   {% endif %}
 
+  <div class="grid">
+  <!-- Column 1 -->
+  <div class="grid__item medium-up--one-third">
   {%- assign footer_linklist = section.settings.footer_linklist -%}
   {% if linklists[footer_linklist].links.size > 0 %}
   <div class="navigation__footer--links-section">
@@ -29,6 +32,36 @@
     </ul>
   </div>
   {% endif %}
+  </div>
+
+  <!-- Column 2 -->
+    <div class="grid__item medium-up--one-third">
+  {%- assign footer_linklist = section.settings.footer_linklist_2 -%}
+  {% if linklists[footer_linklist].links.size > 0 %}
+  <div class="navigation__footer--links-section">
+    <ul class="navigation__footer-link">
+      {% for link in linklists[footer_linklist].links %}
+        <li>{{ link.title | link_to: link.url }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  </div>
+
+  <!-- Column 3 -->
+    <div class="grid__item medium-up--one-third">
+  {%- assign footer_linklist = section.settings.footer_linklist_3 -%}
+  {% if linklists[footer_linklist].links.size > 0 %}
+  <div class="navigation__footer--links-section">
+    <ul class="navigation__footer-link">
+      {% for link in linklists[footer_linklist].links %}
+        <li>{{ link.title | link_to: link.url }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  </div>
+  </div>
 
   <div id="footer__copyright-notice">
     {% if section.settings.logo != blank %}
@@ -52,7 +85,19 @@
       {
         "type": "link_list",
         "id": "footer_linklist",
-        "label": "First menu",
+        "label": "First Column",
+        "default": "footer"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_2",
+        "label": "Second Column",
+        "default": "footer"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_3",
+        "label": "Third Column",
         "default": "footer"
       },
       {
