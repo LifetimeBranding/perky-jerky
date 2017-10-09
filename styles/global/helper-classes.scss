@@ -3,6 +3,14 @@
   @include clearfix();
 }
 
+ul.inline-list li {
+  display: inline;
+}
+
+li.no-bullets {
+  list-style-type: none;
+}
+
 .visually-hidden {
   @include visually-hidden();
 }

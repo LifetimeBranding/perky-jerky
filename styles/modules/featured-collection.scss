@@ -4,10 +4,67 @@
   background-color: #fff;
   height: 1012px;
   text-transform: uppercase;
+
 }
+
+/*
+#featured-collection-product-stage {
+  background-color: #f2f2f2;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 296.25px;
+}
+*/
 
 .section-featured-collection--item {
   margin-top: 67.5px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.section-featured-collection--item:hover {
+  transform: scale(1.05, 1.05);
+}
+
+#collection-detail-category-container { 
+  text-align: center;
+}
+
+
+#collection-detail-category-container img {
+  margin: auto;
+  z-index: 3;
+}
+#collection-detail-flavor-container {
+  padding-left: 156.25px;
+}
+
+.section-featured-collection__detail--container {
+  position: absolute;
+  left: 0;
+  margin-top: 32.25px;
+  height: 540px;
+  background-color: #aca;
+  padding: 75px 0px 48.75px 0px;
+  width: 100%;
+}
+
+.section-featured-collection__detail--flavor {
+  display: inline-block;
+  width: 75%;
+  text-align: left;
+  height: 75px;
+  vertical-align: middle;
+}
+
+.section-featured-collection__detail--flavor:hover {
+  background-color: #f3a;
+  cursor: pointer;
+  color: #fff;
 }
 
 .section-featured-collection--item > img {
