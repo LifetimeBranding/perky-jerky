@@ -1,18 +1,71 @@
 <div class="grid">
-  <div class="grid__item one-whole medium-up--one-half text-center">
-      <div class="grid">
-      <div class="grid__item">
-    <h4>what theyre saying about us</h4>
-    </div>
-    </div>
+
+<div class="grid__item one-whole medium-up--one-half text-center">
+<div class="grid">
+  <div class="grid__item">
+  <h4>{{ section.settings.featured-by | upcase }}</h4>
   </div>
-  <div class="grid__item one-whole medium-up--one-half text-center">
+  {% comment %}
+    TODO: ADD LOOP HERE. DISPLAY CONTENT IN FLEX CONTAINER
+  {% endcomment %}
+</div>
+</div>
 
-    <div class="grid">
-      <div class="grid__item">
-            <h4>perky jerky retailers</h4>
-      </div>
-    </div>
-
+<div class="grid__item one-whole medium-up--one-half text-center">
+<div class="grid">
+  <div class="grid__item">
+  <h4>{{ section.settings.retailers | upcase }}</h4>
+  </div>
+  <div class="grid__item">
+  {% comment %}
+    TODO: ADD LOOP HERE. DISPLAY CONTENT IN FLEX CONTAINER
+  {% endcomment %}
   </div>
 </div>
+</div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Social Proof",
+  "settings": [
+    {
+      "id": "featured-by",
+      "label": "Featured By Header",
+      "type": "text",
+      "default": "What they are saying about us"
+    },
+    {
+      "id": "retailers",
+      "label": "Retailers Header",
+      "type": "text",
+      "default": "Perky Jerky Retailers"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Featured By",
+      "type": "featured_by",
+      "settings": [
+        {
+          "id": "where",
+          "type": "text",
+          "label": "Name"
+        }
+      ]
+    },
+    {
+      "name": "Retailers",
+      "type": "sold_at",
+      "settings": [
+        {
+          "id": "retailers",
+          "type": "text",
+          "label": "Name"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
