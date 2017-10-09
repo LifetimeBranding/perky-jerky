@@ -9,12 +9,19 @@
   </div>
   
   <div class="grid__item medium-up--one-half">
-    <div style="overflow: hidden; width: 508.5px; height: 322.50px; padding-bottom: 37.5px; float: right; margin-top: 112.5px;">
-    <table style="table-layout: fixed; width: 100%">
+    <div style="overflow: scroll; width: 508.5px; height: 100%; padding-bottom: 37.5px; float: right; margin-top: 112.5px;">
+    <table class="table__perky" id="nutrition-facts">
       <!-- header row -->
       <tr> 
-        <i class="fa fa-info-circle"></i>
-        <td>nutrition facts</td><td>beef</td><td>turkey</td><td>pork</td>
+        <i class="fa fa-info-circle" style="cursor: pointer"></i>
+        <!-- Columns -->
+        <td>nutrition facts</td>
+        {% for block in section.blocks %}
+          <td>
+            <img src="{{block.settings.icon | img_url: '83x67' }}" alt="{{block.settings.image.alt}}">
+            {{ block.settings.name }}
+          </td>
+        {% endfor %}
       </tr>
       <!-- total fat row -->
       <tr>
@@ -50,6 +57,55 @@
 
 {% schema %}
   {
-    "name": "Nutrition Facts"
+    "name": "Nutrition Facts",
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "category",
+        "name": "Category",
+        "settings": [
+          {
+            "id": "icon",
+            "label": "Icon",
+            "type": "image_picker"
+          },
+          {
+            "id": "name",
+            "type": "text",
+            "label": "Name"
+          },
+          {
+            "id": "total-fat",
+            "type": "text",
+            "label": "Total Fat (g)"
+          },
+          {
+            "id": "saturated-fat",
+            "type": "text",
+            "label": "Saturated Fat (g)"
+          },
+          {
+            "id": "cholesterol",
+            "type": "text",
+            "label": "Cholesterol (mg)"
+          },
+          {
+            "id": "sodium",
+            "type": "text",
+            "label": "Sodium (mg)"
+          },
+          {
+            "id": "carbs",
+            "type": "text",
+            "label": "Carbohydrates (g)"
+          },
+          {
+            "id": "protein",
+            "type": "text",
+            "label": "Protein (g)"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
