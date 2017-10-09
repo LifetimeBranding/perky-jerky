@@ -1,5 +1,7 @@
-<div class="page-width">
+<div class="grid page-width">
+
 {% paginate collection.products by 12 %}
+<div class="grid__item one-quarter">
   <header role="banner">
     <h1>{{ collection.title }}</h1>
     {% if collection.description != blank %}
@@ -12,11 +14,11 @@
       <ul>
         {% for tag in collection.all_tags %}
           {% if current_tags contains tag %}
-            <li class="active">
+            <li class="active no-bullets">
               {{ tag | link_to_remove_tag: tag }}
             </li>
           {% else %}
-            <li>
+            <li class="no-bullets">
               {{ tag | link_to_tag: tag }}
             </li>
           {% endif %}
@@ -24,8 +26,8 @@
       </ul>
     {% endif %}
   </header>
-
-  <div>
+</div>
+  <div class="grid__item three-quarters">
     {% for product in collection.products %}
       <div>
         {% if product.featured_image != blank %}
