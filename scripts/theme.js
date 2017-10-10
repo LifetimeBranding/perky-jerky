@@ -18,7 +18,12 @@ window.theme = window.theme || {};
 // =require templates/customers-addresses.js
 // =require templates/customers-login.js
 
+/*================ Theme Components ================*/
+// =require components/theme-components-bundle.js
+
 $(document).ready(function() {
+  var featuredDetailComponent = new FeaturedCollectionComponent('collection-detail-flavor-container');
+
   var sections = new slate.Sections();
   sections.register('product', theme.Product);
 
@@ -37,4 +42,7 @@ $(document).ready(function() {
   if (slate.cart.cookiesEnabled()) {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
+
+  // Theme Components
+    
 });
