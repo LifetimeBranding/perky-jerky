@@ -22,9 +22,9 @@
 }
 
 .button__btn--primary {
-  background-color: {{ settings.color_primary }};
+  background-color: $color-primary;
 }
 
 .button__btn--secondary {
-  background-color: {{ settings.color_secondary }};
+  background-color: $color-secondary;
 }
