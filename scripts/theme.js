@@ -1,6 +1,7 @@
 window.slate = window.slate || {};
 window.theme = window.theme || {};
 
+
 /*================ Slate ================*/
 // =require slate/a11y.js
 // =require slate/cart.js
@@ -21,9 +22,9 @@ window.theme = window.theme || {};
 /*================ Theme Components ================*/
 // =require components/theme-components-bundle.js
 
-$(document).ready(function() {
-  var featuredDetailComponent = new FeaturedCollectionComponent('collection-detail-flavor-container');
+var featuredDetailComponent = new FeaturedCollectionComponent('featured-collection-dropdown')
 
+$(document).ready(function() {
   var sections = new slate.Sections();
   sections.register('product', theme.Product);
 
@@ -44,5 +45,6 @@ $(document).ready(function() {
   }
 
   // Theme Components
+  featuredDetailComponent.toggle();
     
 });

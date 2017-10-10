@@ -6,9 +6,12 @@ class FeaturedCollectionComponent {
         this.container = document.getElementById(container)
     }
 
+    // Display Methods
     public toggle () {
-        if (this.container.style.visibility == 'hidden') {
-           document.getElementById('');
-        }
+        let visibility = this.container.style.visibility
+        visibility === 'hidden' ? this.show() : this.hide()
     }
+
+    private hide() { this.container.style.visibility = 'hidden' }
+    private show() { this.container.style.visibility = 'visible' }
 }
