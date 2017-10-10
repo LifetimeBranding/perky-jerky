@@ -1,4 +1,4 @@
-class FeaturedCollectionComponent {
+class ShowcaseCollectionComponent {
     shown: boolean
     container: HTMLElement
 

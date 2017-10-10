@@ -4,9 +4,9 @@
 <div class="grid__item medium-up--one-whole text-center h-100">
     <!-- Section: Product Stage 
     <div style="position: relative">
-    <div id="featured-collection-product-stage"></div>
+    <div id="showcase-collection-product-stage"></div>
     </div>-->
-  <!-- Section: Featured Products -->
+  <!-- Section: Showcase Products -->
   <div class="grid" style="z-index: 1">
     <div class="grid__item one-whole">
       <img src="http://via.placeholder.com/510x292" width="510" height="292" alt="Guarentee" style="margin-top: 78.75px">
@@ -14,21 +14,21 @@
 
     <div style="padding: 0px 30px 0px 30px">
     <div class="grid__item one-third">
-      <div class="section-featured-collection--item" onclick="featuredDetailComponent.toggle()">
+      <div class="section-showcase-collection--item" onclick="showcaseDetailComponent.toggle()">
         <img src="http://via.placeholder.com/300x382" width="300" height="382" alt="Category 1">
         <span>Jerky</span>
       </div>
     </div>
 
     <div class="grid__item one-third">
-      <div class="section-featured-collection--item" onclick="featuredDetailComponent.toggle()">
+      <div class="section-showcase-collection--item" onclick="showcaseDetailComponent.toggle()">
         <img src="http://via.placeholder.com/109x382" width="109" height="382" alt="Category 2">
         <span>Sticks</span>
       </div>
     </div>
 
     <div class="grid__item one-third">
-      <div class="section-featured-collection--item" onclick="featuredDetailComponent.toggle()">
+      <div class="section-showcase-collection--item" onclick="showcaseDetailComponent.toggle()">
         <img src="http://via.placeholder.com/289x382" width="289" height="382" alt="Category 3">
         <span>Protein Pals</span>
       </div>
@@ -36,12 +36,12 @@
     </div>
 
     <div class="grid__item one-whole text-right" style="margin-top: 63.75px">
-      <a class="btn button__btn button__btn--primary" href="{{ 'Perky Jerky' | url_for_vendor }}">Shop All</a>
+      <a class="btn button__btn button__btn--primary" href="{{ 'All' | url_for_vendor }}">Shop All</a>
     </div>
   </div>
 
   <!-- Dropdown: Product Details -->
-  <div id="featured-collection-dropdown" class="section-featured-collection__detail--container">
+  <div id="showcase-collection-dropdown" class="section-showcase-collection__detail--container">
   <div class="grid page-width">
     <div class="grid__item">
       <div class="grid">
@@ -68,13 +68,13 @@
 
             {% for i in (1..5) %}
               <div class="grid__item">
-                  <div class="section-featured-collection__detail--flavor">
+                  <div class="section-showcase-collection__detail--flavor">
                     Flavor {{ i }}
                   </div>
               </div>
             {% endfor %}
               <div class="grid__item">
-                <div class="section-featured-collection__detail--flavor">
+                <div class="section-showcase-collection__detail--flavor">
                     See All
                 </div>
               </div>
@@ -90,18 +90,12 @@
 
 {% schema %}
   {
-    "name": "Featured collection",
+    "name": "Showcase collection",
     "settings": [
       {
-        "type": "text",
-        "id": "title",
-        "label": "Heading",
-        "default": "Featured collection"
-      },
-      {
-        "id": "collection",
-        "type": "collection",
-        "label": "Collection"
+        "type": "image_picker",
+        "id": "heading-banner",
+        "label": "Heading Banner"
       }
     ]
   }

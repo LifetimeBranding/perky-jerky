@@ -1,6 +1,6 @@
-/*================ Featured Collection ================*/
+/*================ Showcase Collection ================*/
 
-#shopify-section-featured-collection {
+#shopify-section-showcase-collection {
   background-color: #fff;
   height: 1012px;
   text-transform: uppercase;
@@ -8,7 +8,7 @@
 }
 
 /*
-#featured-collection-product-stage {
+#showcase-collection-product-stage {
   background-color: #f2f2f2;
   position: absolute;
   width: 100%;
@@ -19,14 +19,14 @@
 }
 */
 
-.section-featured-collection--item {
+.section-showcase-collection--item {
   margin-top: 67.5px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
   z-index: 9;
 }
 
-.section-featured-collection--item:hover {
+.section-showcase-collection--item:hover {
   transform: scale(1.05, 1.05);
 }
 
@@ -43,21 +43,21 @@
   padding-left: 156.25px;
 }
 
-#featured-collection-dropdown {
+#showcase-collection-dropdown {
   visibility: hidden;
 }
 
-.section-featured-collection__detail--container {
+.section-showcase-collection__detail--container {
   position: absolute;
   left: 0;
   margin-top: 32.25px;
   height: 540px;
-  background-color: #aca;
+  background-color: #fff;
   padding: 75px 0px 48.75px 0px;
   width: 100%;
 }
 
-.section-featured-collection__detail--flavor {
+.section-showcase-collection__detail--flavor {
   display: inline-block;
   width: 75%;
   text-align: left;
@@ -65,17 +65,17 @@
   vertical-align: middle;
 }
 
-.section-featured-collection__detail--flavor:hover {
+.section-showcase-collection__detail--flavor:hover {
   background-color: #f3a;
   cursor: pointer;
   color: #fff;
 }
 
-.section-featured-collection--item > img {
+.section-showcase-collection--item > img {
   display: block;
   margin: 0px auto 22.5px auto;
 }
 
-.section-featured-collection--item > span {
+.section-showcase-collection--item > span {
   font-size: 27.75px;
 }

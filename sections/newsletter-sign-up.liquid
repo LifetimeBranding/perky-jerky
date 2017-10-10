@@ -20,13 +20,25 @@
         <input type="text" name="zipcode" placeholder="Zip Code">
         <input type="email" name="email" placeholder="Email Address">
       </div>
-      <button class="button__btn button__btn--primary">Subscribe</button>
+      <button class="button__btn button__btn--primary" onclick="this.innerHTML='Getting perky...'">Subscribe</button>
     </div>
     
   </div>
 
   {% schema %}
   {
-    "name": "Newsletter Sign Up"
+    "name": "Newsletter Sign Up",
+    "settings": [
+    {
+      "id": "api",
+      "label": "API Key",
+      "type": "text"
+    },
+    {
+      "id": "listid",
+      "label": "Newsletter ID",
+      "type": "text"
+    }
+    ]
   }
 {% endschema %}

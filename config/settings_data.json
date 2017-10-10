@@ -3,8 +3,8 @@
   "presets": {
     "Perky Jerky": {
       "sections": {
-        "featured-collection": {
-          "type": "featured-collection"
+        "showcase-collection": {
+          "type": "showcase-collection"
         },
         "pick-and-pack": {
           "type": "pick-and-pack"
@@ -30,7 +30,7 @@
       },
       "content_for_index": [
         "incentive-with-cta",
-        "featured-collection",
+        "showcase-collection",
         "pick-and-pack",
         "nutrition-facts",
         "brand-ambassador",

@@ -22,7 +22,7 @@ window.theme = window.theme || {};
 /*================ Theme Components ================*/
 // =require components/theme-components-bundle.js
 
-var featuredDetailComponent = new FeaturedCollectionComponent('featured-collection-dropdown')
+var showcaseDetailComponent = new ShowcaseCollectionComponent('showcase-collection-dropdown')
 
 $(document).ready(function() {
   var sections = new slate.Sections();
