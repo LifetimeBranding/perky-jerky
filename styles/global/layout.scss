@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  /*font-family: {{ settings.type_body_font }};*/
+  font-family: $font-stack-body;
 }
 
 .h-100 {
