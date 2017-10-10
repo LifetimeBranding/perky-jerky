@@ -45,6 +45,6 @@ $(document).ready(function() {
   }
 
   // Theme Components
-  featuredDetailComponent.toggle();
+  showcaseDetailComponent.toggle();
     
 });

@@ -9,27 +9,27 @@
   <!-- Section: Showcase Products -->
   <div class="grid" style="z-index: 1">
     <div class="grid__item one-whole">
-      <img src="http://via.placeholder.com/510x292" width="510" height="292" alt="Guarentee" style="margin-top: 78.75px">
+      <img src="{{ section.settings.header-image | img_url: '509x292' }}" width="509" height="292" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px">
     </div>
 
     <div style="padding: 0px 30px 0px 30px">
     <div class="grid__item one-third">
       <div class="section-showcase-collection--item" onclick="showcaseDetailComponent.toggle()">
-        <img src="http://via.placeholder.com/300x382" width="300" height="382" alt="Category 1">
+        <img src="{{ section.settings.jerky-image | img_url: '300x382' }}" width="300" height="382" alt="{{ section.settings.jerky-image.alt }}">
         <span>Jerky</span>
       </div>
     </div>
 
     <div class="grid__item one-third">
       <div class="section-showcase-collection--item" onclick="showcaseDetailComponent.toggle()">
-        <img src="http://via.placeholder.com/109x382" width="109" height="382" alt="Category 2">
+        <img src="{{ section.settings.sticks-image | img_url: '109x382' }}" width="109" height="382" alt="{{ section.settings.sticks-image.alt }}">
         <span>Sticks</span>
       </div>
     </div>
 
     <div class="grid__item one-third">
       <div class="section-showcase-collection--item" onclick="showcaseDetailComponent.toggle()">
-        <img src="http://via.placeholder.com/289x382" width="289" height="382" alt="Category 3">
+        <img src="{{ section.settings.protein-pals-image | img_url: '289x382' }}" width="300" height="382" alt="{{ section.settings.protein-pals-image.alt }}">
         <span>Protein Pals</span>
       </div>
     </div>
@@ -94,8 +94,23 @@
     "settings": [
       {
         "type": "image_picker",
-        "id": "heading-banner",
+        "id": "header-image",
         "label": "Heading Banner"
+      },
+      {
+        "type": "image_picker",
+        "id": "jerky-image",
+        "label": "Jerky Package"
+      },
+      {
+        "type": "image_picker",
+        "id": "sticks-image",
+        "label": "Sticks Package"
+      },
+      {
+        "type": "image_picker",
+        "id": "protein-pals-image",
+        "label": "Protein Pals Package"
       }
     ]
   }
