@@ -4,10 +4,12 @@
   height: 375px;
 }
 
-// Alternating column colors
-#shopify-section-social-proof :nth-child(2) {
-  background-color: #f2f2f2;
+// Proof Container
+.proof-container {
+    max-width: 551.25px;
+    margin: auto;
 }
+
 
 #shopify-section-social-proof h4 {
   margin: 63.75px 0px 69.75px 0px;

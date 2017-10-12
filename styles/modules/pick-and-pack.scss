@@ -24,22 +24,18 @@
 }
 
 /*================ Centerpiece ================*/
+
 #pick-and-pack-centerpiece {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#pick-and-pack-centerpiece img {
+  margin: auto;
   position: absolute;
 }
 
-#pick-and-pack-centerpiece > div {
-  position: relative;
-  left: 50%;
-  margin: auto;
-  text-align: center;
-  width: 552px;
-}
-
-#pick-and-pack-centerpiece > img {
-  width: 100%;
-  height: 100%;
-}
 
 /*================ Right Side ================*/
 #pick-and-pack-right {

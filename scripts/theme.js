@@ -20,7 +20,7 @@ window.theme = window.theme || {};
 // =require templates/customers-login.js
 
 /*================ Theme Components ================*/
-// =require components/theme-components-bundle.js
+// =require custom/build/showcase-collection.js
 
 var showcaseDetailComponent = new ShowcaseCollectionComponent('showcase-collection-dropdown')
 

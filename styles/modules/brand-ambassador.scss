@@ -2,6 +2,8 @@
 
 #shopify-section-brand-ambassador {
   background-color: #9fb48c;
+  background-image: url('{{ section.settings.background | img_url }}');
+  background-size: cover;
   height: 600px;
 }
 

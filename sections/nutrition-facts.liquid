@@ -1,53 +1,50 @@
 <!-- TODO: FIX INLINE SECTIONS -->
 <div class="grid page-width">
+
   <div class="grid__item medium-up--one-half">
-
-    <div style="margin-top: 210px">
-      <h1>TENDER</h1>
-    </div>
-
+    <!-- Background Image -->
   </div>
   
   <div class="grid__item medium-up--one-half">
     <div style="overflow: scroll; width: 508.5px; height: 100%; padding-bottom: 37.5px; float: right; margin-top: 112.5px;">
-    <table class="responsive-table" id="nutrition-facts">
-      <!-- header row -->
-      <tr> 
-        <i class="fa fa-info-circle" style="cursor: pointer"></i>
-        <!-- Columns -->
-        <td>nutrition facts</td>
-        {% for block in section.blocks %}
-          <td>
-            <img src="{{block.settings.icon | img_url: '83x67' }}" alt="{{block.settings.image.alt}}">
-            {{ block.settings.name }}
-          </td>
-        {% endfor %}
-      </tr>
-      <!-- total fat row -->
-      <tr>
-        <td>total fat (g)</td><td>8</td><td>8</td><td>8</td>
-      </tr>
-      <!-- saturated fat row -->
-      <tr>
-        <td>saturated fat (g)</td><td>6</td><td>6</td><td>6</td>
-      </tr>
-      <!-- cholesterol row -->
-      <tr>
-        <td>cholesterol (mg)</td><td>55</td><td>55</td><td>55</td>
-      </tr>
-      <!-- sodium row -->
-      <tr>
-        <td>sodium (mg)</td><td>4</td><td>4</td><td>4</td>
-      </tr>
-      <!-- carbohydrates -->
-      <tr>
-        <td>carbohydrates (g)</td><td>44</td><td>44</td><td>44</td>
-      </tr>
-      <!-- protein row -->
-      <tr>
-        <td>protein (g)</td><td>6</td><td>6</td><td>6</td>
-      </tr>
-    </table>
+      <table class="responsive-table" id="nutrition-facts">
+        <!-- Header Row -->
+        <tr> 
+          <i class="fa fa-info-circle" style="cursor: pointer"></i>
+          <!-- Columns -->
+          <td>nutrition facts</td>
+          {% for block in section.blocks %}
+            <td>
+              <img src="{{block.settings.icon | img_url: '83x67' }}" alt="{{block.settings.image.alt}}">
+              {{ block.settings.name }}
+            </td>
+          {% endfor %}
+        </tr>
+        <!-- total fat row -->
+        <tr>
+          <td>total fat (g)</td><td>8</td><td>8</td><td>8</td>
+        </tr>
+        <!-- saturated fat row -->
+        <tr>
+          <td>saturated fat (g)</td><td>6</td><td>6</td><td>6</td>
+        </tr>
+        <!-- cholesterol row -->
+        <tr>
+          <td>cholesterol (mg)</td><td>55</td><td>55</td><td>55</td>
+        </tr>
+        <!-- sodium row -->
+        <tr>
+          <td>sodium (mg)</td><td>4</td><td>4</td><td>4</td>
+        </tr>
+        <!-- carbohydrates -->
+        <tr>
+          <td>carbohydrates (g)</td><td>44</td><td>44</td><td>44</td>
+        </tr>
+        <!-- protein row -->
+        <tr>
+          <td>protein (g)</td><td>6</td><td>6</td><td>6</td>
+        </tr>
+      </table>
     </div>
 
      <a class="btn button__btn button__btn--primary" href="{{ 'Jerky' | url_for_type }}">Shop Jerky</a>
@@ -58,6 +55,14 @@
 {% schema %}
   {
     "name": "Nutrition Facts",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Featured Image",
+        "id": "featured_image"
+      }
+    ],
+
     "max_blocks": 3,
     "blocks": [
       {
