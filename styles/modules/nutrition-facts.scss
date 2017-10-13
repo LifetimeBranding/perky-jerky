@@ -3,7 +3,7 @@
 #shopify-section-nutrition-facts {
   background-color: #fff;
   text-transform: uppercase;
-  max-height: 611.25px;
+  min-height: 611.25px;
   font-size: 15px;
 }
 
@@ -16,22 +16,19 @@
 
 }
 
-
 #shopify-section-nutrition-facts td {
   padding: 0px 0px 11.25px 0px;
 }
 
+// first column
 #shopify-section-nutrition-facts td:first-child {
-  width: 213px;
+  //width: 213px;
+  width: 35%;
 }
-
-
 
 #shopify-section-nutrition-facts td:not(:first-child) {
   text-align: center;
-  //width: 75px;
 }
-
 
 #shopify-section-nutrition-facts tr:not(:last-child) {
   border-bottom: 3px solid #d2d2d2;

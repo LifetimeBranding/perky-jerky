@@ -1,7 +1,7 @@
 {% assign items_per_row = 3 %}
 
 <div class="grid h-100">
-<div class="grid__item one-whole medium-up--one-half text-center">
+<div class="grid__item one-whole medium-up--one-half text-center h-100">
 <div class="grid">
   <div class="grid__item">
   <h4>{{ section.settings.featured-by | upcase }}</h4>
@@ -9,7 +9,7 @@
     <div class="proof-container">
       {%- for block in section.blocks -%}
         {%- if block.type == 'featured_by' -%}
-          <img src="{{ block.settings.image | img_url: '167x77' }}" alt="{{ block.settings.who }}">
+          <img src="{{ block.settings.image | img_url: '222x102' }}" alt="{{ block.settings.who }}" width="167" height="77">
         {%- endif -%}
       {%- endfor -%}
     </div>
@@ -26,7 +26,7 @@
       <div class="grid">
         {%- for block in section.blocks -%}
           {%- if block.type == 'sold_at' -%}
-            <img src="{{ block.settings.image | img_url: '167x77' }}" alt="{{ block.settings.who }}">
+            <img src="{{ block.settings.image | img_url: '222x102' }}" alt="{{ block.settings.who }}" width="167" height="77">
           {%- endif -%}
         {%- endfor -%}
       </div>
