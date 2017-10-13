@@ -46,5 +46,13 @@ $(document).ready(function() {
 
   // Theme Components
   showcaseDetailComponent.toggle();
+
+  // Frontpage Hero
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    dots: true,
+    loop: true,
+    autoplay: true,
+  });
     
 });
