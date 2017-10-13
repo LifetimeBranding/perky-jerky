@@ -8,12 +8,20 @@
 }
 
 #shopify-section-nutrition-facts .table-container {
-  //width: 508.5px; 
+  max-width: 508.5px; 
   height: 100%; 
-  padding-bottom: 37.5px; 
+  overflow-x: auto;
+  //padding-bottom: 37.5px; 
   //float: right; 
   margin-top: 112.5px;
 
+}
+
+#shopify-section-nutrition-facts table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  overflow: auto;
 }
 
 #shopify-section-nutrition-facts td {

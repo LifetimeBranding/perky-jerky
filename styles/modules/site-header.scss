@@ -24,6 +24,11 @@ ul.navigation__header--links > li > a {
   font-weight: 700;
 }
 
+.navigation__link {
+  color: #000;
+  text-decoration: none;
+}
+
 .navigation__dropdown-content::before {
   content: ' '; 
   position: absolute;
