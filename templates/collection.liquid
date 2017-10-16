@@ -1,6 +1,8 @@
 <div class="grid page-width">
 
 {% paginate collection.products by 12 %}
+
+<!-- Sidebar -->
 <div class="grid__item one-quarter">
   <header role="banner">
     <h1>{{ collection.title }}</h1>
@@ -27,9 +29,12 @@
     {% endif %}
   </header>
 </div>
+
+<!-- Product Grid -->
   <div class="grid__item three-quarters">
+    <div class="grid">
     {% for product in collection.products %}
-      <div>
+      <div class="grid__item one-third">
         {% if product.featured_image != blank %}
           <a href="{{ product.url | within: collection }}">
             {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
@@ -93,6 +98,7 @@
       {% endif %}
 
     {% endfor %}
+  </div>
   </div>
 
   {% if paginate.pages > 1 %}
