@@ -21,8 +21,10 @@ window.theme = window.theme || {};
 
 /*================ Theme Components ================*/
 // =require custom/build/showcase-collection.js
+// =require custom/build/interactive-navigation.js
 
 var showcaseDetailComponent = new ShowcaseCollectionComponent('showcase-collection-dropdown')
+var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu');
 
 $(document).ready(function() {
   var sections = new slate.Sections();
