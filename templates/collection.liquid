@@ -1,6 +1,6 @@
 <div class="grid page-width">
 
-{% paginate collection.products by 12 %}
+{% paginate collection.products by 6 %}
 
 <!-- Sidebar -->
 <div class="grid__item one-quarter">
@@ -14,6 +14,7 @@
 
     {% if collection.all_tags.size > 0 %}
       <ul>
+        <li class="no-bullets">All Products</li>
         {% for tag in collection.all_tags %}
           {% if current_tags contains tag %}
             <li class="active no-bullets">
@@ -34,7 +35,7 @@
   <div class="grid__item three-quarters">
     <div class="grid">
     {% for product in collection.products %}
-      <div class="grid__item one-third">
+      <div class="grid__item one-third" style="padding: 5px; text-align: center">
         {% if product.featured_image != blank %}
           <a href="{{ product.url | within: collection }}">
             {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}

@@ -11,6 +11,7 @@
   max-width: 360px;
   text-align: center;
   margin-top: 123.75px;
+  z-index: 1;
 }
 
 #pick-and-pack-left > img {
@@ -26,15 +27,16 @@
 /*================ Centerpiece ================*/
 
 #pick-and-pack-centerpiece {
-  position: relative;
+  position: absolute;
   height: 100%;
-  width: 100%;
+  width: 500px;
 }
 
 #pick-and-pack-centerpiece img {
-  margin: auto;
   position: absolute;
-  top: 100%;
+  bottom: 0;
+  margin-left: 50%;
+  z-index: 0;
 }
 
 
@@ -42,6 +44,7 @@
 #pick-and-pack-right {
   margin-top: 150px; 
   padding-left: 200px;
+  z-index: 1;
 }
 
 #pick-and-pack-right ol {

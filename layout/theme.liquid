@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="{{ settings.color_primary }}">
   <link rel="canonical" href="{{ canonical_url }}">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Is this even being used?
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  -->
 
   {% if settings.favicon != blank %}
     <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
@@ -73,6 +75,5 @@
 
   {% section 'footer' %}
   {{ '//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' | script_tag }}
-  {{ 'pj.js' | asset_url | script_tag }}
 </body>
 </html>

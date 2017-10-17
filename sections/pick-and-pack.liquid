@@ -1,11 +1,10 @@
 
-<div class="h-100" style="background-image: url('{{ section.settings.background | img_url: '1997x807' }}'); background-size: cover; background-position: center center;">
+<div class="h-100" style="background-image: url('{{ section.settings.background | img_url: '1997x807' }}'); background-size: cover; background-position: center center; position: relative;">
+
+
+
 
 <div class="grid page-width">
-
-    <!--<div class="h-100" id="pick-and-pack-centerpiece">
-      <img src="{{ section.settings.centerpiece | img_url: '592x744' }}">
-    </div>-->
 
   <!-- Left Side -->
   <div class="grid__item small--one-whole one-half">
@@ -18,7 +17,10 @@
       <span style="font-size: 21px;">try 'em all in one box.</span>
     </div>
   </div>
-
+      <!--Centerpiece -->
+      <div id="pick-and-pack-centerpiece">
+      <img src="{{ section.settings.centerpiece | img_url: '592x744' }}" alt="Pick and Pack Box">
+      </div>
   <!-- Right Side -->
   <div class="grid__item small--hide one-half">
     <div id="pick-and-pack-right">

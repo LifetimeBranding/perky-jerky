@@ -29,13 +29,12 @@
 
         <div class="navigation__header--container">
         <!-- Logo -->
-        <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+        <a href="/" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
           {%- if section.settings.logo != blank -%}
             {%- capture image_size -%}{{ section.settings.logo_max_width }}x{%- endcapture -%}
             <img src="{{ section.settings.logo | img_url: image_size }}"
                  srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-                 alt="{{ section.settings.logo.alt | default: shop.name }}"
-                 itemprop="logo">
+                 alt="{{ section.settings.logo.alt | default: shop.name }}">
           {%- else -%}
             {{ shop.name }}
           {% endif -%}
@@ -132,7 +131,8 @@
   </div>
   <div class="grid__item one-half" style="width: 100px">
     <div class="navigation__main-menu--icon">
-    <img src="{{ 'menu-drawing.png' | asset_img_url: '110x75' }}" width="82" height="56" alt="I'm your menu" onclick="interactiveNavigation.toggle()">
+    <img src="{{ 'menu-drawing.png' | asset_img_url: '110x75' }}" width="82" height="56" alt="I'm your menu" 
+    onclick="interactiveNavigation.toggle()">
     </div>
   </div>
   </div>
