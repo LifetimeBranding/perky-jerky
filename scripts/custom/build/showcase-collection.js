@@ -19,10 +19,14 @@ var ShowcaseCollectionComponent = /** @class */ (function () {
         this.isVisible() ? this.close() : this.open();
     };
     ShowcaseCollectionComponent.prototype.switchTo = function (id) {
-        // Open if closed
-        if (!this.isVisible())
-            this.toggle();
         this.openedCategory = id;
+        if (this.isVisible()) {
+            // transition to new category
+        }
+        else {
+            // open if not already
+            this.toggle();
+        }
     };
     ShowcaseCollectionComponent.prototype.isVisible = function () {
         return this.container.style.visibility === 'visible';
@@ -30,9 +34,11 @@ var ShowcaseCollectionComponent = /** @class */ (function () {
     ShowcaseCollectionComponent.prototype.close = function () {
         this.openedCategory = null;
         this.container.style.visibility = 'hidden';
+        window.scrollBy(0, -500);
     };
     ShowcaseCollectionComponent.prototype.open = function () {
         this.container.style.visibility = 'visible';
+        window.scrollBy(0, 500);
     };
     return ShowcaseCollectionComponent;
 }());

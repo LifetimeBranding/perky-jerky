@@ -25,10 +25,13 @@ class ShowcaseCollectionComponent {
     }
 
     protected switchTo(id: number) {
-      // Open if closed
-      if (!this.isVisible()) this.toggle()
-
       this.openedCategory = id
+      if (this.isVisible()) {
+        // transition to new category
+      } else {
+        // open if not already
+        this.toggle()
+      }
     }
 
     protected isVisible() {
@@ -37,10 +40,12 @@ class ShowcaseCollectionComponent {
 
     protected close() { 
       this.openedCategory = null
-      this.container.style.visibility = 'hidden' 
+      this.container.style.visibility = 'hidden'
+      window.scrollBy(0, -500)
     }
     
     protected open() { 
-      this.container.style.visibility = 'visible' 
+      this.container.style.visibility = 'visible'
+      window.scrollBy(0, 500)
     }
 }
