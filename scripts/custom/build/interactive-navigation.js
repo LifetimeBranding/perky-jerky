@@ -3,7 +3,10 @@ var InteractiveNavigationComponent = /** @class */ (function () {
         this.slideOutSelector = document.getElementById(slideOutSelector);
     }
     InteractiveNavigationComponent.prototype.toggle = function () {
-        this.slideOutSelector.style.width == "0px" ? this.open() : this.close();
+        this.isOpen() ? this.close() : this.open();
+    };
+    InteractiveNavigationComponent.prototype.isOpen = function () {
+        return this.slideOutSelector.style.width !== "0px";
     };
     InteractiveNavigationComponent.prototype.open = function () {
         this.slideOutSelector.style.width = '100%';

@@ -6,7 +6,11 @@ class InteractiveNavigationComponent {
     }
 
     public toggle() {
-        this.slideOutSelector.style.width == "0px" ? this.open() : this.close();
+        this.isOpen() ? this.close() : this.open();
+    }
+
+    public isOpen() {
+        return this.slideOutSelector.style.width !== "0px"
     }
 
     public open() {
