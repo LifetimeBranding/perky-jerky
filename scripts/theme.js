@@ -23,7 +23,7 @@ window.theme = window.theme || {};
 // =require custom/build/showcase-collection.js
 // =require custom/build/interactive-navigation.js
 
-var showcaseDetailComponent = new ShowcaseCollectionComponent('showcase-collection-dropdown')
+var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown')
 var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu');
 
 $(document).ready(function() {
@@ -45,9 +45,6 @@ $(document).ready(function() {
   if (slate.cart.cookiesEnabled()) {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
-
-  // Theme Components
-  showcaseDetailComponent.toggle();
 
   // Frontpage Hero
   $('.owl-carousel').owlCarousel({
