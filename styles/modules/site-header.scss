@@ -32,11 +32,11 @@ ul.navigation__header--links > li > a {
 .navigation__dropdown-content::before {
   content: ' '; 
   position: absolute;
-  right: 50%;
+  right: 60%;
   bottom: 100%;
   border-width: 37.5px; 
   border-style: solid; 
-  border-color: transparent transparent #ffffff transparent;
+  border-color: transparent transparent #fff transparent;
 }
 
 /* Navigation: Dropdowns */
@@ -53,6 +53,7 @@ ul.navigation__header--links > li > a {
   z-index: 9;
   background-color: #fff;
   margin-top: 33.75px;
+  box-shadow: 0 0 2.5em darkgray;
 }
 
 .navigation__dropdown:hover .navigation__dropdown-content {
