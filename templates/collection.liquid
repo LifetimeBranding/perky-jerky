@@ -1,4 +1,4 @@
-<div class="grid page-width">
+<div class="grid page-width" style="margin: 50px auto 100px auto">
 
 {% paginate collection.products by 6 %}
 
@@ -111,10 +111,15 @@
 
     {% endfor %}
   </div>
-  </div>
 
+  <!-- Pagination -->
+  <div style="float: right; margin-top: 100px">
   {% if paginate.pages > 1 %}
     {% include 'pagination' %}
   {% endif %}
+</div>
+
+  </div>
+
 {% endpaginate %}
 </div>
