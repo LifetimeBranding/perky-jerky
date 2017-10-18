@@ -67,7 +67,7 @@
               <div class="grid__item one-third text-center">
 
                 <img class="navigation__dropdown-1-image" 
-                src="{{ block.settings.image }}" width="188" height="203"
+                src="{{ block.settings.image | img_url }}" width="188" height="203"
                 alt="{{ block.settings.image.alt }}">
 
                 <span>{{ block.settings.collection }}</span>
@@ -88,7 +88,7 @@
             <div class="grid__item text-center">
 
               <img class="navigation__dropdown-1-image" 
-              src="{{ section.settings.logo_for_picknpack }}" 
+              src="{{ section.settings.logo_for_picknpack | img_url }}" 
               width="323" height="203" 
               alt="{{ section.settings.logo_for_picknpack.alt }}">
 
@@ -116,7 +116,7 @@
 
                 <div class="grid__item one-fifth text-center">
                   <img class="navigation__dropdown-2-image" width="292" height="188"
-                  src="{{ block.settings.image }}" alt="{{ block.settings.image.alt }}">
+                  src="{{ block.settings.image | img_url }}" alt="{{ block.settings.image.alt }}">
                 </div>
 
               {%- endif -%}
