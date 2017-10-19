@@ -26,6 +26,9 @@
         },
         "newsletter-sign-up": {
           "type": "newsletter-sign-up"
+        },
+        "package-deals": {
+          "type": "package-deals"
         }
       },
       "content_for_index": [

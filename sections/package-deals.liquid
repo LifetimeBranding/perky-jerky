@@ -1,0 +1,38 @@
+<div class="grid page-width">
+  <div class="grid__item one-whole" style="margin: 47.25px 0px 22.5px 0px">
+    <h1>{{ 'Package Deals' | upcase }}</h1>
+  </div>
+
+  {%- for block in section.blocks -%}
+    <div class="grid__item one-third">
+      <img src="{{ block.settings.image | img_url: '413x259' }}" width="310" height="195" style="padding: 11.25px">
+      <p style="max-width: 250px; margin: auto"> {{ block.settings.description }} </p>
+    </div>
+  {%- endfor -%}
+
+</div>
+
+{% schema %}
+  {
+    "name": "Package Deals",
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "package_deals",
+        "name": "Package Deals",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
