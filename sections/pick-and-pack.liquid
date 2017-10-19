@@ -1,5 +1,5 @@
 
-<div class="h-100" style="background-image: url('{{ section.settings.background | img_url: '1997x807' }}'); background-size: cover; background-position: center center; position: relative;">
+<div class="h-100" style="background-image: url('{{ section.settings.background | img_url: 'master' }}'); background-size: cover; background-position: center center; position: relative;">
 
 
 
@@ -10,16 +10,16 @@
   <div class="grid__item small--one-whole one-half">
     <div id="pick-and-pack-left">
     <!-- Brand Logo -->
-      <img src="{{ section.settings.logo | img_url: '161x46' }}" width="124" height="38" alt="Logo" style="margin-bottom: 20px;">
+      <img src="{{ section.settings.logo | img_url: 'master' }}" width="124" height="38" alt="Logo" style="margin-bottom: 20px;">
       <!-- Pick -n- Pack Banner Image -->
-      <img src="{{ section.settings.banner | img_url: '437x176' }}" width="358" height="124" alt="Pick and Pack Banner">
+      <img src="{{ section.settings.banner | img_url: 'master' }}" width="358" height="124" alt="Pick and Pack Banner">
       <span style="font-size: 45px; display: block; margin-top: 40px;">can't decide?</span>
       <span style="font-size: 21px;">try 'em all in one box.</span>
     </div>
   </div>
       <!--Centerpiece -->
       <div id="pick-and-pack-centerpiece">
-      <img src="{{ section.settings.centerpiece | img_url: '592x744' }}" alt="Pick and Pack Box">
+      <img src="{{ section.settings.centerpiece | img_url: 'master' }}" alt="Pick and Pack Box">
       </div>
   <!-- Right Side -->
   <div class="grid__item small--hide one-half">
@@ -30,7 +30,7 @@
         <li>delivery date</li>
         <li>pack it!</li>
       </ol>
-      <a class="btn button__btn button__btn--secondary" href="{{ pages.pickandpack.url }}">Start Packing</a>
+      <a class="btn button__btn button__btn--secondary" href="/collections/pick-and-pack">Start Packing</a>
     </div>
   </div>
 </div>

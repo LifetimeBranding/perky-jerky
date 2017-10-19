@@ -5,34 +5,34 @@
   <!-- Section: Showcase Products -->
   <div class="grid">
     <div class="grid__item one-whole">
-      <img src="{{ section.settings.header-image | img_url: '509x294' }}" width="509" height="294" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px;">
+      <img src="{{ section.settings.header-image | img_url: 'master' }}" width="509" height="294" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px;">
     </div>
 
     <div style="padding: 0px 30px 0px 30px">
     <div class="grid__item one-third">
       <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(1)">
-        <img src="{{ section.settings.jerky-image | img_url: '454x547' }}" width="300" height="382" alt="{{ section.settings.jerky-image.alt }}">
+        <img src="{{ section.settings.jerky-image | img_url: 'master' }}" width="300" height="382" alt="{{ section.settings.jerky-image.alt }}">
         <span>Jerky</span>
       </div>
     </div>
 
     <div class="grid__item one-third">
       <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(2)">
-        <img src="{{ section.settings.sticks-image | img_url: '150x536' }}" width="109" height="382" alt="{{ section.settings.sticks-image.alt }}">
+        <img src="{{ section.settings.sticks-image | img_url: 'master' }}" width="109" height="382" alt="{{ section.settings.sticks-image.alt }}">
         <span>Sticks</span>
       </div>
     </div>
 
     <div class="grid__item one-third">
       <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(3)">
-        <img src="{{ section.settings.protein-pals-image | img_url: '454x547' }}" width="300" height="382" alt="{{ section.settings.protein-pals-image.alt }}">
+        <img src="{{ section.settings.protein-pals-image | img_url: 'master' }}" width="300" height="382" alt="{{ section.settings.protein-pals-image.alt }}">
         <span>Protein Pals</span>
       </div>
     </div>
     </div>
 
     <div class="grid__item one-whole text-right" style="margin-top: 63.75px">
-      <a class="btn button__btn button__btn--primary" href="{{ 'All' | url_for_vendor }}">Shop All</a>
+      <a class="btn button__btn button__btn--primary" href="/collections/all">Shop All</a>
     </div>
   </div>
 

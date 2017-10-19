@@ -9,7 +9,7 @@
     <div class="proof-container">
       {%- for block in section.blocks -%}
         {%- if block.type == 'featured_by' -%}
-          <img src="{{ block.settings.image | img_url: '222x102' }}" alt="{{ block.settings.who }}" width="167" height="77">
+          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.who }}" width="167" height="77">
         {%- endif -%}
       {%- endfor -%}
     </div>
@@ -26,7 +26,7 @@
       <div class="grid">
         {%- for block in section.blocks -%}
           {%- if block.type == 'sold_at' -%}
-            <img src="{{ block.settings.image | img_url: '222x102' }}" alt="{{ block.settings.who }}" width="167" height="77">
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.who }}" width="167" height="77">
           {%- endif -%}
         {%- endfor -%}
       </div>

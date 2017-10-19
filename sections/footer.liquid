@@ -66,8 +66,8 @@
   <div id="footer__copyright-notice">
     {% if section.settings.logo != blank %}
       {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-        <img src="{{ section.settings.logo | img_url: image_size }}"
-              srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+        <img src="{{ section.settings.logo | img_url: 'master' }}"
+              srcset="{{ section.settings.logo | img_url: 'master' }} 1x, {{ section.settings.logo | img_url: 'master', scale: 2 }} 2x"
               alt="{{ section.settings.logo.alt | default: shop.name }}"
               itemprop="logo">
       {% else %}

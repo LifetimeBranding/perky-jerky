@@ -42,8 +42,8 @@
     <a href="/" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
       {%- if section.settings.logo != blank -%}
         {%- capture image_size -%}{{ section.settings.logo_max_width }}x{%- endcapture -%}
-        <img src="{{ section.settings.logo | img_url: image_size }}"
-             srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+        <img src="{{ section.settings.logo | img_url: 'master' }}"
+             srcset="{{ section.settings.logo | img_url: 'master' }} 1x, {{ section.settings.logo | img_url: 'master', scale: 2 }} 2x"
              alt="{{ section.settings.logo.alt | default: shop.name }}">
       {%- else -%}
         {{ shop.name }}
@@ -67,7 +67,7 @@
               <div class="grid__item one-third text-center">
 
                 <img class="navigation__dropdown-1-image" 
-                src="{{ block.settings.image | img_url }}" width="188" height="203"
+                src="{{ block.settings.image | img_url: 'master' }}" width="188" height="203"
                 alt="{{ block.settings.image.alt }}">
 
                 <span>{{ block.settings.collection }}</span>
@@ -88,8 +88,8 @@
             <div class="grid__item text-center">
 
               <img class="navigation__dropdown-1-image" 
-              src="{{ section.settings.logo_for_picknpack | img_url }}" 
-              width="323" height="203" 
+              src="{{ section.settings.logo_for_picknpack | img_url: 'master' }}" 
+              width="310" height="195" 
               alt="{{ section.settings.logo_for_picknpack.alt }}">
 
               <span>Just pick a size, your favorite flavors, a shop date, and you're ready to go!</span>
@@ -116,7 +116,7 @@
 
                 <div class="grid__item one-fifth text-center">
                   <img class="navigation__dropdown-2-image" width="292" height="188"
-                  src="{{ block.settings.image | img_url }}" alt="{{ block.settings.image.alt }}">
+                  src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
                 </div>
 
               {%- endif -%}
