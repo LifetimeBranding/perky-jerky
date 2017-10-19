@@ -5,4 +5,26 @@
   text-transform: uppercase;
   color: white;
   height: 94px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#shopify-section-incentive-with-cta .v-center {
+  margin-top: -15px;
+}
+
+#shopify-section-incentive-with-cta .btn {
+  font-size: 13px;
+  padding: 5px;
+}
+
+@include media-query('medium-up') {
+  #shopify-section-incentive-with-cta {
+    font-size: 19px;
+  }
+
+  #shopify-section-incentive-with-cta .v-center {
+    margin-top: -9px;
+  }
+
 }

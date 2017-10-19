@@ -10,7 +10,7 @@
 #pick-and-pack-left {
   max-width: 360px;
   text-align: center;
-  margin-top: 123.75px;
+  margin: 123.75px auto auto auto;
   z-index: 1;
 }
 
@@ -24,21 +24,34 @@
   margin: auto;
 }
 
+@include media-query('widescreen') {
+  #pick-and-pack-left {
+  margin-left: -100px;
+  }
+}
+
 /*================ Centerpiece ================*/
 
 #pick-and-pack-centerpiece {
-  position: absolute;
-  height: 100%;
-  width: 500px;
+  display: none;
 }
 
-#pick-and-pack-centerpiece img {
-  position: absolute;
-  bottom: 0;
-  margin-left: 50%;
-  z-index: 0;
-}
+// TODO: Reposition instead of hide
+@include media-query('medium-up') {
+  #pick-and-pack-centerpiece {
+    display: inherit;
+    position: absolute;
+    height: 100%;
+    width: 500px;
+  }
 
+  #pick-and-pack-centerpiece img {
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    z-index: 0;
+  }
+}
 
 /*================ Right Side ================*/
 #pick-and-pack-right {
