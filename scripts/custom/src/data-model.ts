@@ -17,7 +17,7 @@ export class DataModel {
       'flavors': {
         'Beef': ['Flavor 1'],
         'Pork': ['Flavor 1'],
-        'Turkey': ['Flavof 1']
+        'Turkey': ['Flavor 1']
       }
     },
     {
@@ -32,7 +32,18 @@ export class DataModel {
   ]
 
   public get numberOfProducts() {
-    return 5
+    let count: number = 0
+    for (let i = 0; i < this.products.length; i++) 
+    {
+      for (let j = 0; j < Object.keys(this.products[i]['flavors']).length; j ++) 
+      {
+
+         count += this.products[i]['flavors'][Object.keys(this.products[i]['flavors'])[j]].length;
+   
+      }
+
+    }
+    return count
   }
 }
 
