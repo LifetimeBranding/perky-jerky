@@ -35,7 +35,7 @@ var DataModel = /** @class */ (function () {
     }
     Object.defineProperty(DataModel.prototype, "numberOfProducts", {
         get: function () {
-            return 5;
+            return this.products.length;
         },
         enumerable: true,
         configurable: true

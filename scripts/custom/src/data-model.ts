@@ -31,14 +31,8 @@ export class DataModel {
     }
   ]
 
-  public numberOfProducts() {
-    var count: number = 0
-
-    for (let i = 0; i < 5; i++) {
-      count ++
-    }
-
-    return count
+  public get numberOfProducts() {
+    return 5
   }
 }
 
