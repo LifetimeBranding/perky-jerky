@@ -1,3 +1,6 @@
+/*
+* Role: View Controller
+*/
 var ShowcaseCollectionComponent = /** @class */ (function () {
     function ShowcaseCollectionComponent(container) {
         this.container = document.getElementById(container);
@@ -14,19 +17,20 @@ var ShowcaseCollectionComponent = /** @class */ (function () {
             return;
         }
     };
-    // Helper methods
-    ShowcaseCollectionComponent.prototype.toggle = function () {
-        this.isVisible() ? this.close() : this.open();
-    };
     ShowcaseCollectionComponent.prototype.switchTo = function (id) {
         this.openedCategory = id;
+        // Get data from the Model
         if (this.isVisible()) {
-            // transition to new category
+            // Transition
         }
         else {
             // open if not already
             this.toggle();
         }
+    };
+    // Helper methods
+    ShowcaseCollectionComponent.prototype.toggle = function () {
+        this.isVisible() ? this.close() : this.open();
     };
     ShowcaseCollectionComponent.prototype.isVisible = function () {
         return this.container.style.visibility === 'visible';
