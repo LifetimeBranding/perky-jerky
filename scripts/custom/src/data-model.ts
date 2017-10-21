@@ -1,6 +1,6 @@
 export class DataModel {
   // Mock Data for now
-  public products = 
+  public products: any[] = 
   [
     {
       'product-name': 'Jerky',
@@ -33,15 +33,12 @@ export class DataModel {
 
   public get numberOfProducts() {
     let count: number = 0
-    for (let i = 0; i < this.products.length; i++) 
-    {
-      for (let j = 0; j < Object.keys(this.products[i]['flavors']).length; j ++) 
-      {
 
-         count += this.products[i]['flavors'][Object.keys(this.products[i]['flavors'])[j]].length;
-   
+    for (let i = 0; i < this.products.length; i++) {
+      for (let j = 0; j < Object.keys(this.products[i]['flavors']).length; j ++) {
+        let currentFlavor: string = Object.keys(this.products[i]['flavors'])[j]
+         count += this.products[i]['flavors'][currentFlavor].length;
       }
-
     }
     return count
   }

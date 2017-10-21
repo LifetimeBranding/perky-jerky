@@ -38,7 +38,8 @@ var DataModel = /** @class */ (function () {
             var count = 0;
             for (var i = 0; i < this.products.length; i++) {
                 for (var j = 0; j < Object.keys(this.products[i]['flavors']).length; j++) {
-                    count += this.products[i]['flavors'][Object.keys(this.products[i]['flavors'])[j]].length;
+                    var currentFlavor = Object.keys(this.products[i]['flavors'])[j];
+                    count += this.products[i]['flavors'][currentFlavor].length;
                 }
             }
             return count;
