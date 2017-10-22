@@ -1,3 +1,6 @@
+/*
+* Role: View Controller
+*/
 class InteractiveNavigationComponent {
     slideOutSelector: HTMLElement 
 

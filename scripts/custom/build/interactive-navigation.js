@@ -1,3 +1,6 @@
+/*
+* Role: View Controller
+*/
 var InteractiveNavigationComponent = /** @class */ (function () {
     function InteractiveNavigationComponent(slideOutSelector) {
         this.slideOutSelector = document.getElementById(slideOutSelector);
