@@ -26,55 +26,35 @@
     </div>
   </div>
 
-  <!-- TODO: MOVE THIS TO VIEW CONTROLLER -->
+  <!-- TODO: MOVE THIS TO VIEW CONTROLLER // OR ACCESS DATA MODEL DIRECTLY? -->
   <!-- Dropdown: Product Details -->
   <div id="showcase-collection-dropdown" class="section-showcase-collection__detail--container">
+
+  <span class="fa fa-spin fa-refresh fa-fw fa-5x"></span>
+
   <div class="grid page-width">
     <div class="grid__item">
       <div class="grid">
         <div class="grid__item one-third">
           <!-- Product Category -->
           <div id="collection-detail-category-container" class="grid">
-
-            <!-- Product Category Image -->
-            <div class="grid__item">
-              <img src="http://via.placeholder.com/241x316" width="241" height="316" alt="Banner">
-            </div>
-
-            <!-- Product Category Names -->
-            <div class="grid__item">
-              <ul class="inline-list">
-              {% for category in (1..3) %}
-                <li class="no-bullets">
-                  <a href="#">Category {{ category }}</a>
-                </li>
-              {% endfor %}
-              </ul>
-            </div>
+          
+          <!-- Product Category Image -->
+          <div id="showcase-collection-category-image-container" class="grid__item">
+            <!-- IMG TAG -->
           </div>
+
+          <!-- Product Category Names -->
+          <div class="grid__item">
+            <ul id="showcase-collection-category-names" class="inline-list">
+            </ul>
+          </div>
+
         </div>
 
         <div class="grid__item two-thirds">
           <!-- Category Flavors -->
-          <div id="collection-detail-flavor-container" class="grid">
-
-            {% for i in (1..5) %}
-              <div class="grid__item">
-                <a href="collections/all">
-                  <div class="section-showcase-collection__detail--flavor">
-                    Flavor {{ i }}
-                  </div>
-                </a>
-              </div>
-            {% endfor %}
-              <div class="grid__item">
-                <a href="collections/all">
-                <div class="section-showcase-collection__detail--flavor">
-                    See All
-                </div>
-              </a>
-              </div>
-          </div>
+          <div id="collection-detail-flavor-container" class="grid"></div>
         </div>
       </div>
     </div>
@@ -84,7 +64,7 @@
 </div>
 
 </div>
-
+</div>
 {% schema %}
   {
     "name": "Showcase collections",
