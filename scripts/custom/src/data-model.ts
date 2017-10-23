@@ -1,3 +1,4 @@
+// TODO: Refactor to make proper use of getter and setter methods
 export class DataModel {
 
   // Mock Data for now
@@ -32,6 +33,15 @@ export class DataModel {
     }
   ]
 
+  public get listOfProductNames() {
+    let productNames: string[] = []
+
+    for (let i = 0; i < this.products.length; i ++) {
+      productNames.push(this.products[i]['product-name'])
+    }
+    return productNames;
+  }
+
   public get numberOfProducts() {
     let count: number = 0
 
@@ -48,7 +58,7 @@ export class DataModel {
     return count
   }
 
-  // TODO: Refactor this
+  // TODO: Refactor this to use helper getIndexOfProduct helper method
   public getCategoryListOfProduct(product: string): any[] {
 
     // Find the product 
@@ -66,9 +76,13 @@ export class DataModel {
     }
   }
 
+  public getProductThemeColor(product: string) {
+    let indexOfProduct = this.getIndexOfProduct(product)
+    return this.products[indexOfProduct]['theme-color']
+  }
+
   public getFlavorsOfCategory(product: string, category: string) {
     let indexOfProduct = this.getIndexOfProduct(product)
-
     return this.products[indexOfProduct]['flavor-category'][category]
   }
 
