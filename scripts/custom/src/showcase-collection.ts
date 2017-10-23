@@ -3,11 +3,11 @@
 */
 
 class ShowcaseCollectionComponent {
-  container: HTMLElement
+  containerElement: HTMLElement
   openedCategory: number
 
-  constructor (container: string) {
-    this.container = document.getElementById(container)
+  constructor (containerElement: string) {
+    this.containerElement = document.getElementById(containerElement)
   }
 
   public show(category: number) {
@@ -43,18 +43,16 @@ class ShowcaseCollectionComponent {
   }
 
   protected isVisible() {
-    return this.container.style.visibility === 'visible'
+    return this.containerElement.style.visibility === 'visible'
   }
 
   protected close() { 
     this.openedCategory = null
-    this.container.style.visibility = 'hidden'
-    window.scrollBy(0, -500)
+    this.containerElement.style.visibility = 'hidden'
   }
   
   protected open() { 
-    this.container.style.visibility = 'visible'
-    window.scrollBy(0, 500)
+    this.containerElement.style.visibility = 'visible'
   }
 }
 
