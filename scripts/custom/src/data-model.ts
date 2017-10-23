@@ -1,3 +1,7 @@
+/*
+* Role: Data Model
+*/
+
 // TODO: Refactor to make proper use of getter and setter methods
 export class DataModel {
 
@@ -39,6 +43,7 @@ export class DataModel {
     for (let i = 0; i < this.products.length; i ++) {
       productNames.push(this.products[i]['product-name'])
     }
+
     return productNames;
   }
 

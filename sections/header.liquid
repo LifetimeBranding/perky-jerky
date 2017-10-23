@@ -67,10 +67,10 @@
               <div class="grid__item one-third text-center">
 
                 <img class="navigation__dropdown-1-image" 
-                src="{{ block.settings.image | img_url: 'master' }}" width="188" height="203"
-                alt="{{ block.settings.image.alt }}">
+                src="{{ collections[block.settings.collection].image | img_url: 'large' }}" width="188" height="203"
+                alt="{{ collections[block.settings.collection].name }}">
 
-                <span>{{ block.settings.collection }}</span>
+                <span>{{ collections[block.settings.collection].title }}</span>
               </div>
               {%- endif -%}
             {%- endfor -%}
@@ -174,11 +174,6 @@
         "type": "featured_in_shop",
         "name": "Featured in Shop",
         "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
           {
             "type": "collection",
             "id": "collection",

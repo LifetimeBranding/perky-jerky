@@ -9,26 +9,16 @@
     </div>
 
     <div style="padding: 0px 30px 0px 30px">
-    <div class="grid__item one-third">
-      <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(1)">
-        <img src="{{ section.settings.jerky-image | img_url: 'master' }}" width="300" height="382" alt="{{ section.settings.jerky-image.alt }}">
-        <span>Jerky</span>
-      </div>
-    </div>
 
-    <div class="grid__item one-third">
-      <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(2)">
-        <img src="{{ section.settings.sticks-image | img_url: 'master' }}" width="109" height="382" alt="{{ section.settings.sticks-image.alt }}">
-        <span>Sticks</span>
+    {%- for block in section.blocks -%}
+      <div class="grid__item one-third">
+        <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(1)">
+          <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}" width="300" height="382" alt="{{ collections[block.settings.collection].title }}">
+          <span>{{ collections[block.settings.collection].title }}</span>
+        </div>
       </div>
-    </div>
+    {%- endfor -%}
 
-    <div class="grid__item one-third">
-      <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(3)">
-        <img src="{{ section.settings.protein-pals-image | img_url: 'master' }}" width="300" height="382" alt="{{ section.settings.protein-pals-image.alt }}">
-        <span>Protein Pals</span>
-      </div>
-    </div>
     </div>
 
     <div class="grid__item one-whole text-right" style="margin-top: 63.75px">
@@ -36,6 +26,7 @@
     </div>
   </div>
 
+  <!-- TODO: MOVE THIS TO VIEW CONTROLLER -->
   <!-- Dropdown: Product Details -->
   <div id="showcase-collection-dropdown" class="section-showcase-collection__detail--container">
   <div class="grid page-width">
@@ -84,35 +75,34 @@
     </div>
   </div>
   </div>
+  <!-- END MOVE -->
 </div>
 
 </div>
 
 {% schema %}
   {
-    "name": "Showcase collection",
+    "name": "Showcase collections",
     "settings": [
       {
         "type": "image_picker",
         "id": "header-image",
         "label": "Heading Banner"
-      },
+      }
+    ],
+    "max_blocks": 3,
+    "blocks": [
       {
-        "type": "image_picker",
-        "id": "jerky-image",
-        "label": "Jerky Package"
-      },
-      {
-        "type": "image_picker",
-        "id": "sticks-image",
-        "label": "Sticks Package"
-      },
-      {
-        "type": "image_picker",
-        "id": "protein-pals-image",
-        "label": "Protein Pals Package"
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
       }
     ]
   }
-
 {% endschema %}
