@@ -1,21 +1,20 @@
 /*
 * Role: View Controller
 */
-var InteractiveNavigationComponent = /** @class */ (function () {
-    function InteractiveNavigationComponent(slideOutSelector) {
+class InteractiveNavigationComponent {
+    constructor(slideOutSelector) {
         this.slideOutSelector = document.getElementById(slideOutSelector);
     }
-    InteractiveNavigationComponent.prototype.toggle = function () {
+    toggle() {
         this.isOpen() ? this.close() : this.open();
-    };
-    InteractiveNavigationComponent.prototype.isOpen = function () {
+    }
+    isOpen() {
         return this.slideOutSelector.style.width !== "0px";
-    };
-    InteractiveNavigationComponent.prototype.open = function () {
+    }
+    open() {
         this.slideOutSelector.style.width = '100%';
-    };
-    InteractiveNavigationComponent.prototype.close = function () {
+    }
+    close() {
         this.slideOutSelector.style.width = '0px';
-    };
-    return InteractiveNavigationComponent;
-}());
+    }
+}

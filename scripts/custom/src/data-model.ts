@@ -3,7 +3,8 @@
 */
 
 // TODO: Refactor to make proper use of getter and setter methods
-export class DataModel {
+//       Fix the fact that export breaks browser script
+/*export*/ class DataModel {
 
   // Mock Data for now
   public products: any[] = 
@@ -12,9 +13,9 @@ export class DataModel {
       'product-name': 'Jerky',
       'theme-color': '#f00',
       'flavor-category': {
-        'Beef': ['Flavor 1', 'Flavor 2', 'Flavor 3', 'Flavor 4', 'Flavor 5'],
-        'Pork': ['Flavor 1', 'Flavor 2', 'Flavor 3', 'Flavor 4' ,'Flavor 5'],
-        'Turkey': ['Flavor 1', 'Flavor 2', 'Flavor 3', 'Flavor 4', 'Flavor 5']
+        'Beef': ['Beef 1', 'Beef 2', 'Beef 3', 'Beef 4', 'Beef 5'],
+        'Pork': ['Pork 1', 'Pork 2', 'Pork 3', 'Pork 4' ,'Pork 5'],
+        'Turkey': ['Turkey 1', 'Turkey 2', 'Turkey 3', 'Turkey 4', 'Turkey 5']
       }
     },
     {
@@ -81,6 +82,12 @@ export class DataModel {
     }
   }
 
+  public getProductAttribute(product: string, attribute: string) {
+    // TODO: Refactor to use meta tags : [index][metatag][attribute]
+    let indexOfProduct = this.getIndexOfProduct(product)
+    return this.products[indexOfProduct][attribute]
+  }
+
   public getProductThemeColor(product: string) {
     let indexOfProduct = this.getIndexOfProduct(product)
     return this.products[indexOfProduct]['theme-color']
@@ -99,5 +106,3 @@ export class DataModel {
     }
   }
 }
-
-export default DataModel

@@ -1,20 +1,19 @@
-"use strict";
 /*
 * Role: Data Model
 */
-Object.defineProperty(exports, "__esModule", { value: true });
 // TODO: Refactor to make proper use of getter and setter methods
-var DataModel = /** @class */ (function () {
-    function DataModel() {
+//       Fix the fact that export breaks browser script
+/*export*/ class DataModel {
+    constructor() {
         // Mock Data for now
         this.products = [
             {
                 'product-name': 'Jerky',
                 'theme-color': '#f00',
                 'flavor-category': {
-                    'Beef': ['Flavor 1', 'Flavor 2', 'Flavor 3', 'Flavor 4', 'Flavor 5'],
-                    'Pork': ['Flavor 1', 'Flavor 2', 'Flavor 3', 'Flavor 4', 'Flavor 5'],
-                    'Turkey': ['Flavor 1', 'Flavor 2', 'Flavor 3', 'Flavor 4', 'Flavor 5']
+                    'Beef': ['Beef 1', 'Beef 2', 'Beef 3', 'Beef 4', 'Beef 5'],
+                    'Pork': ['Pork 1', 'Pork 2', 'Pork 3', 'Pork 4', 'Pork 5'],
+                    'Turkey': ['Turkey 1', 'Turkey 2', 'Turkey 3', 'Turkey 4', 'Turkey 5']
                 }
             },
             {
@@ -37,63 +36,57 @@ var DataModel = /** @class */ (function () {
             }
         ];
     }
-    Object.defineProperty(DataModel.prototype, "listOfProductNames", {
-        get: function () {
-            var productNames = [];
-            for (var i = 0; i < this.products.length; i++) {
-                productNames.push(this.products[i]['product-name']);
+    get listOfProductNames() {
+        let productNames = [];
+        for (let i = 0; i < this.products.length; i++) {
+            productNames.push(this.products[i]['product-name']);
+        }
+        return productNames;
+    }
+    get numberOfProducts() {
+        let count = 0;
+        // Loop through products array
+        for (let i = 0; i < this.products.length; i++) {
+            // Loop through flavor category array of each product array
+            for (let j = 0; j < Object.keys(this.products[i]['flavor-category']).length; j++) {
+                let currentFlavor = Object.keys(this.products[i]['flavor-category'])[j];
+                count += this.products[i]['flavor-category'][currentFlavor].length;
             }
-            return productNames;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(DataModel.prototype, "numberOfProducts", {
-        get: function () {
-            var count = 0;
-            // Loop through products array
-            for (var i = 0; i < this.products.length; i++) {
-                // Loop through flavor category array of each product array
-                for (var j = 0; j < Object.keys(this.products[i]['flavor-category']).length; j++) {
-                    var currentFlavor = Object.keys(this.products[i]['flavor-category'])[j];
-                    count += this.products[i]['flavor-category'][currentFlavor].length;
-                }
-            }
-            return count;
-        },
-        enumerable: true,
-        configurable: true
-    });
+        }
+        return count;
+    }
     // TODO: Refactor this to use helper getIndexOfProduct helper method
-    DataModel.prototype.getCategoryListOfProduct = function (product) {
+    getCategoryListOfProduct(product) {
         // Find the product 
-        for (var i = 0; i < this.products.length; i++) {
+        for (let i = 0; i < this.products.length; i++) {
             if (this.products[i]['product-name'] === product) {
-                var categoryList = [];
+                let categoryList = [];
                 // Push each flavor category to the array
-                for (var j = 0; j < Object.keys(this.products[i]['flavor-category']).length; j++) {
+                for (let j = 0; j < Object.keys(this.products[i]['flavor-category']).length; j++) {
                     categoryList.push(Object.keys(this.products[i]['flavor-category'])[j]);
                 }
                 return categoryList;
             }
         }
-    };
-    DataModel.prototype.getProductThemeColor = function (product) {
-        var indexOfProduct = this.getIndexOfProduct(product);
+    }
+    getProductAttribute(product, attribute) {
+        // TODO: Refactor to use meta tags : [index][metatag][attribute]
+        let indexOfProduct = this.getIndexOfProduct(product);
+        return this.products[indexOfProduct][attribute];
+    }
+    getProductThemeColor(product) {
+        let indexOfProduct = this.getIndexOfProduct(product);
         return this.products[indexOfProduct]['theme-color'];
-    };
-    DataModel.prototype.getFlavorsOfCategory = function (product, category) {
-        var indexOfProduct = this.getIndexOfProduct(product);
+    }
+    getFlavorsOfCategory(product, category) {
+        let indexOfProduct = this.getIndexOfProduct(product);
         return this.products[indexOfProduct]['flavor-category'][category];
-    };
-    DataModel.prototype.getIndexOfProduct = function (product) {
-        for (var i = 0; i < this.products.length; i++) {
+    }
+    getIndexOfProduct(product) {
+        for (let i = 0; i < this.products.length; i++) {
             if (this.products[i]['product-name'] === product) {
                 return i;
             }
         }
-    };
-    return DataModel;
-}());
-exports.DataModel = DataModel;
-exports.default = DataModel;
+    }
+}

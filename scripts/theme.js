@@ -20,10 +20,12 @@ window.theme = window.theme || {};
 // =require templates/customers-login.js
 
 /*================ Theme Components ================*/
+// =require custom/build/data-model.js
 // =require custom/build/showcase-collection.js
 // =require custom/build/interactive-navigation.js
 
-var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown')
+var dataModel = new DataModel()
+var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown', dataModel)
 var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu');
 
 $(document).ready(function() {

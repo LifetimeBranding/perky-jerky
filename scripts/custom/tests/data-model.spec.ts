@@ -1,7 +1,6 @@
 import 'mocha'
 import { expect } from 'chai'
-import DataModel from '../src/data-model'
-
+import { DataModel } from '../src/data-model'
 
 let data = new DataModel()
 
@@ -17,26 +16,32 @@ describe('Number of products', function() {
   })
 })
 
-describe('getCategoryListOfProduct()', function() {
+describe('getCategoryListOfProduct("Protein Pals")', function() {
   it('Should return an array', function() {
     expect(data.getCategoryListOfProduct('Protein Pals')).to.be.a('array')
   })
 })
 
-describe('getFlavorsOfCategory()', function() {
+describe('getFlavorsOfCategory("Protein Pals", "Beef")', function() {
   it('Should return an array', function() {
     expect(data.getFlavorsOfCategory('Protein Pals', 'Beef')).to.be.a('array')
   })
 })
 
-describe('getIndexOfProduct(product: string)', function() {
+describe('getIndexOfProduct("Protein Paks:")', function() {
   it('Should return a number', function() {
     expect(data.getIndexOfProduct('Protein Pals')).to.be.a('number')
   })
 })
 
-describe('getProductThemeColor(product: string)', function() {
+describe('getProductThemeColor("Protein Pals")', function() {
   it('Should return a string', function() {
     expect(data.getProductThemeColor('Protein Pals')).to.be.a('string')
+  })
+})
+
+describe('getProductAttribute("Jerky", "theme-color")', function() {
+  it('Should return a string', function() {
+    expect(data.getProductAttribute('Jerky', 'theme-color')).to.be.a('string')
   })
 })

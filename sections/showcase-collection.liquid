@@ -12,7 +12,7 @@
 
     {%- for block in section.blocks -%}
       <div class="grid__item one-third">
-        <div class="section-showcase-collection--item" onclick="showcaseDropdown.show(1)">
+        <div class="section-showcase-collection--item" onclick="showcaseDropdown.show('{{ collections[block.settings.collection].title }}')">
           <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}" width="300" height="382" alt="{{ collections[block.settings.collection].title }}">
           <span>{{ collections[block.settings.collection].title }}</span>
         </div>
@@ -32,12 +32,16 @@
   <div class="grid page-width">
     <div class="grid__item">
       <div class="grid">
-        <div id="collection-detail-category-container" class="grid__item one-third">
+        <div class="grid__item one-third">
           <!-- Product Category -->
-          <div class="grid">
+          <div id="collection-detail-category-container" class="grid">
+
+            <!-- Product Category Image -->
             <div class="grid__item">
               <img src="http://via.placeholder.com/241x316" width="241" height="316" alt="Banner">
             </div>
+
+            <!-- Product Category Names -->
             <div class="grid__item">
               <ul class="inline-list">
               {% for category in (1..3) %}
@@ -49,6 +53,7 @@
             </div>
           </div>
         </div>
+
         <div class="grid__item two-thirds">
           <!-- Category Flavors -->
           <div id="collection-detail-flavor-container" class="grid">

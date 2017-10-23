@@ -4,13 +4,15 @@
 
 class ShowcaseCollectionComponent {
   containerElement: HTMLElement
-  openedCategory: number
+  dataModel: any
+  openedCategory: string
 
-  constructor (containerElement: string) {
+  constructor (containerElement: string, model: any) {
     this.containerElement = document.getElementById(containerElement)
+    this.dataModel = model
   }
 
-  public show(category: number) {
+  public show(category: string) {
     if (this.isVisible()) {
       // Close if the same category is clicked
       if (this.openedCategory === category) 
@@ -23,21 +25,42 @@ class ShowcaseCollectionComponent {
     }
   }
 
-  protected switchTo(id: number) {
-    this.openedCategory = id
-    
-    // Get data from the Model
+  protected switchTo(category: string) {
+    this.openedCategory = category
 
-    if (this.isVisible()) {
-      // Transition
+    var dataLoaded = new Promise((resolve, reject) => {
+      let result = this.getCollectionInfo(category)
 
-    } else {
-      // open if not already
-      this.toggle()
-    }
+      if (result)
+        resolve(result)
+      else
+        reject(Error('Error'))
+    })
+
+    dataLoaded.then((data) => {
+      // if successfully resolved
+      if (this.isVisible()) {
+        // Transition
+
+      } else {
+        // open if not already
+        this.toggle()
+      }
+      console.log(data)
+
+    }, (error) => {
+
+      // if failed
+      console.log(error)
+
+    })
   }
 
   // Helper methods
+  protected getCollectionInfo(collection: string) {
+    return this.dataModel.getCategoryListOfProduct(collection)
+  }
+
   protected toggle () {
     this.isVisible() ? this.close() : this.open()
   }
