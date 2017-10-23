@@ -48,15 +48,34 @@ export class DataModel {
     return count
   }
 
+  // TODO: Refactor this
   public getCategoryListOfProduct(product: string): any[] {
+
+    // Find the product 
     for (let i = 0; i < this.products.length; i ++) {
       if (this.products[i]['product-name'] === product) {
         let categoryList: any[] = []
 
+        // Push each flavor category to the array
         for (let j = 0; j < Object.keys(this.products[i]['flavor-category']).length; j++) {
           categoryList.push(Object.keys(this.products[i]['flavor-category'])[j])
         }
+
         return categoryList
+      }
+    }
+  }
+
+  public getFlavorsOfCategory(product: string, category: string) {
+    let indexOfProduct = this.getIndexOfProduct(product)
+
+    return this.products[indexOfProduct]['flavor-category'][category]
+  }
+
+  public getIndexOfProduct(product: string) {
+    for (let i = 0; i < this.products.length; i++) {
+      if (this.products[i]['product-name'] === product) {
+        return i
       }
     }
   }
