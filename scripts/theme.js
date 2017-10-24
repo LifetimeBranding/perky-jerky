@@ -24,9 +24,11 @@ window.theme = window.theme || {};
 // =require custom/build/showcase-collection.js
 // =require custom/build/interactive-navigation.js
 
+/*================ View Control ================*/
 var dataModel = new DataModel()
 var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown', dataModel)
 var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu');
+/*================ /View Control ================*/
 
 $(document).ready(function() {
   var sections = new slate.Sections();

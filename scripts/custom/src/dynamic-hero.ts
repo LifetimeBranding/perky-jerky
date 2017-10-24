@@ -1,6 +1,6 @@
 /*
-* Role: View Controller
+* @
 */
-class DynamicHero {
+class DynamicHeroComponent {
     public state: number  
 }

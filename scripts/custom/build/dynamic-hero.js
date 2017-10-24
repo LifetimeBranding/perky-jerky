@@ -1,5 +1,5 @@
 /*
-* Role: View Controller
+* @
 */
-class DynamicHero {
+class DynamicHeroComponent {
 }

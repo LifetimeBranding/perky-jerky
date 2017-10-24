@@ -1,5 +1,5 @@
 /*
-* Role: Data Model
+* DATA MODEL
 */
 // TODO: Refactor to make proper use of getter and setter methods
 //       Fix the fact that export breaks browser script

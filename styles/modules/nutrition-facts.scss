@@ -1,27 +1,44 @@
+/*================ Left Side Image ================*/
+#shopify-section-nutrition-facts .image-container {
+  text-align: center;
+  margin: auto;
+}
+
+@include media-query('widescreen') {
+  #shopify-section-nutrition-facts .image-container {
+    margin-left: -200px;
+  }
+}
+
+
 /*================ Nutrition Facts ================*/
 
 #shopify-section-nutrition-facts {
   background-color: #fff;
   text-transform: uppercase;
-  min-height: 611.25px;
   font-size: 15px;
 }
 
 #shopify-section-nutrition-facts .table-container {
   max-width: 508.5px; 
-  height: 100%; 
-  overflow-x: auto;
-  //padding-bottom: 37.5px; 
-  //float: right; 
-  margin-top: 112.5px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: auto;
+}
 
+@include media-query('widescreen') {
+  #shopify-section-nutrition-facts .table-container {
+    margin-left: -45px;
+  }
 }
 
 #shopify-section-nutrition-facts table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  overflow: auto;
+  border-collapse: collapse; // border doesn't show without this
 }
 
 #shopify-section-nutrition-facts td {
