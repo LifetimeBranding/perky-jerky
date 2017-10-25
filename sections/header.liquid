@@ -41,9 +41,8 @@
     <!-- Logo -->
     <a href="/" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
       {%- if section.settings.logo != blank -%}
-        {%- capture image_size -%}{{ section.settings.logo_max_width }}x{%- endcapture -%}
-        <img src="{{ section.settings.logo | img_url: 'master' }}"
-             srcset="{{ section.settings.logo | img_url: 'master' }} 1x, {{ section.settings.logo | img_url: 'master', scale: 2 }} 2x"
+        <img src="{{ section.settings.logo | img_url: 'master'}} "
+             width="106" height="30"
              alt="{{ section.settings.logo.alt | default: shop.name }}">
       {%- else -%}
         {{ shop.name }}

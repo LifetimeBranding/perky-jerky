@@ -9,7 +9,7 @@
 // =require vendor/jquery-2.2.3.min.js
 
 /*!
- * slick.min.js
+ * Owl Carousel
  */
 // =require vendor/owl.carousel.min.js
 
