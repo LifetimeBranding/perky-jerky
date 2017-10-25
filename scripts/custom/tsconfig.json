@@ -9,7 +9,6 @@
   },
   "files": [
     "src/showcase-collection.ts",
-    "src/dynamic-hero.ts",
     "src/interactive-navigation.ts",
     "src/data-model.ts",
   ]
