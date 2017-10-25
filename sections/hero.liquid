@@ -3,19 +3,19 @@
     <div class="hero__container">
       <div class="owl-carousel">
         {%- for block in section.blocks -%}
-        <div>
-          <picture>
-            <source media="(max-width: 989px)" srcset="{{ block.settings.product-image | img_url: 'master' }}">
-            <source media="(min-width: 990px)" srcset="{{ block.settings.product-bed | img_url: 'master' }}">
+          <div>
+
+            <!-- Bed for product image -->
             <img src="{{ block.settings.product-bed | img_url: 'master' }}" 
                  alt="{{ block.settings.product-bed.alt }}" 
                  style="height: 800px; width: 100%">
-          </picture>
-          <!-- Product Image-->
-          <div style="position: relative">
-            <img src="{{ block.settings.product-image | img_url: 'master' }}" style="position: absolute">
+
+            <!-- Product Image-->
+            <div style="position: absolute; left: 50%; top: 100px;">
+              <img src="{{ block.settings.product-image | img_url: 'master' }}" style="height: 700px">
+            </div>
+
           </div>
-        </div>
         {%- endfor -%}
       </div>
     </div>
