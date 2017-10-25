@@ -1,7 +1,6 @@
 /*================ Front Page HERO ================*/
 
 #shopify-section-hero {
-  width: 100%;
   background: #DDDDDD;
   background-image: url('hero_background.jpg'); // change this to be more dynamic
   background-repeat: no-repeat;
@@ -10,6 +9,8 @@
 
 .hero__container {
   width: 100%;
+  max-width: 1540px; 
+  margin: auto;
   height: 820px;
 }
 
