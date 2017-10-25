@@ -51,7 +51,9 @@
     </div>
     <div id="footer__copyright-notice">
       {% if section.settings.logo != blank %} {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-      <img src="{{ section.settings.logo | img_url: 'master' }}" srcset="{{ section.settings.logo | img_url: 'master' }} 1x, {{ section.settings.logo | img_url: 'master', scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo"> {% else %} {{ shop.name }} {% endif %}
+      <img src="{{ section.settings.logo | img_url: 'master' }}" 
+      width="130" height="50" alt="{{ section.settings.logo.alt | default: shop.name }}" 
+      itemprop="logo"> {% else %} {{ shop.name }} {% endif %}
       <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.</small>
     </div>
   </div>
