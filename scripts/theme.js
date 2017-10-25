@@ -25,7 +25,7 @@ window.theme = window.theme || {};
 
 var dataModel = new DataModel()
 var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown', dataModel)
-var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu');
+var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu', 'slide-out-navigation-toggle');
 
 $(document).ready(function() {
 

@@ -1,6 +1,10 @@
-/*
-* @
-*/
+/**
+ *    Showcase Collection Component
+ *
+ *    TODO:
+ *    - Change to Showcase Product Component after migration is complete?
+ *
+ */
 class ShowcaseCollectionComponent {
     constructor(containerElement, model) {
         this.containerElement = document.getElementById(containerElement);

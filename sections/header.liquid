@@ -53,7 +53,7 @@
     <div style="display: inline-block; vertical-align: 9px;">
     <!-- Dropdown: Shop -->
     <div class="navigation__dropdown small--hide">
-      <a class="navigation__link" href="javascript:void(0)">Shop</a>
+      <a class="navigation__link" href="#">Shop</a>
       <div class="navigation__dropdown-content">
       <div class="navigation__dropdown-1-container page-width">
       <div class="grid">
@@ -106,7 +106,7 @@
 
     <!-- Dropdown: Community -->
     <div class="navigation__dropdown small--hide">
-      <a class="navigation__link" href="javascript:void(0)">Community</a>
+      <a class="navigation__link" href="#">Community</a>
       <div class="navigation__dropdown-content">
       <div class="navigation__dropdown-2-container">
         <div class="grid">
@@ -142,9 +142,18 @@
     </div>
   </div>
   <div class="grid__item one-half" style="width: 100px">
-    <div class="navigation__main-menu--icon">
-    <img src="{{ 'menu-drawing.png' | asset_img_url: '110x75' }}" width="82" height="56" alt="I'm your menu" 
-    onclick="interactiveNavigation.toggle()">
+    <div id="slide-out-navigation-toggle" onclick="interactiveNavigation.toggle()">
+      <div>
+        <!-- Open Image -->
+        <img src="{{ 'menu-drawing.png' | asset_img_url: '110x75' }}" 
+          width="82" height="56" alt="Menu Button">
+      </div>
+      <div style="display: none">
+        <!-- Close Button-->
+        <div style="margin-left: 25px; margin-top: 20px;">
+          {% include 'icon-close' %}
+        </div>
+      </div>
     </div>
   </div>
   </div>

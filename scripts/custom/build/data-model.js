@@ -1,11 +1,13 @@
 /*
-* DATA MODEL
+*   MOCK DATA
+*
+*   TODO:
+*   - Refactor to make proper use of getter and setter methods
+*   - Fix the fact that export breaks browser script (needed for testing)
+*
 */
-// TODO: Refactor to make proper use of getter and setter methods
-//       Fix the fact that export breaks browser script
 /*export*/ class DataModel {
     constructor() {
-        // Mock Data for now
         this.products = [
             {
                 'product-name': 'Jerky',
@@ -70,7 +72,7 @@
         }
     }
     getProductAttribute(product, attribute) {
-        // TODO: Refactor to use meta tags : [index][metatag][attribute]
+        // TODO: Refactor to use meta tags based on migration results? : [index][metatag][attribute]
         let indexOfProduct = this.getIndexOfProduct(product);
         return this.products[indexOfProduct][attribute];
     }

@@ -4,6 +4,7 @@ html {
   background-color: $color-body;
   font-family: $font-stack-body;
   font-size: $font-size-base;
+  @include prefix(user-select, none, webkit moz spec)
 }
 
 h1,

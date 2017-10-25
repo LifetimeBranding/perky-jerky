@@ -91,15 +91,17 @@ nav {
   width: 0px;
 }
 
-.navigation__main-menu--icon {
+#slide-out-navigation-toggle {
   height: 100%;
   float: left;
   z-index: -1; 
   cursor: pointer; 
   vertical-align: middle;
+  display: inline-block;
+  height: 50px;
 }
 
-.navigation__main-menu--icon > img {
+#slide-out-navigation-toggle > img {
   display: inline-block;
   vertical-align: middle;
 }
