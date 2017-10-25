@@ -1,7 +1,6 @@
 window.slate = window.slate || {};
 window.theme = window.theme || {};
 
-
 /*================ Slate ================*/
 // =require slate/a11y.js
 // =require slate/cart.js
@@ -24,13 +23,12 @@ window.theme = window.theme || {};
 // =require custom/build/showcase-collection.js
 // =require custom/build/interactive-navigation.js
 
-/*================ View Control ================*/
 var dataModel = new DataModel()
 var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown', dataModel)
 var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu');
-/*================ /View Control ================*/
 
 $(document).ready(function() {
+
   var sections = new slate.Sections();
   sections.register('product', theme.Product);
 

@@ -13,62 +13,29 @@
     "settings": [
       {
         "type": "select",
-        "id": "type_main-nav_font",
-        "label": "Main Navigation",
-        "default": "Trade Gothic Bold Condensed No. 20",
-        "options": [
-          {
-            "value": "Trade Gothic"
-          },
-          {
-            "value": "Trade Gothic Bold Condensed No. 20"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "type_expandable-nav_font",
-        "label": "Expandable Menu",
-        "default": "Trade Gothic",
-        "options": [
-          {
-            "value": "Trade Gothic"
-          },
-          {
-            "value": "Trade Gothic Bold Condensed No. 20"
-          }
-        ]
-      },
-      {
-        "type": "select",
         "id": "type_headers_font",
         "label": "Headers",
-        "default": "Franchise",
+        "default": "Franchise Bold",
         "options": [
           {
-            "value": "Franchise"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "type_subheader_font",
-        "label": "Subheaders",
-        "default": "Franchise",
-        "options": [
+            "value": "Trade Gothic LT"
+          },
           {
-            "value": "Franchise"
+            "value": "Franchise Bold"
           }
         ]
       },
       {
         "type": "select",
         "id": "type_body_font",
-        "label": "Body Main",
-        "default": "Trade Gothic",
+        "label": "Body",
+        "default": "Trade Gothic LT",
         "options": [
           {
-            "value": "Trade Gothic"
+            "value": "Trade Gothic LT"
+          },
+          {
+            "value": "Franchise Bold"
           }
         ]
       }
@@ -79,104 +46,8 @@
     "settings": [
       {
         "type": "select",
-        "id": "type_main-nav_size",
-        "label": "Main Navigation",
-        "default": "16px",
-        "options": [
-          {
-            "value": "14px",
-            "label": "14px"
-          },
-          {
-            "value": "15px",
-            "label": "15px"
-          },
-          {
-            "value": "16px",
-            "label": "16px"
-          },
-          {
-            "value": "17px",
-            "label": "17px"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "type_expandable-nav_size",
-        "label": "Expandable Menu",
-        "default": "16px",
-        "options": [
-          {
-            "value": "14px",
-            "label": "14px"
-          },
-          {
-            "value": "15px",
-            "label": "15px"
-          },
-          {
-            "value": "16px",
-            "label": "16px"
-          },
-          {
-            "value": "17px",
-            "label": "17px"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "type_headlines_size",
-        "label": "Headers",
-        "default": "16px",
-        "options": [
-          {
-            "value": "14px",
-            "label": "14px"
-          },
-          {
-            "value": "15px",
-            "label": "15px"
-          },
-          {
-            "value": "16px",
-            "label": "16px"
-          },
-          {
-            "value": "17px",
-            "label": "17px"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "type_subheadlines_size",
-        "label": "Subheaders",
-        "default": "16px",
-        "options": [
-          {
-            "value": "14px",
-            "label": "14px"
-          },
-          {
-            "value": "15px",
-            "label": "15px"
-          },
-          {
-            "value": "16px",
-            "label": "16px"
-          },
-          {
-            "value": "17px",
-            "label": "17px"
-          }
-        ]
-      },
-      {
-        "type": "select",
         "id": "type_body_size",
-        "label": "Body Main",
+        "label": "Body",
         "default": "16px",
         "options": [
           {

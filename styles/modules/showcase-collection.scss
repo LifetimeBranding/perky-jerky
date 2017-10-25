@@ -16,10 +16,15 @@
   transition: 0.2s ease-in-out;
   cursor: pointer;
   z-index: 9;
+  color: gray;
 }
 
 .section-showcase-collection--item:hover {
   transform: scale(1.10, 1.10);
+}
+
+.section-showcase-collection--item:hover > span{
+  color: #000;
 }
 
 #collection-detail-category-container { 
@@ -43,7 +48,7 @@
 .section-showcase-collection__detail--container {
   position: absolute;
   left: 0;
-  margin-top: 32.25px;
+  margin-top: 30px;
   height: 540px;
   background-color: #fff;
   padding: 75px 0px 48.75px 0px;

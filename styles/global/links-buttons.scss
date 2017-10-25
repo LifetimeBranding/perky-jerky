@@ -1,4 +1,5 @@
 /*================ Links & Buttons ================*/
+
 .btn {
   @include prefix('user-select', 'none', moz ms webkit spec);
   @include prefix(appearance, none, webkit moz spec);
@@ -27,8 +28,6 @@ a {
 }
 
 a.button__btn {
-  font-weight: bolder !important;
-  font-family: $font-stack-body, sans-serif !important;
   padding: 10px 0px 10px 0px !important;
 }
 

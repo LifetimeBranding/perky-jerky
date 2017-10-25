@@ -1,6 +1,10 @@
-/*
-* @
-*/
+/**
+ *     Interactive Navigation Component
+ *     
+ *     TODO:
+ *     - Have menu button switch to 'X' in open state (preferrebly animated)
+ *     
+ */
 class InteractiveNavigationComponent {
     slideOutSelector: HTMLElement 
 

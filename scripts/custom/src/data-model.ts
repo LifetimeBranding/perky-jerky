@@ -1,12 +1,13 @@
 /*
-* DATA MODEL
+*   MOCK DATA
+*   
+*   TODO: 
+*   - Refactor to make proper use of getter and setter methods
+*   - Fix the fact that export breaks browser script (needed for testing)
+*   
 */
-
-// TODO: Refactor to make proper use of getter and setter methods
-//       Fix the fact that export breaks browser script
 /*export*/ class DataModel {
-
-  // Mock Data for now
+  
   public products: any[] = 
   [
     {
@@ -38,52 +39,44 @@
     }
   ]
 
-  public get listOfProductNames() {
+  public get listOfProductNames(): string[] {
     let productNames: string[] = []
-
     for (let i = 0; i < this.products.length; i ++) {
       productNames.push(this.products[i]['product-name'])
     }
-
     return productNames;
   }
 
   public get numberOfProducts() {
     let count: number = 0
-
     // Loop through products array
     for (let i = 0; i < this.products.length; i++) {
-
       // Loop through flavor category array of each product array
       for (let j = 0; j < Object.keys(this.products[i]['flavor-category']).length; j ++) {
         let currentFlavor: string = Object.keys(this.products[i]['flavor-category'])[j]
         count += this.products[i]['flavor-category'][currentFlavor].length;
       }
     }
-
     return count
   }
 
   // TODO: Refactor this to use helper getIndexOfProduct helper method
   public getCategoryListOfProduct(product: string): any[] {
-
     // Find the product 
     for (let i = 0; i < this.products.length; i ++) {
       if (this.products[i]['product-name'] === product) {
         let categoryList: any[] = []
-
         // Push each flavor category to the array
         for (let j = 0; j < Object.keys(this.products[i]['flavor-category']).length; j++) {
           categoryList.push(Object.keys(this.products[i]['flavor-category'])[j])
         }
-
         return categoryList
       }
     }
   }
 
   public getProductAttribute(product: string, attribute: string) {
-    // TODO: Refactor to use meta tags : [index][metatag][attribute]
+    // TODO: Refactor to use meta tags based on migration results? : [index][metatag][attribute]
     let indexOfProduct = this.getIndexOfProduct(product)
     return this.products[indexOfProduct][attribute]
   }
@@ -105,4 +98,5 @@
       }
     }
   }
+
 }

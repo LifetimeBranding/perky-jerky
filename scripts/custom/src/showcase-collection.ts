@@ -1,7 +1,10 @@
-/*
-* @
-*/
-
+/**
+ *    Showcase Collection Component
+ *  
+ *    TODO:
+ *    - Change to Showcase Product Component after migration is complete?
+ *  
+ */
 class ShowcaseCollectionComponent {
   containerElement: HTMLElement
   dataModel: any

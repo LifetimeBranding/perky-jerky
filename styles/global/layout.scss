@@ -2,10 +2,19 @@
 body,
 html {
   background-color: $color-body;
+  font-family: $font-stack-body;
+  font-size: $font-size-base;
 }
 
-body {
-  font-family: $font-stack-body;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-stack-header;
+  font-weight: $font-weight-header;
+  //font-size: 1.2em !important;
 }
 
 .h-100 {
