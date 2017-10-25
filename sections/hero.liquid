@@ -2,15 +2,21 @@
   <div class="grid__item one-whole text-center">
     <div class="hero__container">
       <div class="owl-carousel">
+        {%- for block in section.blocks -%}
         <div>
           <picture>
-            <source media="(max-width: 989px)" srcset="{{ section.settings.product-image | img_url: 'master' }}">
-            <source media="(min-width: 990px)" srcset="{{ section.settings.hero-image | img_url: 'master' }}">
-            <img src="{{ section.settings.hero-image | img_url: 'master' }}" 
-                 alt="{{ section.settings.hero-image.alt }}" 
+            <source media="(max-width: 989px)" srcset="{{ block.settings.product-image | img_url: 'master' }}">
+            <source media="(min-width: 990px)" srcset="{{ block.settings.product-bed | img_url: 'master' }}">
+            <img src="{{ block.settings.product-bed | img_url: 'master' }}" 
+                 alt="{{ block.settings.product-bed.alt }}" 
                  style="height: 800px; width: 100%">
           </picture>
+          <!-- Product Image-->
+          <div style="position: relative">
+            <img src="{{ block.settings.product-image | img_url: 'master' }}" style="position: absolute">
+          </div>
         </div>
+        {%- endfor -%}
       </div>
     </div>
   </div>
@@ -23,18 +29,19 @@
     "blocks": [
       {
         "name": "Hero",
-        "type": "image"
-      }],
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "hero-image",
-        "label": "Hero Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "product-image",
-        "label": "Product Image"
+        "type": "hero_slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "product-bed",
+            "label": "Product Bed"
+          },
+          {
+            "type": "image_picker",
+            "id": "product-image",
+            "label": "Product Image"
+          }
+        ]
       }
     ]
   }

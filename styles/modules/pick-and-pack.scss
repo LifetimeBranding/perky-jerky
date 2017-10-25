@@ -69,3 +69,9 @@
   margin-bottom: 33.75px;
   font-size: 22.5px;
 }
+
+@include media-query('medium-down') {
+  #pick-and-pack-right {
+    display: none;
+  }
+}
