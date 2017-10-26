@@ -10,13 +10,37 @@
   }
 }
 
-
 /*================ Nutrition Facts ================*/
 
 #shopify-section-nutrition-facts {
   background-color: #fff;
   text-transform: uppercase;
   font-size: 15px;
+}
+
+#nutrition-legal-modal {
+  display: none;
+  position: absolute;
+}
+
+#nutrition-legal-modal > .modal-container {
+  padding: 33.75px 50px 33.75px 33.75px; 
+  background-color: rgba(0,0,0,0.85); 
+  color: #fff;
+}
+
+#nutrition-legal-modal .modal-close-icon {
+  position: absolute; 
+  cursor: pointer; 
+  right: 10px; 
+  top: 10px;
+}
+
+#nutrition-legal-modal .modal-copy-container {
+  overflow-y: scroll; 
+  font-size: 0.8em; 
+  line-height: 2; 
+  height: 300px
 }
 
 #shopify-section-nutrition-facts .table-container {
@@ -31,23 +55,16 @@
   margin: auto;
 }
 
-@include media-query('widescreen') {
-  #shopify-section-nutrition-facts .table-container {
-    //margin-left: -45px;
-  }
-}
-
 #shopify-section-nutrition-facts table {
-  border-collapse: collapse; // border doesn't show without this
+  border-collapse: collapse; // The border of the table doesn't show without this
 }
 
 #shopify-section-nutrition-facts td {
   padding: 0px 0px 11.25px 0px;
 }
 
-// first column
+/* This is the first column */
 #shopify-section-nutrition-facts td:first-child {
-  //width: 213px;
   width: 35%;
 }
 

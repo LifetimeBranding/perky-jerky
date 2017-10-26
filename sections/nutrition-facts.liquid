@@ -1,4 +1,9 @@
-<!-- TODO: FIX INLINE SECTIONS -->
+<!-- 
+    TODO: 
+    REFACTOR AND REMOVE INLINE STYLE/SCRIPTS
+    MODAL ANIMATIONS
+
+ -->
 <div class="grid page-width">
 
   <div class="grid__item medium-up--one-half one-whole">
@@ -11,12 +16,31 @@
   <div class="grid__item medium-up--one-half one-whole">
     <div style="position: relative; height: 603px;">
     <div class="table-container">
+      <!-- Legal Modal -->
+      <div id="nutrition-legal-modal">
+        <div class="modal-container">
+          <span class="modal-close-icon" onclick="document.getElementById('nutrition-legal-modal').style.display = 'none';">{% include 'icon-close' %}</span>
+          <strong>Nutrition Facts Apply To Jerky Original Only.</strong>
+          <div class="modal-copy-container">
+            <p>
+              Occaecat ad occaecat non in ullamco ut sint dolor adipisicing pariatur adipisicing nisi cupidatat ut amet fugiat excepteur dolor proident ullamco fugiat cillum sit deserunt irure nulla dolore in dolor cillum exercitation laborum ullamco magna dolor reprehenderit magna do.
+            </p>
+            <p>
+              Fugiat esse sint magna ex dolor enim mollit nulla incididunt labore pariatur mollit proident id cupidatat et nisi ad amet quis culpa elit do magna pariatur do proident adipisicing exercitation laborum ullamco in tempor in non nisi ut mollit dolor ut ut exercitation deserunt in nulla sint do nostrud esse dolore id cillum in commodo ex ut labore proident consequat tempor id nulla aliquip nisi deserunt incididunt nostrud in fugiat id consectetur minim incididunt eiusmod pariatur tempor do esse consectetur aute eu sint amet ullamco cillum deserunt ex fugiat eu sint laboris proident consectetur id laboris amet ex in velit et quis velit irure labore in ut ut excepteur sunt id ea aliquip dolor minim aliqua sit id commodo eiusmod ut anim ut minim consequat culpa cillum sed ut exercitation do deserunt cupidatat adipisicing elit non dolor aliqua minim dolor sit ut nisi sit dolor sunt sint laboris ad exercitation proident aute consectetur officia fugiat.
+            </p>
+            <p>
+              Officia excepteur dolore sed cillum incididunt non in dolore tempor enim tempor sit non sint cupidatat eiusmod ut irure reprehenderit irure adipisicing in culpa pariatur eiusmod non nostrud nisi commodo.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <table>
         <!-- Header Row -->
         <tr> 
           <!-- Columns -->
           <td>          
-            <i class="fa fa-info-circle" style="cursor: pointer; display: block;"></i>
+            <i class="fa fa-info-circle" style="cursor: pointer; display: block;" onclick="document.getElementById('nutrition-legal-modal').style.display = 'block';"></i>
             nutrition facts
           </td>
           {% for block in section.blocks %}
@@ -54,10 +78,13 @@
     </div>
   </div>
 
-    <!-- <a class="btn button__btn button__btn--primary" href="{{ 'Jerky' | url_for_type }}">Shop Jerky</a>-->
-
+  <a style="margin-top: -150px" class="btn button__btn button__btn--primary" href="{{ 'Jerky' | url_for_type }}">Shop Jerky</a>
   </div>
 </div>
+
+<script>
+
+</script>
 
 {% schema %}
   {

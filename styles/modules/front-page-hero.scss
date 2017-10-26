@@ -1,8 +1,11 @@
+/* TODO: USE MIXINS TO SET RESPONSIVE BREAKPOINTS 
+SMALL (PHONES), MEDIUM (TABLETS), AND LARGE
+*/
 /*================ Front Page HERO ================*/
 
 #shopify-section-hero {
   background: #DDDDDD;
-  background-image: url('hero_background.jpg'); // change this to be more dynamic
+  background-image: url('hero_background.jpg'); // TODO: change this to be more dynamic
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -10,7 +13,7 @@
 .hero__container {
   max-width: 1540px; 
   margin: auto;
- // height: 520px;
+  height: 520px;
 }
 
 .frontpage-hero-carousel {
@@ -18,8 +21,47 @@
   top: 50%;
 }
 
+ img.hero-product-bed {
+  display: none !important;
+}
 
-//@include media-query('medium-up') {
+.hero-product-image-container > img {
+  margin: auto;
+  height: 399px !important;
+  width: 300px !important;
+}
+
+@include media-query('small') {
+  .hero-product-image-container > img {
+    position: relative;
+    margin-top: 100px;
+  }
+}
+
+
+@include media-query('medium-up') {
+  img.hero-product-bed {
+    display: block !important;
+    height: 800px;
+    width: 100%;
+  }
+
+  .hero-product-image-container {
+    display: block;
+    position: absolute; 
+    left: 52.5%; 
+    top: 150px;
+  }
+
+  .hero-product-image-container > img {
+    width: 558px !important;
+    height: 634px !important;
+  }
+}
+
+
+@include media-query('medium-up') {
   .hero__container {
     height: 820px;
   }
+}
