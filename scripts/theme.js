@@ -65,7 +65,7 @@ $(document).ready(function() {
     dots: true,
     responsive: {
       600: {
-        items: 3
+        items: 3,
       }
     }
   })

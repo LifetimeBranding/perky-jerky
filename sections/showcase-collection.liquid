@@ -8,12 +8,12 @@
       <img src="{{ section.settings.header-image | img_url: 'master' }}" width="509" height="294" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px;">
     </div>
 
-      <div id="showcase" class="grid__item one-third owl-carousel">
+      <div id="showcase" class="grid__item one-third owl-carousel owl-theme">
          {%- for block in section.blocks -%}
           <div class="section-showcase-collection--item" 
             onclick="showcaseDropdown.show('{{ collections[block.settings.collection].title }}')">
             <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}"
-              width="300" height="382" alt="{{ collections[block.settings.collection].title }}">
+              width="300" height="382" style="width:300px" alt="{{ collections[block.settings.collection].title }}">
             <span>{{ collections[block.settings.collection].title }}</span>
           </div>
         {%- endfor -%}

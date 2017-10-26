@@ -18,10 +18,11 @@
   color: gray;
 }
 
-.section-showcase-collection--item:hover {
-  transform: scale(1.10, 1.10);
+@include media-query('medium-up'){
+  .section-showcase-collection--item:hover {
+    transform: scale(1.10, 1.10);
+  }
 }
-
 .section-showcase-collection--item:hover > span{
   color: #000;
 }

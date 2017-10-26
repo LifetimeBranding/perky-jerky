@@ -13,7 +13,7 @@ SMALL (PHONES), MEDIUM (TABLETS), AND LARGE
 .hero__container {
   max-width: 1540px; 
   margin: auto;
-  height: 520px;
+  height: 550px;
 }
 
 .frontpage-hero-carousel {
@@ -59,9 +59,8 @@ SMALL (PHONES), MEDIUM (TABLETS), AND LARGE
   }
 }
 
-
 @include media-query('medium-up') {
   .hero__container {
-    height: 820px;
+    height: 840px;
   }
 }
