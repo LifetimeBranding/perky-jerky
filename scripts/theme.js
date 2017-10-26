@@ -23,8 +23,11 @@ window.theme = window.theme || {};
 // =require custom/build/showcase-collection.js
 // =require custom/build/interactive-navigation.js
 
+// Using mock data for now
 var dataModel = new DataModel()
+// TODO: Only initialize this on the homepage
 var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown', dataModel)
+// Site Header
 var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu', 'slide-out-navigation-toggle');
 
 $(document).ready(function() {
@@ -49,10 +52,21 @@ $(document).ready(function() {
   }
 
   // HERO Carousel
-  $('.owl-carousel').owlCarousel({
+  $('#hero').owlCarousel({
      items: 1,
      dots: true,
      loop: true,
      autoplay: true,
    });
+
+  // Showcase Products Carousel
+  $('#showcase').owlCarousel({
+    items: 1,
+    dots: true,
+    responsive: {
+      600: {
+        items: 3
+      }
+    }
+  })
 });
