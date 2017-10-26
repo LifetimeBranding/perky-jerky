@@ -1,3 +1,5 @@
+/* TODO: FIX CENTERING ISSUES */
+
 /*================ Incentive With CTA ================*/
 
 #shopify-section-incentive-with-cta {
@@ -9,10 +11,38 @@
   font-weight: 700;
 }
 
-#shopify-section-incentive-with-cta .v-center {
-  margin-top: -15px;
+#shopify-section-incentive-with-cta > .grid {
+  height: 100%;
 }
 
+/* Discount Banner */
+#shopify-section-incentive-with-cta .discount-banner {
+ // position: relative;
+  min-width: 101px;
+  height: 100%;
+}
+
+#shopify-section-incentive-with-cta .discount-banner-image {
+  position: absolute;
+  margin-top: -1.25px;
+}
+
+#shopify-section-incentive-with-cta .discount-banner-text  {
+  text-align: center;
+  position: relative;
+  margin-left: 5px; /* actual image has shadows on side increasing image padding by 5px */
+}
+
+#shopify-section-incentive-with-cta .discount-banner-text span {
+  display: block;
+}
+
+/* CTA Copy */
+#shopify-section-incentive-with-cta .cta-copy {
+  display: none;
+}
+
+/* CTA Button */
 #shopify-section-incentive-with-cta .btn {
   font-size: 13px;
   padding: 5px;
@@ -21,9 +51,5 @@
 @include media-query('medium-up') {
   #shopify-section-incentive-with-cta {
     font-size: 19px;
-  }
-
-  #shopify-section-incentive-with-cta .v-center {
-    margin-top: -9px;
   }
 }

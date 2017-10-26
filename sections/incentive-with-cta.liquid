@@ -1,22 +1,33 @@
-<div class="grid page-width h-100">
+<!-- TODO: FIX CENTERING ISSUES -->
+<div class="grid page-width">
 
-  <div class="grid__item three-quarters h-100">
-  <div style="position: relative; min-width: 101px;">
-    <div style="position: absolute; margin-top: -1.25px">
-      <img src="{{ 'get-percent-off-banner.png' | asset_img_url: 'master' }}" width="101" height="123" alt="Banner">
+  <div class="grid__item one-tenth medium-up--one-tenth">
+    <!-- Discount Banner -->
+    <div class="discount-banner">
+      <div class="discount-banner-image">
+        <img src="{{ 'get-percent-off-banner.png' | asset_img_url: 'master' }}" width="101" height="123" alt="Discount Banner">
+      </div>
+      <div class="discount-banner-text">
+        <div style="padding-top: 20px">
+          <span>Get</span>
+          <span>{{ section.settings.discount-amt }}</span>
+          <span>Off</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="text-right h-100">
-  <div class="v-center">
-    <span style="margin-left: 115px">{{ section.settings.copy}}</span>
-  </div>
-  </div>
+  <div class="grid__item medium-up--seven-tenths">
+    <!-- CTA Copy -->
+    <div class="medium-up--show text-center" style="padding: 33px; margin-top: 4px; display: none">
+      <span>{{ section.settings.discount-copy}}</span>
+    </div>
   </div>
 
-  <div class="grid__item one-quarter text-right h-100">
-  <div class="v-center" style="margin-top: -19px">
-    <a class="btn button__btn button__btn--primary" href="{{ pages.storefinder.url }}">{{ section.settings.button-label }}</a>
-  </div>
+  <div class="grid__item nine-tenths medium-up--two-tenths text-center medium-up--text-right">
+    <!-- CTA Button -->
+    <a class="btn button__btn button__btn--primary small--hide" href="{{ pages.storefinder.url }}" style="margin-top: 29px">
+      {{ section.settings.button-label }}
+    </a>
   </div>
 
 </div>
@@ -37,8 +48,13 @@
       },
       {
         "type": "text",
-        "label": "Discount",
-        "id": "discount"
+        "label": "Discount Copy",
+        "id": "discount-copy"
+      },
+      {
+        "type": "text",
+        "label": "Discount Amount",
+        "id": "discount-amt"
       }
     ]
   }
