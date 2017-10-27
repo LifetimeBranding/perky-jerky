@@ -1,35 +1,42 @@
 {% assign items_per_row = 3 %}
 
-<div class="grid h-100">
-<div class="grid__item one-whole medium-up--one-half text-center h-100">
 <div class="grid">
-  <div class="grid__item">
-  <h4>{{ section.settings.featured-by | upcase }}</h4>
-  </div>
-    <div class="proof-container">
-      {%- for block in section.blocks -%}
-        {%- if block.type == 'featured_by' -%}
-          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.who }}" width="167" height="77">
-        {%- endif -%}
-      {%- endfor -%}
+<!-- Left Side -->
+<div class="grid__item one-whole medium-up--one-half text-center">
+<div class="grid">
+
+    <div class="grid__item">
+      <h4>{{ section.settings.featured-by | upcase }}</h4>
     </div>
+
+    <div class="grid__item ">
+      <div class="proof-container">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'featured_by' -%}
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.who }}" width="167" height="77">
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
 </div>
 </div>
 
-<div class="grid__item one-whole medium-up--one-half text-center h-100" style="background-color: #f2f2f2">
+<!-- Right Side -->
+<div class="grid__item one-whole medium-up--one-half text-center" style="background-color: #f2f2f2">
 <div class="grid">
+
   <div class="grid__item">
-  <h4>{{ section.settings.retailers | upcase }}</h4>
+    <h4>{{ section.settings.retailers | upcase }}</h4>
   </div>
+
   <div class="grid__item">
     <div class="proof-container">
-      <div class="grid">
         {%- for block in section.blocks -%}
           {%- if block.type == 'sold_at' -%}
             <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.who }}" width="167" height="77">
           {%- endif -%}
         {%- endfor -%}
-      </div>
     </div>
   </div>
 </div>

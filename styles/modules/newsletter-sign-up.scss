@@ -19,11 +19,13 @@
 
 #newsletter-sign-up-copy {
   margin: auto;
+  padding-top: 15px;
 }
 
 @include media-query('medium-up') {
   #newsletter-sign-up-copy {
     margin: 97.5px 0px 0px 0px;
+    padding-top: 0px;
   }
 
   #newsletter-sign-up-inputs {
