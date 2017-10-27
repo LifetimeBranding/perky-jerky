@@ -41,6 +41,6 @@ a.button__btn {
 
 @include media-query('small') {
   .button__btn {
-    width: 100px;
+    min-width: 100px;
   }
 }

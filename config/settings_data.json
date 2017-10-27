@@ -29,6 +29,9 @@
         },
         "package-deals": {
           "type": "package-deals"
+        },
+        "social-media-feed": {
+          "type": "social-media-feed"
         }
       },
       "content_for_index": [

@@ -51,6 +51,12 @@ $(document).ready(function() {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
 
+  // Social Media Feed
+(function(){
+    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+    i.src = "https://cdn.curator.io/published/e474d585-e572-44d2-b0e1-eaa4167f.js";
+    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+})();
   // HERO Carousel
   $('#hero').owlCarousel({
      items: 1,
