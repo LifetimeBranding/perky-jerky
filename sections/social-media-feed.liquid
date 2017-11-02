@@ -5,7 +5,30 @@
 </div>
 
 <div>
-  <!--icons-->
-</div>
 
+  {% comment %}
+    Split filter creates an array object
+  {% endcomment %}
+
+  {% assign networks = 'facebook twitter instagram youtube-play pinterest envelope-o' | split: ' ' %}
+
+  {% for network in networks %}
+
+    {% comment %}
+      TODO: Fix currentLink remaining as string and not an object.
+    {% endcomment %}
+    
+    {% assign currentLink = 'settings.social_network_link' | replace: 'network', network %}
+
+      <a href="#">
+        <span class="fa-stack">
+          <span class="fa fa-circle fa-stack-2x"></span>
+          <span class="fa fa-{{network}} fa-stack-1x fa-inverse"></span>
+        </span>
+      </a>
+
+  {% endfor %}
+
+
+</div>
 </div>
