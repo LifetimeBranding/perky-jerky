@@ -1,4 +1,8 @@
 /*================ Showcase Collection ================*/
+#shopify-section-showcase-collection .owl-carousel .owl-stage-outer {
+  // Fix for clipping of text
+  overflow: inherit;
+}
 
 #shopify-section-showcase-collection {
   background-color: #fff;
