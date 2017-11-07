@@ -68,18 +68,18 @@
             {%- for block in section.blocks -%}
               {%- if block.type == 'featured_in_shop' -%}
               <div class="grid__item one-third text-center">
-
-                <img class="navigation__dropdown-1-image" 
-                src="{{ collections[block.settings.collection].image | img_url: 'large' }}" width="188" height="203"
-                alt="{{ collections[block.settings.collection].name }}">
-
-                <span>{{ collections[block.settings.collection].title }}</span>
+                  <a href=" {{ collections[block.settings.collection].url }}">
+                  <img class="navigation__dropdown-1-image" 
+                  src="{{ collections[block.settings.collection].image | img_url: 'large' }}" width="188" height="203"
+                  alt="{{ collections[block.settings.collection].name }}">
+                  <span>{{ collections[block.settings.collection].title }}</span>
+                  </a>
               </div>
               {%- endif -%}
             {%- endfor -%}
 
           <div class="grid__item full-width text-center">
-            <button class="button__btn button__btn--primary" style="margin-top: 53px">Shop All Snacks</button>
+            <a href="#" class="button__btn btn button__btn--primary" style="margin-top: 53px">Shop All Snacks</a>
           </div>
       
           </div>
@@ -98,7 +98,7 @@
               <span>Just pick a size, your favorite flavors, a shop date, and you're ready to go!</span>
             </div>
             <div class="grid__item text-center">
-              <button class="button__btn button__btn--primary" style="margin-top: 53px">Start Packing</button>
+              <a href="#" class="button__btn btn button__btn--primary" style="margin-top: 53px">Start Packing</a>
             </div>
           </div>
         </div>

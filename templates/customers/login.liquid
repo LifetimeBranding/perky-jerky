@@ -1,10 +1,23 @@
+<div class="grid page-width">
 <div class="form-success hide" id="ResetSuccess">
   {{ 'customer.recover_password.success' | t }}
 </div>
+<div class="grid__item one-half">
+<h1>Login Or Create An Account</h1>
+<div>
+<h3>New Customers</h3>
+<p><!--{{ 'customer.register' | t}}--> Consectetur tempor sint laboris aliquip velit pariatur laboris commodo velit in dolor incididunt eu aliquip ut in dolor consequat.</p>
 
+<!-- TODO: Change to Button -->
+    <a href="/account/register" class="button__btn btn button__btn--secondary">
+      {{ 'layout.customer.create_account' | t }}
+    </a>
+</div>
+</div>
+<div class="grid__item one-half">
 <div id="CustomerLoginForm">
   {% form 'customer_login' %}
-    <h1>{{ 'customer.login.title' | t }}</h1>
+    <h1><!--{{ 'customer.login.title' | t }}--> Registered Customers</h1>
 
     {{ form.errors | default_errors }}
 
@@ -35,10 +48,6 @@
     <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
 
     <a href="/">{{ 'customer.login.cancel' | t }}</a>
-
-    <a href="/account/register">
-      {{ 'layout.customer.create_account' | t }}
-    </a>
 
     {% if form.password_needed %}
       <a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a>
@@ -77,6 +86,7 @@
   {% endform %}
 
 </div>
+</div>
 
 {% if shop.checkout.guest_login %}
   <h2>{{ 'customer.login.guest_title' | t }}</h2>
@@ -85,3 +95,4 @@
     <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
   {% endform %}
 {% endif %}
+</div>
