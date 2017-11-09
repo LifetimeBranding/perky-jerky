@@ -8,8 +8,9 @@
     "typeRoots": ["../../../node_modules/@types"]
   },
   "files": [
-    "src/showcase-collection.ts",
-    "src/interactive-navigation.ts",
-    "src/data-model.ts",
+    "src/ShowcaseCollectionObject.ts",
+    "src/ShowcaseCollectionComponent.ts",
+    "src/InteractiveNavigationComponent.ts",
+    "src/DataModel.ts",
   ]
 }

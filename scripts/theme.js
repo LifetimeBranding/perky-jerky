@@ -19,16 +19,18 @@ window.theme = window.theme || {};
 // =require templates/customers-login.js
 
 /*================ Theme Components ================*/
-// =require custom/build/data-model.js
-// =require custom/build/showcase-collection.js
-// =require custom/build/interactive-navigation.js
+// =require custom/build/DataModel.js
+// =require custom/build/ShowcaseCollectionComponent.js
+// =require custom/build/InteractiveNavigationComponent.js
 
 // Using mock data for now
 var dataModel = new DataModel()
-// TODO: Only initialize this on the homepage
-var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown', dataModel)
+
 // Site Header
 var interactiveNavigation = new InteractiveNavigationComponent('slide-out-navigation-menu', 'slide-out-navigation-toggle');
+
+// TODO: Only initialize this on the homepage
+var showcaseDropdown = new ShowcaseCollectionComponent('showcase-collection-dropdown', dataModel)
 
 $(document).ready(function() {
 

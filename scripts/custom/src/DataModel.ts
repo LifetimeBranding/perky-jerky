@@ -4,6 +4,7 @@
 *   TODO: 
 *   - Refactor to make proper use of getter and setter methods
 *   - Fix the fact that export breaks browser script (needed for testing)
+*   - Refactor into an object
 *   
 */
 /*export*/ class DataModel {
