@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "system",
+    "outFile": "custom/perky-jerky-bundle.js",
+    "types": ["node", "mocha"],
+    "typeRoots": ["../../node_modules/@types"]
+  },
+  "files": [
+    "_ts/ShowcaseCollectionObject.ts",
+    "_ts/ShowcaseCollectionComponent.ts",
+    "_ts/InteractiveNavigationComponent.ts",
+    "_ts/DataModel.ts",
+  ]
+}

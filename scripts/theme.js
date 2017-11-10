@@ -18,10 +18,8 @@ window.theme = window.theme || {};
 // =require templates/customers-addresses.js
 // =require templates/customers-login.js
 
-/*================ Theme Components ================*/
-// =require custom/build/DataModel.js
-// =require custom/build/ShowcaseCollectionComponent.js
-// =require custom/build/InteractiveNavigationComponent.js
+/*================ Custom Components ================*/
+// =require custom/perky-jerky-bundle.js
 
 // Using mock data for now
 var dataModel = new DataModel()

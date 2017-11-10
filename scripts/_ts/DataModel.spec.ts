@@ -1,6 +1,6 @@
 import 'mocha'
 import { expect } from 'chai'
-import { DataModel } from '../src/DataModel'
+import { DataModel } from 'DataModel'
 
 let data = new DataModel()
 
