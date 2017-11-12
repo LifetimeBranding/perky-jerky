@@ -120,10 +120,18 @@
         <div class="grid">
             {%- for block in section.blocks -%}
               {%- if block.type == 'featured_in_community' -%}
-
                 <div class="grid__item one-fifth text-center">
+
+                  <!--<div style="position: relative">
+                  <div class="navigation__dropdown-overlay">
+                    <p>Copy</p>
+                  </div>
+                </div>-->
+
                   <img class="navigation__dropdown-2-image" width="292" height="188"
                   src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+
+
                 </div>
 
               {%- endif -%}

@@ -68,9 +68,25 @@ ul.navigation__header--links > li > a {
   padding: 68px 0px 68px 0px;
 }
 
+/*
+.navigation__dropdown-overlay {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+*/
+
 .navigation__dropdown-2-image {
   margin: auto;
   padding: 7.5px 1px 0px 0px;
+  transition: 0.3s all;
+}
+
+.navigation__dropdown-2-image:hover {
+  cursor: pointer;
+  filter: brightness(0.2);
 }
 
 .navigation__dropdown-2-container {

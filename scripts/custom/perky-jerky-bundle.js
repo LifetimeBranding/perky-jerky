@@ -3,7 +3,7 @@
 *
 */
 class ShowcaseCollectionObject {
-    construcor(productName, themeColor, flavorsOfCategory) {
+    constructor(productName, themeColor, flavorsOfCategory) {
         this.productName = productName;
         this.themeColor = themeColor;
         this.flavorsOfCategory;
@@ -17,9 +17,9 @@ class ShowcaseCollectionObject {
  *
  */
 class ShowcaseCollectionComponent {
-    constructor(containerElement, model) {
+    constructor(containerElement, dataModel) {
         this.containerElement = document.getElementById(containerElement);
-        this.dataModel = model;
+        this.dataModel = dataModel;
     }
     show(category) {
         if (this.isVisible()) {
@@ -143,7 +143,6 @@ class InteractiveNavigationComponent {
 *
 *   TODO:
 *   - Refactor to make proper use of getter and setter methods
-*   - REDO DIRECTORY STRUCTURE
 *
 */
 class DataModel {

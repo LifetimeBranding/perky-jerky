@@ -10,9 +10,9 @@ class ShowcaseCollectionComponent {
   dataModel: any
   openedCategory: string
 
-  constructor (containerElement: string, model: any) {
+  constructor (containerElement: string, dataModel: any) {
     this.containerElement = document.getElementById(containerElement)
-    this.dataModel = model
+    this.dataModel = dataModel
   }
 
   public show(category: string) {
