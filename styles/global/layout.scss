@@ -4,18 +4,29 @@ html {
   background-color: $color-body;
   font-family: $font-stack-body;
   font-size: $font-size-base;
-  @include prefix(user-select, none, webkit moz spec)
+  //@include prefix(user-select, none, webkit moz spec)
 }
+
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.header__main,
+.header__sub {
   font-family: $font-stack-header;
   font-weight: $font-weight-header;
   //font-size: 1.2em !important;
+}
+
+
+h1, .header__main {
+  font-size: 87px !important;
+}
+h2, .header__sub {
+  font-size: 31.25px !important;
 }
 
 .h-100 {

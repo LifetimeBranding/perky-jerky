@@ -14,7 +14,7 @@
             onclick="showcaseDropdown.show('{{ collections[block.settings.collection].title }}')">
             <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}"
               width="300" height="382" style="width:300px" alt="{{ collections[block.settings.collection].title }}">
-            <span>{{ collections[block.settings.collection].title }}</span>
+            <span style="font-family: 'Franchise Bold'">{{ collections[block.settings.collection].title }}</span>
           </div>
         {%- endfor -%}
     </div>

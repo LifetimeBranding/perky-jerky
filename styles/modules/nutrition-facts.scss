@@ -37,8 +37,9 @@
 }
 
 #nutrition-legal-modal .modal-copy-container {
+  font-family: "Trade Gothic Medium";
   overflow-y: scroll; 
-  font-size: 0.8em; 
+  font-size: 12px; 
   line-height: 2; 
   height: 300px
 }
@@ -57,10 +58,12 @@
 
 #shopify-section-nutrition-facts table {
   border-collapse: collapse; // The border of the table doesn't show without this
+  font-family: "Franchise Bold";
+  font-size: 24px;
 }
 
 #shopify-section-nutrition-facts td {
-  padding: 0px 0px 11.25px 0px;
+  padding: 4px 0px 4px 0px;
 }
 
 /* This is the first column */

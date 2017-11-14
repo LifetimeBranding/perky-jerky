@@ -8,7 +8,7 @@
 
 /*================ Left Side ================*/
 #pick-and-pack-left {
-  max-width: 360px;
+  max-width: 400px;
   text-align: center;
   margin: 123.75px auto auto auto;
   z-index: 1;
@@ -71,8 +71,9 @@
 }
 
 #pick-and-pack-right > ol > li {
+  font-family: "Franchise Bold";
   margin-bottom: 33.75px;
-  font-size: 22.5px;
+  font-size: 31.25px;
 }
 
 @include media-query('medium-down') {
