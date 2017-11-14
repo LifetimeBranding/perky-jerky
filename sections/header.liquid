@@ -57,7 +57,7 @@
       <div class="navigation__dropdown-content">
         <!-- Arrow -->
         <div class="page-width" style="position: relative">
-          <span class="arrow" style="left: 152px"></span>
+          <span class="arrow" style="left: 173px"></span>
         </div>
       <div class="navigation__dropdown-1-container page-width">
       <div class="grid">
@@ -114,24 +114,22 @@
       <div class="navigation__dropdown-content">
         <!-- Arrow -->
         <div class="page-width" style="position: relative">
-          <span class="arrow" style="left: 310px"></span>
+          <span class="arrow" style="left: 327px"></span>
         </div>
       <div class="navigation__dropdown-2-container">
         <div class="grid">
             {%- for block in section.blocks -%}
               {%- if block.type == 'featured_in_community' -%}
-                <div class="grid__item one-fifth text-center">
+                <div class="grid__item one-fifth text-center overlay-container">
 
-                  <!--<div style="position: relative">
+                  <div style="position: relative">
                   <div class="navigation__dropdown-overlay">
-                    <p>Copy</p>
+                    <h2>{{block.settings.title}}</h2>
                   </div>
-                </div>-->
+                </div>
 
                   <img class="navigation__dropdown-2-image" width="292" height="188"
                   src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
-
-
                 </div>
 
               {%- endif -%}
