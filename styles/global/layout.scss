@@ -18,14 +18,14 @@ h6,
 .header__sub {
   font-family: $font-stack-header;
   font-weight: $font-weight-header;
-  //font-size: 1.2em !important;
+  //font-size: 1.2em;
 }
 
 
-h1, .header__main {
+h1.homepage, .header__main {
   font-size: 87px !important;
 }
-h2, .header__sub {
+h2.homepage, .header__sub {
   font-size: 31.25px !important;
 }
 

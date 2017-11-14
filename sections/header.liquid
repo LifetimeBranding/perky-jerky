@@ -70,7 +70,7 @@
               <div class="grid__item one-third text-center">
                   <a href=" {{ collections[block.settings.collection].url }}">
                   <img class="navigation__dropdown-1-image" 
-                  src="{{ collections[block.settings.collection].image | img_url: 'large' }}" width="188" height="203"
+                  src="{{ collections[block.settings.collection].image | img_url: 'large' }}" width="160" height="203"
                   alt="{{ collections[block.settings.collection].name }}">
                   <span>{{ collections[block.settings.collection].title }}</span>
                   </a>
@@ -121,15 +121,14 @@
             {%- for block in section.blocks -%}
               {%- if block.type == 'featured_in_community' -%}
                 <div class="grid__item one-fifth text-center overlay-container">
-
-                  <div style="position: relative">
+                  <a href="{{ pages[block.settings.page].url }}">
                   <div class="navigation__dropdown-overlay">
-                    <h2>{{block.settings.title}}</h2>
+                    <h2 class="homepage">{{ block.settings.title }}</h2>
                   </div>
-                </div>
 
                   <img class="navigation__dropdown-2-image" width="292" height="188"
                   src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+                  </a>
                 </div>
 
               {%- endif -%}
@@ -147,7 +146,7 @@
   <div class="small--hide navigation__main-menu">
   <div class="grid">
   <div class="grid__item one-half" style="width: 135px; max-height: 56px;">
-    <div class="navigation__main-menu--slide-out" id="slide-out-navigation-menu">
+    <div class="navigation__main-menu--slide-out" id="slide-out-navigation-menu" style="margin-top: -10px">
       <ul>
         <li><span class="fa fa-user"></span> <a href="/account/login">Login / Register</a></li>
         <li><span class="fa fa-shopping-cart"></span> <a href="/cart">My Cart ({{ cart.item_count }})</a></li>
@@ -156,7 +155,7 @@
     </div>
   </div>
   <div class="grid__item one-half" style="width: 100px">
-    <div id="slide-out-navigation-toggle" onclick="interactiveNavigation.toggle()">
+    <div id="slide-out-navigation-toggle" onclick="interactiveNavigation.toggle()" style="margin-top: -10px">
       <div>
         <!-- Open Image -->
         <img src="{{ 'menu-drawing.png' | asset_img_url: '110x75' }}" 
@@ -216,6 +215,11 @@
             "type": "text",
             "id": "title",
             "label": "Title"
+          },
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Page"
           }
         ]
       }

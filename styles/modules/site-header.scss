@@ -44,13 +44,16 @@ ul.navigation__header--links > li > a {
   margin: 0px 45px 0px 45px;
 }
 
-.overlay-container > img {
-  filter: brightness(0.2);
-  transition: 0.3s all;
-  cursor: pointer;
+.overlay-container {
+  position: relative;
 }
 
-.overlay-container:hover > img {
+.overlay-container img {
+  filter: brightness(0.2);
+  transition: 0.3s all;
+}
+
+.overlay-container:hover img {
   filter: brightness(1);
 }
 
@@ -87,7 +90,6 @@ ul.navigation__header--links > li > a {
   color: #fff;
   font-family: "Franchise Bold";
   width: 100%;
-  cursor: pointer;
   padding-top: 20%;
 }
 
