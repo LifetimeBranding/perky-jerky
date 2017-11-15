@@ -14,4 +14,11 @@
 #shopify-section-brand-ambassador img {
   display: block;
   margin: 176.25px auto 37.5px;
+  padding: 0px 30px;
+}
+
+@include media-query('medium-up') {
+  #shopify-section-brand-ambassador img {
+   padding: 0;
+  }
 }

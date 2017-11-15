@@ -1,6 +1,5 @@
 
-<div class="h-100" style="background-image: url('{{ section.settings.background | img_url: 'master' }}'); background-size: cover; background-position: center center; position: relative;">
-
+<div class="wallpaper" style="background-image: url('{{ section.settings.background | img_url: 'master' }}')">
 <div class="grid page-width">
 
   <!-- Left Side -->
@@ -10,14 +9,18 @@
       <img src="{{ section.settings.logo | img_url: 'master' }}" width="124" height="38" alt="Logo" style="margin-bottom: 20px;">
       <!-- Pick -n- Pack Banner Image -->
       <img src="{{ section.settings.banner | img_url: 'master' }}" width="358" height="124" alt="Pick and Pack Banner">
+      <div class="small--hide">
       <h1 class="homepage" style="margin-bottom: 0px">can't decide?</h1>
       <h2 class="homepage" style="margin-top: 0px">try 'em all in one box.</h2>
+      </div>
     </div>
   </div>
       <!--Centerpiece -->
+      <div style="width: 100%">
       <div id="pick-and-pack-centerpiece">
       <img src="{{ section.settings.centerpiece | img_url: 'master' }}" alt="Pick and Pack Box">
       </div>
+    </div>
   <!-- Right Side -->
   <div class="grid__item small--hide one-half">
     <div id="pick-and-pack-right">

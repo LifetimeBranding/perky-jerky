@@ -6,6 +6,13 @@
   height: 608px;
 }
 
+#shopify-section-pick-and-pack .wallpaper {
+  height: 100%;
+  background-position: center center; 
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% contain;
+}
 /*================ Left Side ================*/
 #pick-and-pack-left {
   max-width: 400px;
@@ -28,16 +35,32 @@
   #pick-and-pack-left {
   margin-left: -100px;
   }
+
 }
 
 /*================ Centerpiece ================*/
 
 #pick-and-pack-centerpiece {
-  display: none;
+  height: 100%;
+  max-width: 100%;
+}
+
+#pick-and-pack-centerpiece img {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
 }
 
 // TODO: Reposition instead of hide
 @include media-query('medium-up') {
+
+  #shopify-section-pick-and-pack .wallpaper {
+      background-size: cover;
+      background-position: center center;
+    }
+
   #pick-and-pack-centerpiece {
     display: inherit;
     position: absolute;
@@ -46,9 +69,11 @@
   }
 
   #pick-and-pack-centerpiece img {
+    width: 100%;
     position: absolute;
     bottom: 0;
     margin-left: 50%;
+    left: 0;
     z-index: 0;
   }
 }

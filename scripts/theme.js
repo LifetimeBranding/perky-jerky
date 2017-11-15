@@ -67,7 +67,8 @@ $(document).ready(function() {
 
   // Showcase Products Carousel
   $('#showcase').owlCarousel({
-    items: 1,
+    //items: 1,
+    items: 3,
     dots: true,
     responsive: {
       600: {

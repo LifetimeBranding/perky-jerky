@@ -3,7 +3,6 @@
 
 #shopify-section-showcase-collection {
   background-color: #fff;
-  height: 1012px;
   text-transform: uppercase;
   background-image: url('showcase-stage.png');
   background-position: center bottom;
@@ -19,7 +18,21 @@
   color: gray;
 }
 
+  img.showcase-image {
+    width: 300px;
+    height: 200px;
+  }
+
 @include media-query('medium-up'){
+  #shopify-section-showcase-collection {
+      height: 1012px;
+  }
+
+  img.showcase-image {
+    width: 300px;
+    height: 382px;
+  }
+
   #shopify-section-showcase-collection .owl-carousel .owl-stage-outer {
     // Fix for clipping of text
     overflow: inherit;
