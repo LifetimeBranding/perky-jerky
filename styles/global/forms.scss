@@ -25,6 +25,14 @@ textarea {
   min-height: 100px;
 }
 
+// Custom
+.input {
+  background-color: #f2f2f2;
+  border: 1px solid #dbdbdb;
+  font-family: "Franchise Bold";
+  font-size: 1.2rem;
+}
+
 /*================ Custom select style ================*/
 select {
   @include prefix(appearance, none, webkit moz spec);

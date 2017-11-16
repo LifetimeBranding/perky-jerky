@@ -1,33 +1,36 @@
-<div class="grid page-width">
+<div class="grid page-width" style="padding: 50px 0px">
 <div class="form-success hide" id="ResetSuccess">
   {{ 'customer.recover_password.success' | t }}
 </div>
-<div class="grid__item one-half">
-<h1>Login Or Create An Account</h1>
-<div>
-<h3>New Customers</h3>
-<p><!--{{ 'customer.register' | t}}--> Consectetur tempor sint laboris aliquip velit pariatur laboris commodo velit in dolor incididunt eu aliquip ut in dolor consequat.</p>
+<h2 class="header__sub">Login Or Create An Account</h2>
+<div class="grid__item medium-up--one-half">
+<div style="">
+<h2>New Customers</h2>
+<p><!--{{ 'customer.register' | t}}-->
+By creating an account with our store, you'll be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.
+</p>
 
-<!-- TODO: Change to Button -->
-    <a href="/account/register" class="button__btn btn button__btn--secondary">
-      {{ 'layout.customer.create_account' | t }}
-    </a>
+<a href="/account/register" class="button__btn btn button__btn--secondary">
+  {{ 'layout.customer.create_account' | t }}
+</a>
 </div>
 </div>
-<div class="grid__item one-half">
-<div id="CustomerLoginForm">
+<div class="grid__item medium-up--one-half">
+<div id="CustomerLoginForm" style="border: 1px solid #dbdbdb">
   {% form 'customer_login' %}
-    <h1><!--{{ 'customer.login.title' | t }}--> Registered Customers</h1>
+
+    <h2><!--{{ 'customer.login.title' | t }}--> Registered Customers</h2>
+
 
     {{ form.errors | default_errors }}
-
+<div class="display: inline-block">
     <label for="CustomerEmail" class="label-hidden">
       {{ 'customer.login.email' | t }}
     </label>
     <input type="email"
            name="customer[email]"
            id="CustomerEmail"
-           class="{% if form.errors contains 'email' %}input-error{% endif %}"
+           class="{% if form.errors contains 'email' %}input-error{% endif %} input"
            placeholder="{{ 'customer.login.email' | t }}"
            spellcheck="false"
            autocomplete="off"
@@ -41,13 +44,11 @@
       <input type="password"
              name="customer[password]"
              id="CustomerPassword"
-             class="{% if form.errors contains 'password' %}input-error{% endif %}"
+             class="{% if form.errors contains 'password' %}input-error{% endif %} input"
              placeholder="{{ 'customer.login.password' | t }}">
     {% endif %}
-
-    <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
-
-    <a href="/">{{ 'customer.login.cancel' | t }}</a>
+</div>
+    <input type="submit" class="btn button__btn button__btn--secondary" value="{{ 'customer.login.sign_in' | t }}">
 
     {% if form.password_needed %}
       <a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a>
@@ -92,7 +93,7 @@
   <h2>{{ 'customer.login.guest_title' | t }}</h2>
 
   {% form 'guest_login' %}
-    <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+    <input type="submit" class="btn button__btn button__btn--secondary" value="{{ 'customer.login.guest_continue' | t }}">
   {% endform %}
 {% endif %}
 </div>
