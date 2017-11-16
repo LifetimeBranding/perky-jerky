@@ -1,91 +1,117 @@
 <div class="page-width grid h-100">
-
-<!-- Breakpoint: Medium Up -->
-<div class="grid__item medium-up--one-whole text-center h-100" style="padding-bottom: 75px">
-  <!-- Section: Showcase Products -->
-  <div class="grid">
-    <div class="grid__item one-whole">
-      <img src="{{ section.settings.header-image | img_url: 'master' }}" width="509" height="294" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px;">
-    </div>
-
+  <!-- Breakpoint: Medium Up -->
+  <div class="grid__item medium-up--one-whole text-center h-100" style="padding-bottom: 75px">
+    <!-- Section: Showcase Products -->
+    <div class="grid">
+      <div class="grid__item one-whole">
+        <img src="{{ section.settings.header-image | img_url: 'master' }}" width="509" height="294" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px;">
+      </div>
       <div id="showcase" class="grid__item one-third owl-carousel owl-theme">
-         {%- for block in section.blocks -%}
-          <div class="section-showcase-collection--item" 
-            onclick="showcaseDropdown.show('{{ collections[block.settings.collection].title }}')">
-            <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}"
-              width="300" height="382" class="showcase-image" alt="{{ collections[block.settings.collection].title }}">
-            <span style="font-family: 'Franchise Bold'">{{ collections[block.settings.collection].title }}</span>
-          </div>
+        {%- for block in section.blocks -%}
+        <div class="section-showcase-collection--item" onclick="showcaseDropdown.show('{{ collections[block.settings.collection].title }}')">
+          <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}" width="300" height="382" class="showcase-image" alt="{{ collections[block.settings.collection].title }}">
+          <span style="font-family: 'Franchise Bold'">{{ collections[block.settings.collection].title }}</span>
+        </div>
         {%- endfor -%}
-    </div>
-
-    <div class="grid__item one-whole small--hide /*small--text-center*/ text-right" style="margin-top: 40px">
-      <a class="btn button__btn button__btn--primary" href="/collections/all">Shop All</a>
-    </div>
-  </div>
-
-  <!-- TODO: MOVE THIS TO VIEW CONTROLLER // OR ACCESS DATA MODEL DIRECTLY? -->
-  <!-- Dropdown: Product Details -->
-  <div id="showcase-collection-dropdown" class="section-showcase-collection__detail--container">
-
-  <span class="fa fa-spin fa-refresh fa-fw fa-5x"></span>
-
-  <div class="grid page-width">
-    <div class="grid__item">
-      <div class="grid">
-        <div class="grid__item one-third">
-          <!-- Product Category -->
-          <div id="collection-detail-category-container" class="grid">
-          
-          <!-- Product Category Image -->
-          <div id="showcase-collection-category-image-container" class="grid__item">
-            <!-- IMG TAG -->
-          </div>
-
-          <!-- Product Category Names -->
-          <div class="grid__item">
-            <ul id="showcase-collection-category-names" class="inline-list">
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="grid__item two-thirds">
-          <!-- Category Flavors -->
-          <div id="collection-detail-flavor-container" class="grid"></div>
-        </div>
+      </div>
+      <div class="grid__item one-whole small--hide /*small--text-center*/ text-right" style="margin-top: 40px">
+        <a class="btn button__btn button__btn--primary" href="/collections/all">Shop All</a>
       </div>
     </div>
-  </div>
-  </div>
-  <!-- END MOVE -->
-</div>
+    <!-- TODO: MOVE THIS TO VIEW CONTROLLER // OR ACCESS DATA MODEL DIRECTLY? -->
+    <!-- Dropdown: Product Details -->
+    <div id="showcase-collection-dropdown" class="small--hide section-showcase-collection__detail--container">
+      <!--<span class="fa fa-spin fa-refresh fa-fw fa-5x"></span>-->
+      <div class="grid page-width">
+        <div class="grid__item">
+          <div class="grid">
 
+            <div class="grid__item one-third">
+              <!-- Product Category -->
+              <div id="collection-detail-category-container" class="grid">
+                <!-- Product Category Image -->
+                <div id="showcase-collection-category-image-container" class="grid__item">
+                  <img src="//cdn.shopify.com/s/files/1/2236/2873/files/HERO_2_Bag.png?v=1508948490" width="300" height="300" alt="Banner">
+                </div>
+                <!-- Product Category Names -->
+                <div class="grid__item">
+                  <ul id="showcase-collection-category-names" class="inline-list" style="padding: 0">
+                    <li class="no-bullets">
+                      <h2><a href="#">Turkey</a></h2>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+              <div class="grid__item two-thirds">
+                <!-- Category Flavors -->
+                <div id="collection-detail-flavor-container" class="grid" style="margin-top: -30px">
+
+                  <div class="grid__item">
+                    <a href="collections/all">
+                      <div class="section-showcase-collection__detail--flavor">
+                        <h2 style="color: #d2d2d2">More Than Just Original</h2>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="grid__item">
+                    <a href="collections/all">
+                      <div class="section-showcase-collection__detail--flavor">
+                        <h2 style="color: #d2d2d2">Tasty Teriyaki</h2>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="grid__item">
+                    <a href="collections/all">
+                      <div class="section-showcase-collection__detail--flavor">
+                        <h2 style="color: #d2d2d2">Brewmaster's Pale Ale</h2>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="grid__item">
+                    <a href="collections/all">
+                      <div class="section-showcase-collection__detail--flavor">
+                        <h2 style="color: #d2d2d2">Sweet &amp; Snappy</h2>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="grid__item">
+                    <a href="collections/all">
+                      <div class="section-showcase-collection__detail--flavor">
+                        <h2 style="color: #d2d2d2">Jammin' Jamaican</h2>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="grid__item">
+                    <a href="collections/all">
+                      <div class="section-showcase-collection__detail--flavor">
+                        <h2 style="color: #d2d2d2">Hot &amp; Bothered</h2>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!--<div class="grid__item">
+                    <a href="collections/all">
+                      <div class="section-showcase-collection__detail--flavor">
+                        See All
+                      </div>
+                    </a>
+                  </div>-->
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MOVE -->
+    </div>
+  </div>
 </div>
-</div>
-{% schema %}
-  {
-    "name": "Showcase collections",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "header-image",
-        "label": "Heading Banner"
-      }
-    ],
-    "max_blocks": 3,
-    "blocks": [
-      {
-        "type": "collection",
-        "name": "Collection",
-        "settings": [
-          {
-            "type": "collection",
-            "id": "collection",
-            "label": "Collection"
-          }
-        ]
-      }
-    ]
-  }
-{% endschema %}
+{% schema %} { "name": "Showcase collections", "settings": [ { "type": "image_picker", "id": "header-image", "label": "Heading Banner" } ], "max_blocks": 3, "blocks": [ { "type": "collection", "name": "Collection", "settings": [ { "type": "collection", "id": "collection", "label": "Collection" } ] } ] } {% endschema %}

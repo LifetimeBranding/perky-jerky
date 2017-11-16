@@ -7,6 +7,11 @@
   padding: 15px 0px 15px 0px;
 }
 
+#shopify-section-newsletter-sign-up .form-container {
+  max-width: 418px;
+  margin: auto;
+}
+
 #shopify-section-newsletter-sign-up input[type="text"], input[type="email"] {
   display: inline-block;
   margin: 0px 0px 7.5px 0px;
@@ -14,12 +19,18 @@
   text-transform: uppercase;
   font-size: 15px;
   height: 37.5px;
-  width: 418px;
+  width: 100%;
 }
 
 #newsletter-sign-up-copy {
   margin: auto;
   padding-top: 15px;
+}
+
+@include media-query('small') {
+  #shopify-section-newsletter-sign-up .btn {
+    width: 100% !important;
+  }
 }
 
 @include media-query('medium-up') {

@@ -8,16 +8,15 @@
 
 #shopify-section-pick-and-pack .wallpaper {
   height: 100%;
-  background-position: center center; 
+  background-position: 40% center; 
   position: relative;
   background-repeat: no-repeat;
-  background-size: 100% contain;
 }
 /*================ Left Side ================*/
 #pick-and-pack-left {
   max-width: 400px;
   text-align: center;
-  margin: 123.75px auto auto auto;
+  margin: 50px auto auto auto;
   z-index: 1;
 }
 
@@ -48,13 +47,17 @@
 #pick-and-pack-centerpiece img {
   position: absolute;
   bottom: 0;
-  width: 300px;
-  left: 50%;
-  margin-left: -150px;
+  width: 400px;
+  left: 53%;
+  margin-left: -200px;
 }
 
 // TODO: Reposition instead of hide
 @include media-query('medium-up') {
+
+  #pick-and-pack-left {
+    margin-top: 123.75px;
+  }
 
   #shopify-section-pick-and-pack .wallpaper {
       background-size: cover;

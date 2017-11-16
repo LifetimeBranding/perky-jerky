@@ -3,6 +3,16 @@
   text-align: center;
   margin: auto;
 }
+#shopify-section-nutrition-facts .interactive-image {
+    width: 100%;
+    height: 100%;
+}
+
+@include media-query('medium-up') {
+  #shopify-section-nutrition-facts .interactive-image {
+    height: 603px;
+  }
+}
 
 @include media-query('widescreen') {
   #shopify-section-nutrition-facts .image-container {

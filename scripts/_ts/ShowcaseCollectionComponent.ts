@@ -1,8 +1,6 @@
 /**
- *    Showcase Collection Component
+ *    Showcase Collection Component View Controller
  *  
- *    TODO:
- *    - Change to Showcase Product Component after migration is complete?
  *  
  */
 class ShowcaseCollectionComponent {
@@ -44,37 +42,7 @@ class ShowcaseCollectionComponent {
 
       if (!this.isVisible())
         this.toggle()      
-/* 
-      PARENT NODE: #collection-detail-category-container
-
-      Create Child to #collection-detail-category-container
-       <img src="http://via.placeholder.com/241x316" width="241" height="316" alt="Banner">
-*/
-
-          /*<li class="no-bullets">
-            <a href="#">Category {{ category }}</a>
-          </li>*/
-
- /*
-    CREATE CHILD TO #collection-detail-flavor-container (LAST ONE MUST BE SEE ALL)
-
-            {% for i in (1..5) %}
-              <div class="grid__item">
-                <a href="collections/all">
-                  <div class="section-showcase-collection__detail--flavor">
-                    Flavor {{ i }}
-                  </div>
-                </a>
-              </div>
-            {% endfor %}
-              <div class="grid__item">
-                <a href="collections/all">
-                <div class="section-showcase-collection__detail--flavor">
-                    See All
-                </div>
-              </a>
-              </div>
- */
+      
       console.log(data)
     }, (error) => {
       // if failed

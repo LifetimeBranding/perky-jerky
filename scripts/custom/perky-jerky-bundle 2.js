@@ -3,21 +3,23 @@
 *
 */
 class ShowcaseCollectionObject {
-    constructor(productName, themeColor, flavorsOfCategory) {
+    construcor(productName, themeColor, flavorsOfCategory) {
         this.productName = productName;
         this.themeColor = themeColor;
         this.flavorsOfCategory;
     }
 }
 /**
- *    Showcase Collection Component View Controller
+ *    Showcase Collection Component
  *
+ *    TODO:
+ *    - Change to Showcase Product Component after migration is complete?
  *
  */
 class ShowcaseCollectionComponent {
-    constructor(containerElement, dataModel) {
+    constructor(containerElement, model) {
         this.containerElement = document.getElementById(containerElement);
-        this.dataModel = dataModel;
+        this.dataModel = model;
     }
     show(category) {
         if (this.isVisible()) {
@@ -47,7 +49,7 @@ class ShowcaseCollectionComponent {
             /*
                   PARENT NODE: #collection-detail-category-container
             
-                  //Create Child to #collection-detail-category-container
+                  Create Child to #collection-detail-category-container
                    <img src="http://via.placeholder.com/241x316" width="241" height="316" alt="Banner">
             */
             /*<li class="no-bullets">
@@ -141,9 +143,10 @@ class InteractiveNavigationComponent {
 *
 *   TODO:
 *   - Refactor to make proper use of getter and setter methods
+*   - REDO DIRECTORY STRUCTURE
 *
 */
-class DataModel {
+/*export*/ class DataModel {
     constructor() {
         this.products = [
             {

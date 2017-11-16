@@ -16,3 +16,11 @@
 }
 
 /*================ Media Queries ================*/
+
+@include media-query('small') {
+  #shopify-section-social-proof h2 {
+    max-width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

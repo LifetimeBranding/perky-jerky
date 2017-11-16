@@ -3,8 +3,9 @@
     <div class="grid__item one-whole small--text-center medium-up--one-half">
       <div id="newsletter-sign-up-copy">
         <img src="{{ 'newsletter-email-icon.png' | asset_img_url: 'master' }}" alt="Envelope Icon" width="43" height="33"> 
-        <h1 class="homepage" style="margin: 0">Perks &amp; Jerks</h1>
-        <h2 class="homepage" style="margin: 0">Our newsletter is full of Perks &amp; Jerks:</h2>
+        <h1 class="homepage small--hide" style="margin: 0">Perks &amp; Jerks</h1>
+        <h2 class="homepage medium-up--hide">Perks &amp; Jerks</h2>
+        <h2 class="homepage small--hide" style="margin: 0">Our newsletter is full of Perks &amp; Jerks:</h2>
         <p>Information on events, special offers, and the latest on Jerk Man.
         Sign up, and stay in the loop with the rest of us jerks.
         </p>
@@ -12,13 +13,15 @@
     </div>
     <!-- Right Side -->
     <div class="grid__item one-whole small--text-center medium-up--one-half medium-up--text-right">
+      <div class="form-container">
       <div id="newsletter-sign-up-inputs">
         <input type="text" name="fname" placeholder="First Name">
         <input type="text" name="lname" placeholder="Last Name">
         <input type="text" name="zipcode" placeholder="Zip Code">
         <input type="email" name="email" placeholder="Email Address">
       </div>
-      <button class="btn button__btn button__btn--primary">Subscribe</button>
+      <button class="btn button__btn button__btn--primary" onclick="this.innerHTML = 'Perkyfying...'">Subscribe</button>
+    </div>
     </div>
 </div>
 

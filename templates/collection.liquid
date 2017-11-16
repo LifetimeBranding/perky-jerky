@@ -20,7 +20,7 @@
 {% paginate collection.products by 6 %}
 
 <!-- Sidebar -->
-<div class="grid__item one-quarter">
+<div class="grid__item medium-up--one-quarter one-whole">
   <header role="banner">
     {% if collection.all_tags.size > 0 %}
       <ul class="collection-links no-padding">
@@ -53,7 +53,7 @@
 {% endif %}
 
   <!-- Product Grid -->
-  <div class="grid__item three-quarters">
+  <div class="grid__item medium-up--three-quarters">
     <div class="grid">
     {% for product in collection.products %}
       <div class="grid__item one-third" style="padding: 5px; text-align: center">
@@ -100,14 +100,14 @@
             {{ 'products.product.sold_out' | t }}
           {% endunless %}
         </p>-->
-        <select style="display: block; width: 193px; margin: 0px auto 5px auto; height: 40px; background-color: #fafafa; padding: 1px">
+        <select class="small--hide" style="display: block; width: 193px; margin: 0px auto 5px auto; height: 40px; background-color: #fafafa; padding: 1px">
           <option style="padding: 5px">
             {{ product.weight | weight_with_unit }} - {{ product.price | money}}
           </option>
         </select>
 
-        <!-- Add To Cart Button -->
-        <button class="btn button__btn button__btn--secondary">Add To Cart</button>
+        <!-- Add To Cart Button: Hidden for preview only because it breaks design -->
+        <button class="small--hide btn button__btn button__btn--secondary">Add To Cart</button>
       </div>
 
     {% else %}

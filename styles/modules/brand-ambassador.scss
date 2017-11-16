@@ -2,23 +2,47 @@
 
 #shopify-section-brand-ambassador {
   background-color: #9fb48c;
-  background-image: url('{{ section.settings.background | img_url }}');
   background-size: cover;
-  height: 600px;
 }
+
+
+
+
+#shopify-section-brand-ambassador img {
+  display: block;
+  padding: 0px 30px;
+  margin: 100px auto;
+}
+
+
+  #shopify-section-brand-ambassador .wallpaper {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+      padding: 0px 15px 0px 15px;
+    height: 100%;
+  }
+
+@include media-query('small') {
+  #shopify-section-brand-ambassador .btn {
+    margin-bottom: 20px;
+    width: 100% !important;
+  }
+
+  #shopify-section-brand-ambassador .wallpaper {
+    background-position: right center; 
+  }
+}
+
+@include media-query('medium-up') {
+  #shopify-section-brand-ambassador {
+      height: 600px;
+  }
 
 #shopify-section-brand-ambassador a {
   width: 278px !important;
 }
-
-#shopify-section-brand-ambassador img {
-  display: block;
-  margin: 176.25px auto 37.5px;
-  padding: 0px 30px;
-}
-
-@include media-query('medium-up') {
   #shopify-section-brand-ambassador img {
+   margin: 176.25px auto 37.5px;
    padding: 0;
   }
 }
