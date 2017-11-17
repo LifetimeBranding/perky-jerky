@@ -40,6 +40,18 @@ textarea {
   width: 100%
 }
 
+.select {
+  width: 193px; 
+  margin: 0px auto 5px auto; 
+  height: 40px; 
+  background-color: #fafafa; 
+  padding: 1px;
+}
+
+.select option {
+  padding: 5px;
+}
+
 /*================ Custom select style ================*/
 select {
   @include prefix(appearance, none, webkit moz spec);

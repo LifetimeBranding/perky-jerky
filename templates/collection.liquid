@@ -100,8 +100,8 @@
             {{ 'products.product.sold_out' | t }}
           {% endunless %}
         </p>-->
-        <select class="small--hide" style="display: block; width: 193px; margin: 0px auto 5px auto; height: 40px; background-color: #fafafa; padding: 1px">
-          <option style="padding: 5px">
+        <select class="small--hide select" style="display: block">
+          <option>
             {{ product.weight | weight_with_unit }} - {{ product.price | money}}
           </option>
         </select>
