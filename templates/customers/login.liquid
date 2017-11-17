@@ -15,43 +15,42 @@ By creating an account with our store, you'll be able to move through the checko
 </a>
 </div>
 </div>
-<div class="grid__item medium-up--one-half">
-<div id="CustomerLoginForm" style="border: 1px solid #dbdbdb">
+<div class="grid__item medium-up--one-half" style="border: 1px solid #d2d2d2; padding: 25px;">
+  <h2><!--{{ 'customer.login.title' | t }}--> Registered Customers</h2>
+<div id="CustomerLoginForm">
   {% form 'customer_login' %}
 
-    <h2><!--{{ 'customer.login.title' | t }}--> Registered Customers</h2>
-
-
     {{ form.errors | default_errors }}
-<div class="display: inline-block">
-    <label for="CustomerEmail" class="label-hidden">
-      {{ 'customer.login.email' | t }}
+<div class="grid">
+  <div class="grid__item medium-up--one-half" style="margin: auto">
+    <label for="CustomerEmail" >
+      <strong>{{ 'customer.login.email' | t }}</strong>
     </label>
     <input type="email"
            name="customer[email]"
            id="CustomerEmail"
            class="{% if form.errors contains 'email' %}input-error{% endif %} input"
-           placeholder="{{ 'customer.login.email' | t }}"
            spellcheck="false"
            autocomplete="off"
            autocapitalize="off"
            autofocus>
-
+</div>
+<div class="grid__item medium-up--one-half">
     {% if form.password_needed %}
-      <label for="CustomerPassword" class="label-hidden">
-        {{ 'customer.login.password' | t }}
+      <label for="CustomerPassword">
+        <strong>{{ 'customer.login.password' | t }}</strong>
       </label>
       <input type="password"
              name="customer[password]"
              id="CustomerPassword"
-             class="{% if form.errors contains 'password' %}input-error{% endif %} input"
-             placeholder="{{ 'customer.login.password' | t }}">
+             class="{% if form.errors contains 'password' %}input-error{% endif %} input">
     {% endif %}
+</div>
 </div>
     <input type="submit" class="btn button__btn button__btn--secondary" value="{{ 'customer.login.sign_in' | t }}">
 
     {% if form.password_needed %}
-      <a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a>
+      <a href="#recover" style="display: block; padding-top: 30px" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a>
     {% endif %}
   {% endform %}
 
