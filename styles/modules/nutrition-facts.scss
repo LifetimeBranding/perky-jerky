@@ -8,6 +8,11 @@
     height: 100%;
 }
 
+@include media-query('small') {
+  #shopify-section-nutrition-facts .page-width {
+    padding: 0;
+  }
+}
 @include media-query('medium-up') {
   #shopify-section-nutrition-facts .interactive-image {
     height: 603px;
@@ -31,7 +36,7 @@
 #nutrition-legal-modal {
   display: none;
   position: absolute;
-  margin-top: 45px;
+  margin-top: 55px;
 }
 
 #nutrition-legal-modal > .modal-container {
@@ -54,6 +59,7 @@
   line-height: 2; 
   height: 195px;
   padding-top: 50px;
+  margin-top: 10px;
 }
 
 #shopify-section-nutrition-facts .table-container {

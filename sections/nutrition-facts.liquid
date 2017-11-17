@@ -40,8 +40,8 @@
         <tr> 
           <!-- Columns -->
           <td>          
-            <span class="fa fa-info-circle" style="cursor: pointer; display: inline-block;" onclick="document.getElementById('nutrition-legal-modal').style.display = 'block';"></span>
-            <span style="display: block">nutrition facts</span>
+            <span class="fa fa-info-circle" style="cursor: pointer; display: block;" onclick="document.getElementById('nutrition-legal-modal').style.display = 'block';"></span>
+            <span style="position: absolute; z-index: -1;">nutrition facts</span>
           </td>
           {% for block in section.blocks %}
             <td>
