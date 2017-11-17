@@ -9,7 +9,7 @@
 }
 
 @include media-query('small') {
-  #shopify-section-nutrition-facts .page-width {
+  #shopify-section-nutrition-facts .no-gutter-on-small {
     padding: 0;
   }
 }
