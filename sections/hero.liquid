@@ -3,7 +3,14 @@
     <div class="hero__container">
       <div class="owl-carousel owl-theme" id="hero">
         {%- for block in section.blocks -%}
+
           <div class="hero-product-bed-container">
+
+            {%- if block.settings.product-decorator -%}
+            <img src="{{ block.settings.product-decorator | img_url: 'master' }}" 
+            class="decorator small--hide" width="142" height="127">
+            {%- endif -%}
+
             <!-- Bed for product image -->
             <img src="{{ block.settings.product-bed | img_url: 'master' }}" 
                  alt="{{ block.settings.product-bed.alt }}" class="hero-product-bed">
@@ -12,6 +19,7 @@
             <div class="hero-product-image-container">
               <img src="{{ block.settings.product-image | img_url: 'master' }}">
             </div>
+
           </div>
         {%- endfor -%}
       </div>
@@ -37,6 +45,11 @@
             "type": "image_picker",
             "id": "product-image",
             "label": "Product Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "product-decorator",
+            "label": "Product Decorator"
           }
         ]
       }

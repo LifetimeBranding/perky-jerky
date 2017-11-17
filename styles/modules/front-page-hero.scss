@@ -25,6 +25,15 @@ SMALL (PHONES), MEDIUM (TABLETS), AND LARGE
   display: none !important;
 }
 
+.decorator {
+  position: absolute !important; 
+  right: 70px !important; 
+  margin-top: 170px !important; 
+  z-index: 99 !important; 
+  width: 142px !important; 
+  height: 127px !important;
+}
+
 .hero-product-image-container > img {
   margin: auto;
   height: 399px !important;
