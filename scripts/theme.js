@@ -65,6 +65,7 @@ $(document).ready(function() {
      autoplay: true,
    });
 
+
   // Showcase Products Carousel
   $('#showcase').owlCarousel({
     //items: 1,

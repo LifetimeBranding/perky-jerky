@@ -35,6 +35,7 @@
 </style>
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" class="page-width">
+
   <header role="banner">
 
     <div class="navigation__header--container">
@@ -116,7 +117,7 @@
         <div class="page-width" style="position: relative">
           <span class="arrow" style="left: 327px"></span>
         </div>
-      <div class="navigation__dropdown-2-container">
+      <div class="navigation__dropdown-2-container" style="z-index: 9999">
         <div class="grid">
             {%- for block in section.blocks -%}
               {%- if block.type == 'featured_in_community' -%}
