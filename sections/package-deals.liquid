@@ -5,7 +5,8 @@
 
   {%- for block in section.blocks -%}
     <div class="grid__item medium-up--one-third">
-      <img src="{{ block.settings.image | img_url: 'master' }}" width="310" height="195" style="padding: 11.25px">
+      <img src="{{ block.settings.image | img_url: 'master' }}"
+      srcset="{{ block.settings.image | img_url: 'master' }} 1x, {{ block.settings.image | img_url: 'master', scale: 2 }} 2x"       width="310" height="195" style="padding: 11.25px">
       <p style="max-width: 250px; margin: auto"> {{ block.settings.description }} </p>
     </div>
   {%- endfor -%}

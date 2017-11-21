@@ -17,6 +17,7 @@
   {% if featured_image != blank %}
     <img 
         src="{{ featured_image | img_url: '480x480' }}" 
+        srcset="{{ featured_image | img_url: '480x480' }} 1x, {{ featured_image | img_url: '480x480', scale: 2 }} 2x" 
         alt="{{ featured_image.alt | escape }}" data-product-featured-image>
   {% endif %}
 
@@ -25,7 +26,9 @@
       {% for image in product.images %}
         <li>
           <a href="{{ image.src | img_url: '480x480' }}" data-product-single-thumbnail>
-            <img src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
+            <img src="{{ image.src | img_url: '160x160' }}" 
+            srcset="{{ image.src | img_url: '160x160' }} 1x, {{ image.src | img_url: '160x160', scale: 2 }} 2x"
+            alt="{{ image.alt | escape }}">
           </a>
         </li>
       {% endfor %}

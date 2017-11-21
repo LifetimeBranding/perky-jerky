@@ -59,7 +59,9 @@
       <div class="grid__item one-third" style="padding: 5px; text-align: center">
         {% if product.featured_image != blank %}
           <a href="{{ product.url | within: collection }}">
-            {{ product.featured_image.src | img_url: '480x480' | img_tag: product.featured_image.alt }}
+            <img src="{{ product.featured_image.src | img_url: 'master' }}"
+            srcset="{{ product.featured_image.src | img_url: 'master' }} 1x, {{ product.featured_image.src | img_url: 'master', scale: 2 }} 2x"
+            alt="{{ img_tag: product.featured_image.alt }}">
           </a>
         {% endif %}
         
