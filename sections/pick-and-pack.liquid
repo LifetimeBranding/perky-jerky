@@ -6,9 +6,13 @@
   <div class="grid__item small--one-whole one-half">
     <div id="pick-and-pack-left">
     <!-- Brand Logo -->
-      <img src="{{ section.settings.logo | img_url: 'master' }}" width="124" height="38" alt="Logo" style="margin-bottom: 20px;">
+      <img src="{{ section.settings.logo | img_url: 'master' }}" 
+      srcset="{{ section.settings.logo | img_url: 'master' }} 1x, {{ section.settings.logo | img_url: 'master', scale: 2 }} 2x"
+      width="124" height="38" alt="Logo" style="margin-bottom: 20px;">
       <!-- Pick -n- Pack Banner Image -->
-      <img src="{{ section.settings.banner | img_url: 'master' }}" width="358" height="124" alt="Pick and Pack Banner">
+      <img src="{{ section.settings.banner | img_url: 'master' }}" 
+      srcset="{{ section.settings.banner | img_url: 'master' }} 1x, {{ section.settings.banner | img_url: 'master', scale: 2 }} 2x" 
+      width="358" height="124" alt="Pick and Pack Banner">
       <div class="small--hide">
       <h1 class="homepage" style="margin-bottom: 0px">can't decide?</h1>
       <h2 class="homepage" style="margin-top: 0px">try 'em all in one box.</h2>
@@ -18,7 +22,9 @@
       <!--Centerpiece -->
       <div style="width: 100%">
       <div id="pick-and-pack-centerpiece">
-      <img src="{{ section.settings.centerpiece | img_url: 'master' }}" alt="Pick and Pack Box">
+      <img src="{{ section.settings.centerpiece | img_url: 'master' }}" 
+      srcset="{{ section.settings.centerpiece | img_url: 'master' }} 1x, {{ section.settings.centerpiece | img_url: 'master', scale: 2 }} 2x"
+      alt="Pick and Pack Box">
       </div>
     </div>
   <!-- Right Side -->

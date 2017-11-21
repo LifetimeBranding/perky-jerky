@@ -8,7 +8,9 @@
 
   <div class="grid__item medium-up--one-half one-whole">
     <div class="image-container">
-      <img src="{{ section.settings.featured_image | img_url: 'master' }}" alt="Dare to be Tender"
+      <img src="{{ section.settings.featured_image | img_url: 'master' }}"
+      srcset="{{ section.settings.featured_image | img_url: 'master' }} 1x, {{ section.settings.featured_image | img_url: 'master', scale: 2 }} 2x"
+      alt="Dare to be Tender"
       class="interactive-image">
     </div>
   </div>
@@ -45,7 +47,9 @@
           </td>
           {% for block in section.blocks %}
             <td>
-              <img src="{{block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" width="66" height="45">
+              <img src="{{block.settings.icon | img_url: 'master' }}" 
+              srcset= "{{block.settings.icon | img_url: 'master' }} 1x, {{block.settings.icon | img_url: 'master', scale: 2 }} 2x"
+              alt="{{ block.settings.image.alt }}" width="66" height="45">
               {{ block.settings.name }}
             </td>
           {% endfor %}

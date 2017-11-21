@@ -7,17 +7,22 @@
           <div class="hero-product-bed-container">
 
             {%- if block.settings.product-decorator -%}
-            <img src="{{ block.settings.product-decorator | img_url: 'master' }}" 
+            <img src="{{ block.settings.product-decorator | img_url: 'master' }}"
+            srcset= "{{ block.settings.product-decorator | img_url: 'master' }} 1x, {{ block.settings.product-decorator | img_url: 'master', scale: 2 }} 2x"
+            alt="Product badge"
             class="decorator small--hide" width="142" height="127">
             {%- endif -%}
 
             <!-- Bed for product image -->
-            <img src="{{ block.settings.product-bed | img_url: 'master' }}" 
+            <img src="{{ block.settings.product-bed | img_url: 'master' }}"
+                 srcset="{{ block.settings.product-bed | img_url: 'master' }} 1x, {{ block.settings.product-bed | img_url: 'master', scale: 2 }} 2x"
                  alt="{{ block.settings.product-bed.alt }}" class="hero-product-bed">
 
             <!-- Product Image-->
             <div class="hero-product-image-container">
-              <img src="{{ block.settings.product-image | img_url: 'master' }}">
+              <img src="{{ block.settings.product-image | img_url: 'master' }}"
+                   srcset="{{ block.settings.product-image | img_url: 'master' }} 1x, {{ block.settings.product-image | img_url: 'master', scale: 2 }} 2x"
+                  alt="{{ block.settings.product-image.alt }}">
             </div>
 
           </div>

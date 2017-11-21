@@ -4,12 +4,16 @@
     <!-- Section: Showcase Products -->
     <div class="grid">
       <div class="grid__item one-whole">
-        <img src="{{ section.settings.header-image | img_url: 'master' }}" width="509" height="294" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px;">
+        <img src="{{ section.settings.header-image | img_url: 'master' }}" 
+            srcset="{{ section.settings.header-image | img_url: 'master' }} 1x, {{ section.settings.header-image | img_url: 'master', scale: 2 }} 2x" 
+            width="509" height="294" alt="{{ section.settings.header-image.alt }}" style="margin-top: 78.75px;">
       </div>
       <div id="showcase" class="grid__item one-third owl-carousel owl-theme">
         {%- for block in section.blocks -%}
         <div class="section-showcase-collection--item" onclick="showcaseDropdown.show('{{ collections[block.settings.collection].title }}')">
-          <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}" width="300" height="382" class="showcase-image" alt="{{ collections[block.settings.collection].title }}">
+          <img src="{{ collections[block.settings.collection].image | img_url: 'master' }}"
+          srcset="{{ collections[block.settings.collection].image | img_url: 'master' }} 1x, {{ collections[block.settings.collection].image | img_url: 'master', scale: 2 }} 2x"
+          width="300" height="382" class="showcase-image" alt="{{ collections[block.settings.collection].title }}">
           <span style="font-family: 'Franchise Bold'">{{ collections[block.settings.collection].title }}</span>
         </div>
         {%- endfor -%}
@@ -31,7 +35,8 @@
               <div id="collection-detail-category-container" class="grid">
                 <!-- Product Category Image -->
                 <div id="showcase-collection-category-image-container" class="grid__item">
-                  <img src="//cdn.shopify.com/s/files/1/2236/2873/files/HERO_2_Bag.png?v=1508948490" width="300" height="300" alt="Banner">
+                  <img src="//cdn.shopify.com/s/files/1/2236/2873/files/HERO_2_Bag.png?v=1508948490" 
+                  width="300" height="300" alt="Banner">
                 </div>
                 <!-- Product Category Names -->
                 <div class="grid__item">

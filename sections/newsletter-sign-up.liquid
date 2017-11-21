@@ -2,7 +2,9 @@
     <!-- Left Side -->
     <div class="grid__item one-whole small--text-center medium-up--one-half">
       <div id="newsletter-sign-up-copy">
-        <img src="{{ 'newsletter-email-icon.png' | asset_img_url: 'master' }}" alt="Envelope Icon" width="43" height="33"> 
+        <img src="{{ 'newsletter-email-icon.png' | asset_img_url: 'master' }}"
+        srcset="{{ 'newsletter-email-icon.png' | asset_img_url: 'master' }} 1x, {{ 'newsletter-email-icon.png' | asset_img_url: 'master', scale: 2 }} 2x"  
+        alt="Envelope Icon" width="43" height="33"> 
         <h1 class="homepage small--hide" style="margin: 0">Perks &amp; Jerks</h1>
         <h2 class="homepage medium-up--hide">Perks &amp; Jerks</h2>
         <h2 class="homepage small--hide" style="margin: 0">Our newsletter is full of Perks &amp; Jerks:</h2>

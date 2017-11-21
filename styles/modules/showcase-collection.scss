@@ -45,6 +45,10 @@
 .section-showcase-collection--item:hover > span{
   color: #000;
 }
+// Blur 
+.section-showcase-collection__detail--container {
+  box-shadow: 10px 510px 10px 500px rgba(0, 0, 0, 0.75);
+}
 
 #collection-detail-category-container { 
   text-align: center;

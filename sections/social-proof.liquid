@@ -13,7 +13,9 @@
       <div class="proof-container">
         {%- for block in section.blocks -%}
           {%- if block.type == 'featured_by' -%}
-            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.who }}" width="167" height="77">
+            <img src="{{ block.settings.image | img_url: 'master' }}" 
+            srcset="{{ block.settings.image | img_url: 'master' }} 1x, {{ block.settings.image | img_url: 'master', scale: 2 }} 2x" 
+            alt="{{ block.settings.who }}" width="167" height="77">
           {%- endif -%}
         {%- endfor -%}
       </div>
@@ -34,7 +36,9 @@
     <div class="proof-container">
         {%- for block in section.blocks -%}
           {%- if block.type == 'sold_at' -%}
-            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.who }}" width="167" height="77">
+            <img src="{{ block.settings.image | img_url: 'master' }}" 
+            srcset="{{ block.settings.image | img_url: 'master' }} 1x, {{ block.settings.image | img_url: 'master', scale: 2 }} 2x" 
+            alt="{{ block.settings.who }}" width="167" height="77">
           {%- endif -%}
         {%- endfor -%}
     </div>

@@ -43,6 +43,7 @@
     <a href="/" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
       {%- if section.settings.logo != blank -%}
         <img src="{{ section.settings.logo | img_url: 'master'}} "
+             srcset=" {{ section.settings.logo | img_url: 'master' }} 1x, {{ section.settings.logo | img_url: 'master', scale: 2 }} 2x"
              width="106" height="30"
              alt="{{ section.settings.logo.alt | default: shop.name }}">
       {%- else -%}
@@ -71,7 +72,9 @@
               <div class="grid__item one-third text-center">
                   <a href=" {{ collections[block.settings.collection].url }}">
                   <img class="navigation__dropdown-1-image" 
-                  src="{{ collections[block.settings.collection].image | img_url: 'large' }}" width="160" height="203"
+                  src="{{ collections[block.settings.collection].image | img_url: 'large' }}"
+                  srcset="{{ collections[block.settings.collection].image | img_url: 'large' }} 1x, {{ collections[block.settings.collection].image | img_url: 'large', scale: 2 }} 2x"
+                  width="160" height="203"
                   alt="{{ collections[block.settings.collection].name }}">
                   <span>{{ collections[block.settings.collection].title }}</span>
                   </a>
@@ -93,6 +96,7 @@
 
               <img class="navigation__dropdown-1-image" 
               src="{{ section.settings.logo_for_picknpack | img_url: 'master' }}" 
+              srcset= "{{ section.settings.logo_for_picknpack | img_url: 'master' }} 1x, {{ section.settings.logo_for_picknpack | img_url: 'master', scale: 2 }} 2x"
               width="310" height="195" 
               alt="{{ section.settings.logo_for_picknpack.alt }}">
 
@@ -128,7 +132,9 @@
                   </div>
 
                   <img class="navigation__dropdown-2-image" width="292" height="188"
-                  src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+                  src="{{ block.settings.image | img_url: 'master' }}"
+                  srcset= "{{ block.settings.image | img_url: 'master' }} 1x, {{ block.settings.image | img_url: 'master', scale: 2 }} 2x"
+                  alt="{{ block.settings.image.alt }}">
                   </a>
                 </div>
 
@@ -161,6 +167,7 @@
       <div>
         <!-- Open Image -->
         <img src="{{ 'menu-drawing.png' | asset_img_url: '110x75' }}" 
+        srcset="{{ 'menu-drawing.png' | asset_img_url: '110x75' }} 1x, {{ 'menu-drawing.png' | asset_img_url: '110x75', scale: 2 }} 2x"
           width="82" height="56" alt="Menu Button">
       </div>
       <div style="display: none">

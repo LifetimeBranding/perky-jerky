@@ -5,7 +5,9 @@
     <!-- Discount Banner -->
     <div class="discount-banner">
       <div class="discount-banner-image">
-        <img src="{{ 'get-percent-off-banner.png' | asset_img_url: 'master' }}" width="101" height="123" alt="Discount Banner">
+        <img src="{{ 'get-percent-off-banner.png' | asset_img_url: 'master' }}" 
+        srcset="{{ 'get-percent-off-banner.png' | asset_img_url: 'master' }} 1x, {{ 'get-percent-off-banner.png' | asset_img_url: 'master', scale: 2 }} 2x" 
+        width="101" height="123" alt="Discount Banner">
       </div>
       <div class="discount-banner-text">
         <div style="padding-top: 8px">
