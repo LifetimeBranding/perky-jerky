@@ -1,0 +1,32 @@
+/*** SHOPPING CART **/
+
+@include media-query('medium-up') {
+  .template-cart td {
+    margin: auto;
+    vertical-align: top;
+    padding: 5px 15px;
+  }
+
+  .template-cart th {
+    text-align: left;
+    padding: 0px 15px;
+  }
+
+  .cart__product-description {
+    max-width: 350px;
+  }
+
+  .cart__close-icon {
+    display: inline-block;
+    vertical-align: top;
+    color: #b1b1b1;
+    font-size: 0.3em;
+    margin-left: -25px;
+    margin-right: 15px;
+  }
+
+  input[type="submit"] {
+    float: right;
+    width: initial;
+  }
+}

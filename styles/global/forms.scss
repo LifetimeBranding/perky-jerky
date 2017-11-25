@@ -52,6 +52,22 @@ textarea {
   padding: 5px;
 }
 
+// Removes arrows in input[type='number']
+/* For Firefox */
+input[type='number'].qty {
+    -moz-appearance:textfield;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number].qty::-webkit-inner-spin-button,
+input[type=number].qty::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /*================ Custom select style ================*/
 select {
   @include prefix(appearance, none, webkit moz spec);

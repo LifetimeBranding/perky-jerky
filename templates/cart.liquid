@@ -1,3 +1,5 @@
+
+
 <div class="page-width">
 {% if cart.item_count > 0 %}
   <h1>{{ 'cart.general.title' | t }}</h1>
@@ -6,10 +8,13 @@
     <table class="responsive-table">
       <thead class="small--hide">
         <tr>
-          <th colspan="2">{{ 'cart.label.product' | t }}</th>
-          <th>{{ 'cart.label.price' | t }}</th>
-          <th>{{ 'cart.label.quantity' | t }}</th>
-          <th>{{ 'cart.label.total' | t }}</th>
+          <!-- TODO: REFACTOR TO USE LANGUAGE TAGS -->
+          <th><h2>Preview</h2></th>
+          <th><h2>{{ 'cart.label.product' | t }}</h2></th>
+          <th><h2>Size</h2></th>
+          <th><h2>{{ 'cart.label.price' | t }}</h2></th>
+          <th><h2>{{ 'cart.label.quantity' | t }}</h2></th>
+          <th><h2>{{ 'cart.label.total' | t }}</h2></th>
         </tr>
       </thead>
       <tbody>
@@ -29,6 +34,9 @@
             <td data-label="{{ 'customer.order.product' | t }}">
 
               {% if item.image != blank %}
+              <a class="small--hide cart__close-icon" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                {% include 'icon-close' %}
+              </a>
                 <a href="{{ item.url | within: collections.all }}">
                   {{ item | img_url: '240x240' | img_tag: item.title }}
                 </a>
@@ -36,13 +44,13 @@
 
             </td>
             <td>
-              <a href="{{ item.url }}">{{ item.product.title }}</a>
+              <strong><a href="{{ item.url }}">{{ item.product.title }}</a></strong>
 
-              {% unless item.product.has_only_default_variant %}
+             <!-- {% unless item.product.has_only_default_variant %}
                 <p>{{ item.variant.title }}</p>
               {% endunless %}
-
-              <p>{{ item.vendor }}</p>
+            -->
+            <p class="cart__product-description">Irure velit consequat exercitation do cupidatat in aliquip irure aute incididunt sit amet dolore aliqua dolor exercitation ut fugiat.</p>
 
               {%- assign property_size = item.properties | size -%}
 
@@ -61,10 +69,11 @@
                 {% endfor %}
               {% endif %}
 
-              <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+              <a class="medium-up--hide" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
                 <small>{{ 'cart.general.remove' | t }}</small>
               </a>
             </td>
+            <td>{{ item.variant.title }}</td>
             <td data-label="{{ 'cart.label.price' | t }}">
               {% if item.original_line_price != item.line_price %}
                 <span class="visually-hidden">{{ 'cart.label.discounted_price' | t }}</span>
@@ -77,6 +86,7 @@
             </td>
             <td data-label="{{ 'cart.label.quantity' | t }}">
               <input type="number"
+                     class="select qty"
                      name="updates[]"
                      id="updates_{{ item.key }}"
                      value="{{ item.quantity }}"
@@ -87,8 +97,8 @@
               {{ item.line_price | money }}
             </td>
           </tr>
-
         {% endfor %}
+
       </tbody>
     </table>
 
@@ -97,14 +107,15 @@
       <textarea name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
     {% endif %}
 
-    <p>{{ 'cart.general.subtotal' | t }}</p>
-    <p>{{ cart.total_price | money }}</p>
+    <strong><p class="medium-up--text-right">{{ 'cart.general.subtotal' | t }} {{ cart.total_price | money }}</p></strong>
+
     {% if cart.total_discounts > 0 %}
-      <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
+      <p class="medium-up--text-right">{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
     {% endif %}
-    <p>{{ 'cart.general.shipping_at_checkout' | t }}</p>
-    <input type="submit" name="update" value="{{ 'cart.general.update' | t }}">
-    <input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
+    <p class="medium-up--text-right">{{ 'cart.general.shipping_at_checkout' | t }}</p>
+    <!-- TODO: INCORPORATE INTO DESIGN OR HAVE ON CHANGE EVENT FOR QTY BOXES -->
+    <!--<input type="submit" name="update" value="{{ 'cart.general.update' | t }}">-->
+    <input type="submit" name="checkout" class="button__btn button__btn--primary btn" value="{{ 'cart.general.checkout' | t }}">
   </form>
 {% else %}
   <h1>{{ 'cart.general.title' | t }}</h1>
