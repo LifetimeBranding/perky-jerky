@@ -14,6 +14,24 @@
   .collection-links li.active a {
     color: #000;
   }
+
+  h1.more-detail-overlay {
+    color: #fff;
+    margin: -25px auto auto 40px;
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  .product-image-container:hover h1.more-detail-overlay {
+    visibility: visible;
+    transition: all 1s;
+  }
+
+  .product-image-container:hover img.featured-image {
+    filter: blur(3px) brightness(40%);
+    transition: all 0.35s;
+  }
+
 </style>
 <div class="grid page-width" style="margin: 50px auto 100px auto">
 
@@ -57,11 +75,14 @@
     <div class="grid">
     {% for product in collection.products %}
       <div class="grid__item one-third" style="text-align: center;">
-        <div style="padding: 5px">
+        <div style="padding: 5px" class="product-image-container">
           <a href="{{ product.url | within: collection }}">
             <img src="{{ product.featured_image.src | img_url: 'master' }}"
             srcset="{{ product.featured_image.src | img_url: 'master' }} 1x, {{ product.featured_image.src | img_url: 'master', scale: 2 }} 2x"
-            alt="{{ img_tag: product.featured_image.alt }}" height="300">
+            alt="{{ img_tag: product.featured_image.alt }}" height="300" class="featured-image">
+            <div style="position: absolute; z-index: 2; margin-top: -150px">
+            <h1 class="more-detail-overlay">More Details +</h1>
+          </div>
           </a>
         
         <!-- Title -->
@@ -102,9 +123,11 @@
           {% endunless %}
         </p>-->
         <select class="small--hide select" style="display: block">
+          {% for variant in product.variants %}
           <option>
-            {{ product.weight | weight_with_unit }} - {{ product.price | money}}
+            {{ variant.title }} - {{ variant.price | money}}
           </option>
+          {% endfor %}
         </select>
 
         <!-- Add To Cart Button: Hidden for preview only because it breaks design -->

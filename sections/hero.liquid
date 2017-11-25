@@ -15,14 +15,18 @@
 
             <!-- Bed for product image -->
             <img src="{{ block.settings.product-bed | img_url: 'master' }}"
-                 srcset="{{ block.settings.product-bed | img_url: 'master' }} 1x, {{ block.settings.product-bed | img_url: 'master', scale: 2 }} 2x"
-                 alt="{{ block.settings.product-bed.alt }}" class="hero-product-bed">
+              srcset="{{ block.settings.product-bed | img_url: 'master' }} 1x, 
+                      {{ block.settings.product-bed | img_url: 'master', scale: 2 }} 2x,
+                      {{ block.settings.product-bed | img_url: 'master', scale: 3 }} 3x"
+              alt="{{ block.settings.product-bed.alt }}" class="hero-product-bed">
 
             <!-- Product Image-->
             <div class="hero-product-image-container">
               <img src="{{ block.settings.product-image | img_url: 'master' }}"
-                   srcset="{{ block.settings.product-image | img_url: 'master' }} 1x, {{ block.settings.product-image | img_url: 'master', scale: 2 }} 2x"
-                  alt="{{ block.settings.product-image.alt }}">
+                srcset="{{ block.settings.product-image | img_url: 'master' }} 1x, 
+                        {{ block.settings.product-image | img_url: 'master', scale: 2 }} 2x,
+                        {{ block.settings.product-image | img_url: 'master', scale: 3 }} 2x"
+                alt="{{ block.settings.product-image.alt }}">
             </div>
 
           </div>
